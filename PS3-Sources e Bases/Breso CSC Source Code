@@ -1,0 +1,9423 @@
+Function 0 2 0
+
+CallNative "NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME" 0 0
+Call @Inicio_CSA
+Return 0 0
+
+:Inicio_CSA
+Function 0 2 0
+
+push_0
+StaticSet1 1
+fPush_1.0
+StaticSet1 2
+fPush_1.0
+StaticSet1 3
+fPush 0.179000005126
+StaticSet1 4
+fPush_1.0
+StaticSet1 5
+fPush_1.0
+StaticSet1 6
+fPush_1.0
+StaticSet1 7
+push_1
+StaticSet1 8
+push_7
+StaticSet2 434
+Push 100
+StaticSet2 435
+Push 199
+StaticSet2 436
+push_1
+StaticSet2 437
+fPush 0.14499999582767
+StaticSet2 438
+
+//godmod
+push_0
+StaticSet2 439
+
+//invisivel
+push_0
+StaticSet2 440
+
+//Sempre dia
+push_0
+StaticSet2 441
+
+//Sempre Noite
+push_0
+StaticSet2 442
+
+//apagao
+push_0
+StaticSet2 230
+
+//Radio
+push_0
+StaticSet2 231
+
+//Slowmotion
+push_0
+StaticSet2 445
+
+//Bala Infinita
+push_0
+StaticSet2 446
+
+//Sem policia
+push_0
+StaticSet2 447
+
+//Shrink
+push_0
+StaticSet2 448
+
+//Corridinha
+push_0
+StaticSet2 449
+
+//matar com 1 tiro
+push_0
+StaticSet2 232
+
+//carro invisivel
+push_0
+StaticSet2 233
+
+//drift
+push_0
+StaticSet2 234
+
+//carbonizar
+push_0
+StaticSet2 235
+
+//carro atual
+StaticSet2 526
+//carro atual desvirar
+StaticSet2 533
+
+//atravessar paredes
+push_0
+StaticSet2 236
+
+//arma grana teste
+push_0
+StaticSet2 237
+
+//arma incendiaria
+push_0
+StaticSet2 238
+
+//arma deletadora
+push_0
+StaticSet2 239
+
+//arma teleport
+push_0
+StaticSet2 240
+
+
+//particulas
+PushString "scr_rcbarry1"
+StaticSet2 241
+PushString "scr_alien_teleport"
+StaticSet2 242
+push_0
+StaticSet2 243
+fPush 0.5
+StaticSet2 244
+
+
+:Label_11
+push_0
+CallNative "WAIT" 1 0
+Call @OtherLoop
+StaticGet1 1
+Switch [0=@Label_1][1=@Menu_Principal_Enum][2=@Menu_Config_Enum][3=@Menu_Cores_Enum][4=@Menu_Jogador_Enum][5=@Segundo_Sub_menu_Enum][6=@Terceiro_Sub_menu_Enum][7=@Quarto_Sub_menu_Enum][8=@Menu_Creditos_Enum][9=@Menu_Scenarios_Enum][10=@Menu_Trajes_Enum][11=@Menu_Skins_Enum][12=@Menu_Teleports_Interior_Enum][13=@Menu_Teleports_Montanhas_Enum][14=@Menu_Teleports_Aeroportos_Enum][15=@Menu_Teleports_Cidade_Enum][16=@Menu_Teleports_Deserto_Enum][17=@Menu_Teleports_Uteis_Enum][18=@Menu_Teleports_Agua_Enum][19=@Menu_Opcoes_Diversas_Enum][20=@Menu_Opcoes_Diversas_Clima_Enum][21=@Menu_Opcoes_Diversas_Efeitos_Enum][22=@Menu_Opcoes_Diversas_Horario_Enum][23=@Menu_Opcoes_Diversas_IPL_Enum][24=@Menu_Opcoes_Armas_Enum][25=@Menu_Particulas_Enum][26=@Menu_Veiculo_Modificacoes_Enum][27=@Menu_Recovery_Enum][28=@Menu_Antimodder_Enum][29=@Menu_Levels_Enum][30=@Menu_Dinheiro_Enum][31=@Menu_Valores_Enum]
+
+:Label_1
+Call @Label_10
+Jump @Label_11
+
+:Menu_Principal_Enum
+Call @Menu_Principal
+Jump @Label_13
+
+:Menu_Config_Enum
+Call @Menu_Config
+Jump @Label_13
+
+:Menu_Cores_Enum
+Call @Menu_Cores
+Jump @Label_13
+
+:Menu_Jogador_Enum
+Call @Menu_Jogador
+Jump @Label_13
+
+:Segundo_Sub_menu_Enum
+Call @Segundo_Sub_menu
+Jump @Label_13
+
+:Terceiro_Sub_menu_Enum
+Call @Terceiro_Sub_menu
+Jump @Label_13
+
+:Quarto_Sub_menu_Enum
+Call @Quarto_Sub_menu
+Jump @Label_13
+
+:Menu_Scenarios_Enum
+Call @Menu_Scenarios
+Jump @Label_13
+
+:Menu_Trajes_Enum
+Call @Menu_Trajes
+Jump @Label_13
+
+:Menu_Skins_Enum
+Call @Menu_Skins
+Jump @Label_13
+
+:Menu_Teleports_Interior_Enum
+Call @Menu_Teleports_Interior
+Jump @Label_13
+
+:Menu_Teleports_Montanhas_Enum
+Call @Menu_Teleports_Montanhas
+Jump @Label_13
+
+:Menu_Teleports_Aeroportos_Enum
+Call @Menu_Teleports_Aeroportos
+Jump @Label_13
+
+:Menu_Teleports_Cidade_Enum
+Call @Menu_Teleports_Cidade
+Jump @Label_13
+
+:Menu_Teleports_Deserto_Enum
+Call @Menu_Teleports_Deserto
+Jump @Label_13
+
+:Menu_Teleports_Uteis_Enum
+Call @Menu_Teleports_Uteis
+Jump @Label_13
+
+:Menu_Teleports_Agua_Enum
+Call @Menu_Teleports_Agua
+Jump @Label_13
+
+//19
+:Menu_Opcoes_Diversas_Enum
+Call @Menu_Opcoes_Diversas
+Jump @Label_13
+
+//20
+:Menu_Opcoes_Diversas_Clima_Enum
+Call @Menu_Opcoes_Diversas_Clima
+Jump @Label_13
+
+//21
+:Menu_Opcoes_Diversas_Efeitos_Enum
+Call @Menu_Opcoes_Diversas_Efeitos
+Jump @Label_13
+
+//22
+:Menu_Opcoes_Diversas_Horario_Enum
+Call @Menu_Opcoes_Diversas_Horario
+Jump @Label_13
+
+//23
+:Menu_Opcoes_Diversas_IPL_Enum
+Call @Menu_Opcoes_Diversas_IPL
+Jump @Label_13
+
+//24
+:Menu_Opcoes_Armas_Enum
+Call @Menu_Opcoes_Armas
+Jump @Label_13
+
+//25
+:Menu_Particulas_Enum
+Call @Menu_Particulas
+Jump @Label_13
+
+//26
+:Menu_Veiculo_Modificacoes_Enum
+Call @Menu_Veiculo_Modificacoes
+Jump @Label_13
+
+//27
+:Menu_Recovery_Enum
+Call @Menu_Recovery
+Jump @Label_13
+
+//28
+:Menu_Antimodder_Enum
+Call @Menu_Antimodder
+Jump @Label_13
+
+//29
+:Menu_Levels_Enum
+Call @Menu_Levels
+Jump @Label_13
+
+//30
+:Menu_Dinheiro_Enum
+Call @Menu_Dinheiro
+Jump @Label_13
+
+//31
+:Menu_Valores_Enum
+Call @Menu_Valores
+Jump @Label_13
+
+:Menu_Creditos_Enum
+Call @Menu_Creditos
+Jump @Label_21
+
+
+:Label_13
+Call @Label_22
+Jump @Label_11
+
+:Label_21
+Call @Label_23
+Jump @Label_11
+Return 0 0
+
+//-------------------------LOOP
+
+
+
+:OtherLoop
+Function 0 2 0
+
+StaticGet2 100 
+JumpFalse @Loop_2
+CallNative PLAYER_ID 0 1
+CallNative "SET_EXPLOSIVE_AMMO_THIS_FRAME" 1 0
+
+:Loop_2
+StaticGet2 101
+JumpFalse @Loop_3
+CallNative PLAYER_ID 0 1
+CallNative "SET_SUPER_JUMP_THIS_FRAME" 1 0
+
+:Loop_3
+StaticGet2 441
+JumpFalse @Loop_4
+Push 12
+push_0
+push_0
+CallNative "SET_CLOCK_TIME" 3 0
+Push 12
+push_0
+push_0
+CallNative "NETWORK_OVERRIDE_CLOCK_TIME" 3 0
+
+:Loop_4
+StaticGet2 442
+JumpFalse @Loop_5
+push_0
+push_0
+push_0
+CallNative "SET_CLOCK_TIME" 3 0
+push_0
+push_0
+push_0
+CallNative "NETWORK_OVERRIDE_CLOCK_TIME" 3 0
+
+:Loop_5
+StaticGet2 439
+JumpFalse @Loop_6
+CallNative "PLAYER_ID" 0 1
+push_1
+CallNative "SET_PLAYER_INVINCIBLE" 2 0
+
+:Loop_6
+StaticGet2 447
+JumpFalse @Loop_7
+CallNative "PLAYER_ID" 0 1
+push_0
+push_0
+CallNative "SET_PLAYER_WANTED_LEVEL" 3 0
+CallNative "PLAYER_ID" 0 1
+push_0
+CallNative "SET_PLAYER_WANTED_LEVEL_NOW" 2 0
+
+:Loop_7
+StaticGet2 236
+JumpFalse @Loop_8
+CallNative "PLAYER_PED_ID" 0 1
+fPush 0.0001
+CallNative "SET_PED_CAPSULE" 2 1
+
+:Loop_8
+StaticGet2 232
+JumpFalse @Loop_9
+CallNative "PLAYER_ID" 0 1
+fPush 9999.0
+CallNative "SET_PLAYER_WEAPON_DAMAGE_MODIFIER" 2 0
+
+:Loop_9
+StaticGet2 237
+JumpFalse @Loop_10
+push_2
+Push 184
+CallNative "IS_CONTROL_PRESSED" 2 1
+JumpFalse @Loop_10
+CallNative "PLAYER_PED_ID" 0 1
+pStatic2 534
+CallNative "GET_PED_LAST_WEAPON_IMPACT_COORD" 2 1
+JumpFalse @Loop_10
+Push 289396019
+CallNative "REQUEST_MODEL" 1 0
+Push 289396019
+CallNative "HAS_MODEL_LOADED" 1 1
+JumpFalse @Loop_10
+Push 3463437675
+pStatic2 534
+GetImmediate1 0
+pStatic2 534
+GetImmediate1 1
+pStatic2 534
+GetImmediate1 2
+push_0
+Push 40000
+Push 289396019
+push_0
+push_0
+CallNative "CREATE_AMBIENT_PICKUP" 9 1
+Drop
+Push 289396019
+CallNative "SET_MODEL_AS_NO_LONGER_NEEDED" 1 0
+
+:Loop_10
+StaticGet2 238
+JumpFalse @Loop_11
+CallNative "PLAYER_ID" 0 1
+CallNative "SET_FIRE_AMMO_THIS_FRAME" 1 0
+
+:Loop_11
+StaticGet2 239
+JumpFalse @Loop_12
+CallNative "PLAYER_ID" 0 1
+CallNative "IS_PLAYER_FREE_AIMING" 1 1
+JumpFalse @Loop_12
+CallNative "PLAYER_ID" 0 1
+pStatic2 532
+CallNative "GET_ENTITY_PLAYER_IS_FREE_AIMING_AT" 2 1
+Drop
+StaticGet2 532
+CallNative "DOES_ENTITY_EXIST" 1 1
+JumpFalse @Loop_12
+StaticGet2 532
+CallNative "NETWORK_REQUEST_CONTROL_OF_ENTITY" 1 1
+Drop
+StaticGet2 532
+push_0
+push_1
+CallNative "SET_ENTITY_AS_MISSION_ENTITY" 3 0
+pStatic2 532
+CallNative "DELETE_ENTITY" 1 0
+
+:Loop_12
+StaticGet2 240
+JumpFalse @Loop_13
+push_2
+Push 184
+CallNative "IS_CONTROL_PRESSED" 2 1
+JumpFalse @Loop_13
+CallNative "PLAYER_PED_ID" 0 1
+pStatic2 616
+CallNative "GET_PED_LAST_WEAPON_IMPACT_COORD" 2 1
+JumpFalse @Loop_13
+CallNative "PLAYER_PED_ID" 0 1 
+pStatic2 616
+GetImmediate1 0
+pStatic2 616
+GetImmediate1 1
+pStatic2 616
+GetImmediate1 2
+fPush_1.0
+fAdd
+push_0
+push_0
+push_0
+CallNative "SET_ENTITY_COORDS_NO_OFFSET" 7 0
+
+:Loop_13
+StaticGet2 243
+JumpFalse @Fim_Loop
+StaticGet2 241
+CallNative "REQUEST_NAMED_PTFX_ASSET" 1 0
+StaticGet2 241
+CallNative "HAS_NAMED_PTFX_ASSET_LOADED" 1 1
+StaticGet2 241
+CallNative "UNK_9C720B61" 1 0
+StaticGet2 242
+CallNative "PLAYER_PED_ID" 0 1
+fPush_0.0
+fPush_0.0
+fPush_0.0
+fPush_0.0
+fPush_0.0
+fPush_0.0
+Push 31086
+StaticGet2 244
+push_0
+push_0
+push_0
+CallNative "UNK_161780C1" 13 1
+Drop
+
+
+:Fim_Loop
+Return 0 0
+
+//========================================
+
+:Label_22
+Function 0 2 0
+
+Call @Draw_rect_3
+Call @Desativar_Controles
+push_2
+Push 202
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+push_1
+JumpEQ @Label_26
+push_2
+Push 203
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+push_1
+JumpEQ @Label_27
+push_2
+Push 195
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+push_1
+JumpEQ @Label_28
+Jump @Label_29
+
+:Label_28
+PushString "BACK"
+Call @Tocar_som
+StaticGet1 1
+push_1
+JumpEQ @Habilitar_Todos_Controles
+StaticGet1 8
+StaticSet1 1
+StaticGet2 443
+StaticSet1 2
+StaticGet2 444
+StaticSet1 4
+Jump @Label_29
+
+:Label_26
+StaticGet1 2
+fPush_1.0
+JumpEQ @Label_32
+StaticGet1 2
+fPush_1.0
+fSub
+StaticSet1 2
+StaticGet1 4
+fPush 0.03999999910593
+fSub
+StaticSet1 4
+PushString "NAV_UP_DOWN"
+Call @Tocar_som
+Jump @Label_29
+
+:Label_32
+StaticGet1 3
+fPush 0.03999999910593
+fMul
+fPush 0.13899999856949
+fAdd
+StaticSet1 4
+StaticGet1 3
+StaticSet1 2
+PushString "NAV_UP_DOWN"
+Call @Tocar_som
+Jump @Label_29
+
+:Label_27
+StaticGet1 2
+StaticGet1 3
+JumpEQ @Label_33
+StaticGet1 2
+fPush_1.0
+fAdd
+StaticSet1 2
+StaticGet1 4
+fPush 0.03999999910593
+fAdd
+StaticSet1 4
+PushString "NAV_UP_DOWN"
+Call @Tocar_som
+Jump @Label_29
+
+:Label_33
+fPush 0.179000005126
+StaticSet1 4
+fPush_1.0
+StaticSet1 2
+PushString "NAV_UP_DOWN"
+Call @Tocar_som
+Jump @Label_29
+
+:Habilitar_Todos_Controles
+push_2
+CallNative "ENABLE_ALL_CONTROL_ACTIONS" 1 0
+PushString "BACK"
+Call @Tocar_som
+push_0
+StaticSet1 1
+
+:Label_29
+Return 0 0
+
+//----------------------------
+
+:Label_10
+Function 0 2 0
+
+push_2
+Push 182
+CallNative "IS_CONTROL_PRESSED" 2 1
+push_1
+JumpEQ @Label_34
+Jump @Label_35
+
+:Label_34
+push_2
+Push 179
+CallNative "IS_CONTROL_PRESSED" 2 1
+push_1
+JumpEQ @Label_36
+Jump @Label_35
+
+:Label_36
+PushString "SELECT"
+Call @Tocar_som
+push_1
+StaticSet1 1
+push_1
+StaticSet1 8
+fPush_1.0
+StaticSet1 2
+fPush 0.179000005126
+StaticSet1 4
+
+:Label_35
+Return 0 0
+
+//==============================
+
+:Void_Setar_Sub_Menus
+Function 0 2 0
+
+StaticGet1 2
+StaticSet2 443
+StaticGet1 4
+StaticSet2 444
+fPush_1.0
+StaticSet1 2
+fPush 0.179000005126
+StaticSet1 4
+Return 0 0
+
+:Label_23
+Function 0 2 0
+
+fPush 15
+StaticSet1 3
+Call @Draw_rect_2
+Call @Desativar_Controles
+push_2
+Push 195
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+push_1
+JumpEQ @Label_38
+Jump @Label_39
+
+:Label_38
+PushString "BACK"
+Call @Tocar_som
+StaticGet1 8
+StaticSet1 1
+StaticGet2 443
+StaticSet1 2
+StaticGet2 444
+StaticSet1 4
+
+:Label_39
+Return 0 0
+
+:Draw_Text
+Function 2 2 0
+
+getF1 0
+fPush 0.029999999329448
+fMul
+fPush 0.12999999523163
+fAdd
+StaticSet1 7
+Call @Configuracao_de_Texto
+PushString "STRING"
+CallNative "UNK_3E35563E" 1 0
+getF1 1
+CallNative "UNK_27A244D8" 1 0
+fPush 0.059999998658895
+StaticGet1 7
+CallNative "UNK_6F8350CE" 2 0
+Return 2 0
+
+:Botao_X_apertado
+Function 0 2 0
+
+push_2
+Push 193
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+Return 0 1
+
+:Tocar_som
+Function 1 2 0
+
+push_-1
+getF1 0
+PushString "HUD_FRONTEND_DEFAULT_SOUNDSET"
+CallNative "PLAY_SOUND_FRONTEND" 3 0
+Return 1 0
+
+:Desativar_Controles
+Function 0 2 0
+
+CallNative "HIDE_HELP_TEXT_THIS_FRAME" 0 0
+push_0
+CallNative "SET_CINEMATIC_BUTTON_ACTIVE" 1 0
+push_0
+push_3
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 92
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 71
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 75
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 179
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 177
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 178
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_0
+Push 48
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 164
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 165
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 177
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 178
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 166
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 167
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 164
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 165
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+Push 10
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+push_6
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+push_7
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+Push 9
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+Push 8
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+push_2
+Push 166
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 167
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_0
+Push 37
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 139
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 140
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 141
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 142
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 143
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 144
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 145
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 146
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 147
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 14
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 15
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 52
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 53
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 123
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 124
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 126
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 47
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 69
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 78
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 51
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 45
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 54
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 75
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 22
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 92
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 106
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 149
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 148
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 150
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 151
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 19
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+Return 0 0
+
+:Configuracao_de_Texto
+Function 0 2 0
+
+//fonte opcoes
+push_4
+CallNative "SET_TEXT_FONT" 1 0
+fPush 0.51300000596046
+fPush 0.51300000596046
+//0.40000000596046
+CallNative "SET_TEXT_SCALE" 2 0
+Push 255
+Push 255
+Push 255
+Push 255
+CallNative "SET_TEXT_COLOUR" 4 0
+fPush_0.0
+fPush_1.0
+CallNative "SET_TEXT_WRAP" 2 0
+//opcoes centralizadas
+push_0
+CallNative "SET_TEXT_CENTRE" 1 0
+push_0
+push_0
+push_0
+push_0
+push_0
+CallNative "SET_TEXT_DROPSHADOW" 5 0
+push_0
+push_0
+push_0
+push_0
+push_0
+CallNative "SET_TEXT_EDGE" 5 0
+CallNative "SET_TEXT_OUTLINE" 0 0
+Return 0 0
+
+:AddOption
+Function 2 2 0
+
+getF1 0
+fPush 0.03999999910593
+fMul
+fPush 0.125
+fAdd
+StaticSet1 7
+Call @Configuracao_de_Texto
+PushString "STRING"
+CallNative "UNK_3E35563E" 1 0
+getF1 1
+CallNative "UNK_27A244D8" 1 0
+fPush 0.070000000298023
+StaticGet1 7
+CallNative "UNK_6F8350CE" 2 0
+Return 2 0
+
+
+//bool. msg 1, ms2
+:ToogleBools
+Function 3 5 0
+
+getF1 0
+push_0
+JumpEQ @Ativar_Bools
+Jump @Desativar_Bools
+
+:Desativar_Bools
+getF1 0
+StaticSet1 100
+push_0
+StaticSet1 100
+getF1 2
+PushS 3000
+Call @DrawNotification
+Return 3 0
+
+:Ativar_Bools
+getF1 0
+StaticSet1 101
+push_1
+StaticSet1 101
+getF1 1
+PushS 3000
+Call @DrawNotification
+Return 3 0
+
+:AddTitle
+Function 1 2 0
+
+Call @Configuracao_de_Texto
+//fonte do titulo
+push_1
+CallNative "SET_TEXT_FONT" 1 0
+fPush 0.80000001192093
+fPush 0.80000001192093
+CallNative "SET_TEXT_SCALE" 2 0
+StaticGet2 437
+CallNative "SET_TEXT_CENTRE" 1 0
+PushString "STRING"
+CallNative "UNK_3E35563E" 1 0
+getF1 0
+CallNative "UNK_27A244D8" 1 0
+StaticGet2 438
+fPush 0.10000000149012
+CallNative "UNK_6F8350CE" 2 0
+Return 1 0
+
+:Draw_rect_2
+Function 0 2 0
+
+StaticGet1 3
+fPush 0.03999999910593
+fMul
+fPush_2.0
+fDiv
+fPush 0.15899999439716
+fAdd
+StaticSet1 5
+StaticGet1 3
+fPush 0.03999999910593
+fMul
+StaticSet1 6
+fPush 0.14499999582767
+StaticGet1 5
+fPush 0.18999999761581
+StaticGet1 6
+Push3 16 16 16
+Push 130
+CallNative "DRAW_RECT" 8 0
+fPush 0.14499999582767
+fPush 0.11749999970198
+fPush 0.18999999761581
+fPush 0.082999996840954
+StaticGet2 434
+StaticGet2 435
+StaticGet2 436
+Push 130
+CallNative "DRAW_RECT" 8 0
+//globo
+PushString "MP_MENU_GLARE"
+CallNative "REQUEST_SCALEFORM_MOVIE" 1 1
+fPush 0.425000011921
+fPush 0.469000011683
+fPush 0.819999992847
+fPush 0.870000004768
+Push3 255 255 255
+Push1 255
+CallNative "DRAW_SCALEFORM_MOVIE" 9 0
+Return 0 0
+
+:AddRodape
+Function 1 2 0
+
+StaticGet1 3
+fPush 0.03999999910593
+fMul
+fPush 0.179000005126
+fAdd
+StaticSet2 432
+fPush 0.14499999582767
+StaticGet2 432
+fPush 0.18999999761581
+fPush 0.03999999910593
+StaticGet2 434
+StaticGet2 435
+StaticGet2 436
+Push 130
+CallNative "DRAW_RECT" 8 0
+StaticGet1 3
+fPush_1.0
+fAdd
+fPush 0.03999999910593
+fMul
+fPush 0.125
+fAdd
+StaticSet2 433
+Call @Configuracao_de_Texto
+fPush 0.34999999403954
+fPush 0.34999999403954
+CallNative "SET_TEXT_SCALE" 2 0
+StaticGet2 437
+CallNative "SET_TEXT_CENTRE" 1 0
+PushString "STRING"
+CallNative "UNK_3E35563E" 1 0
+getF1 0
+CallNative "UNK_27A244D8" 1 0
+StaticGet2 438
+StaticGet2 433
+CallNative "UNK_6F8350CE" 2 0
+Return 1 0
+
+:Draw_rect_1
+Function 0 2 0
+
+fPush 0.14499999582767
+StaticGet1 4
+fPush 0.18999999761581
+fPush 0.03999999910593
+Push3 255 255 255
+Push 130
+CallNative "DRAW_RECT" 8 0
+Return 0 0
+
+//=============================
+
+:Add_Toogle_Cores
+Function 1 2 0
+
+getF1 0
+Switch [0=@Toogle_desativado][1=@Toogle_Ativado][2=@Toogle_Desconhecido]
+
+:Toogle_desativado
+fPush 0.14499999582767
+StaticGet1 4
+fPush 0.18999999761581
+fPush 0.03999999910593
+Push3 255 0 0
+Push 130
+CallNative "DRAW_RECT" 8 0
+Jump @Fim_Toogle_Cores
+
+:Toogle_Ativado
+fPush 0.14499999582767
+StaticGet1 4
+fPush 0.18999999761581
+fPush 0.03999999910593
+Push3 0 255 0
+Push 130
+CallNative "DRAW_RECT" 8 0
+Jump @Fim_Toogle_Cores
+
+:Toogle_Desconhecido
+fPush 0.14499999582767
+StaticGet1 4
+fPush 0.18999999761581
+fPush 0.03999999910593
+StaticGet2 434
+StaticGet2 435
+StaticGet2 436
+Push 130
+CallNative "DRAW_RECT" 8 0
+Jump @Fim_Toogle_Cores
+
+:Fim_Toogle_Cores
+Return 1 0
+
+//==================
+
+:Draw_rect_3
+Function 0 2 0
+
+fPush 0.059999998658895
+StaticGet1 4
+fPush -0.0049999998882413
+fPush 0.03999999910593
+StaticGet2 434
+StaticGet2 435
+StaticGet2 436
+Push 130
+CallNative "DRAW_RECT" 8 0
+Return 0 0
+
+:Menu_Principal
+Function 0 2 0
+
+fPush 9
+StaticSet1 3
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString "Menu By EdUaRdO"
+Call @AddRodape
+PushString "~w~B~s~~w~r~s~~w~e~s~~w~s~s~~w~o~s~"
+Call @AddTitle
+fPush_1.0
+PushString "Jogador"
+Call @AddOption
+fPush_2.0
+PushString "Veiculo"
+Call @AddOption
+fPush_3.0
+PushString "Objetos"
+Call @AddOption
+fPush_4.0
+PushString "Teleport"
+Call @AddOption
+fPush_5.0
+PushString "Diversas"
+Call @AddOption
+fPush_6.0
+PushString "Recovery"
+Call @AddOption
+fPush_7.0
+PushString "Protecao contra Modders"
+Call @AddOption
+fPush 8
+PushString "Configuracoes"
+Call @AddOption
+fPush 9
+PushString "Creditos"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Principal
+Jump @Fim_Menu_Principal
+
+:Switch_Menu_Principal
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Principal_Opcao_1][2=@Menu_Principal_Opcao_2][3=@Menu_Principal_Opcao_3][4=@Menu_Principal_Opcao_4][5=@Menu_Principal_Opcao_5][6=@Menu_Principal_Opcao_6][7=@Menu_Principal_Opcao_7][8=@Menu_Principal_Opcao_8][9=@Menu_Principal_Opcao_9]
+
+:Menu_Principal_Opcao_1
+push_4
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_2
+push_5
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_3
+push_6
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_4
+push_7
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_5
+Push 19
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_6
+Push 27
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_7
+Push 28
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_8
+push_2
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_9
+Push 8
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Fim_Menu_Principal
+Return 0 0
+
+//-------------------------------------------------
+
+:Menu_Config
+Function 0 2 0
+
+fPush_2.0
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+PushString "Config"
+Call @AddTitle
+fPush_1.0
+PushString "Cores"
+Call @AddOption
+fPush_2.0
+PushString "Centralizar o Titulo"
+Call @AddOption
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Config_Opcao_1][2=@Centralizar_Titulo]
+
+:Menu_Config_Opcao_1
+Call @Draw_rect_1
+Jump @Menu_Config_Check
+
+:Centralizar_Titulo
+Call @Toggle_Texto_Centralizado_Secundario
+
+:Menu_Config_Check
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Config
+Jump @Fim_Menu_Config
+
+:Switch_Menu_Config
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Config_Opcao_2_1][2=@Menu_Config_Opcao_2_2]
+
+:Menu_Config_Opcao_2_1
+push_3
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Config
+
+:Menu_Config_Opcao_2_2
+Call @Toggle_Texto_Centralizado
+
+:Fim_Menu_Config
+Return 0 0
+
+//===================================================
+
+:Menu_Cores
+Function 0 2 0
+
+fPush 10
+StaticSet1 3
+push_2
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString "Cores"
+Call @AddTitle
+fPush_1.0
+PushString "~b~Padrao"
+Call @AddOption
+fPush_2.0
+PushString "Vermelho"
+Call @AddOption
+fPush_3.0
+PushString "Verde"
+Call @AddOption
+fPush_4.0
+PushString "Amarelo"
+Call @AddOption
+fPush_5.0
+PushString "Rosa"
+Call @AddOption
+fPush_6.0
+PushString "Roxo"
+Call @AddOption
+fPush_7.0
+PushString "Laranja"
+Call @AddOption
+fPush 8
+PushString "Cyano"
+Call @AddOption
+fPush 9
+PushString "Marron"
+Call @AddOption
+fPush 10
+PushString "Preto"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Cores
+Jump @Fim_Menu_Cores
+
+:Switch_Cores
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Cores_Opcao_1][2=@Cores_Opcao_2][3=@Cores_Opcao_3][4=@Cores_Opcao_4][5=@Cores_Opcao_5][6=@Cores_Opcao_6][7=@Cores_Opcao_7][8=@Cores_Opcao_8][9=@Cores_Opcao_9][10=@Cores_Opcao_10]
+
+:Cores_Opcao_1
+push_7
+StaticSet2 434
+Push 100
+StaticSet2 435
+Push 199
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_2
+Push 255
+StaticSet2 434
+push_0
+StaticSet2 435
+push_0
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_3
+push_0
+StaticSet2 434
+Push 255
+StaticSet2 435
+push_0
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_4
+Push 255
+StaticSet2 434
+Push 255
+StaticSet2 435
+push_0
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_5
+Push 255
+StaticSet2 434
+push_0
+StaticSet2 435
+Push 235
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_6
+Push 75
+StaticSet2 434
+push_0
+StaticSet2 435
+Push 75
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_7
+Push 255
+StaticSet2 434
+Push 160
+StaticSet2 435
+push_0
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_8
+push_0
+StaticSet2 434
+Push 255
+StaticSet2 435
+Push 255
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_9
+Push 63
+StaticSet2 434
+Push 33
+StaticSet2 435
+Push 17
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_10
+push_0
+StaticSet2 434
+push_0
+StaticSet2 435
+push_0
+StaticSet2 436
+
+:Fim_Menu_Cores
+Return 0 0
+
+//--------------------------------------------------------------
+
+:Toggle_Texto_Centralizado_Secundario
+Function 0 2 0
+
+StaticGet2 437
+push_0
+JumpEQ @Toggle_Texto_Centralizado_Secundario_Check
+push_1
+Call @Add_Toogle_Cores
+Jump @Toggle_Texto_Centralizado_Secundario_Fim
+
+:Toggle_Texto_Centralizado_Secundario_Check
+push_0
+Call @Add_Toogle_Cores
+
+:Toggle_Texto_Centralizado_Secundario_Fim
+Return 0 0
+
+//================
+
+:Toggle_Texto_Centralizado
+Function 0 2 0
+
+StaticGet2 437
+push_0
+JumpEQ @Toggle_Texto_Centralizado_2
+push_0
+StaticSet2 437
+fPush 0.070000000298023
+StaticSet2 438
+Jump @Fim_Toggle_Texto_Centralizado
+
+:Toggle_Texto_Centralizado_2
+push_1
+StaticSet2 437
+fPush 0.14499999582767
+StaticSet2 438
+
+:Fim_Toggle_Texto_Centralizado
+Return 0 0
+
+
+//===============================================
+
+:Menu_Jogador
+Function 0 2 0
+
+fPush 11
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Jogador"
+Call @AddTitle
+fPush_1.0
+PushString "~b~Scenarios ~y~->"
+Call @AddOption
+fPush_2.0
+PushString "~b~Trajes ~y~->"
+Call @AddOption
+fPush_3.0
+PushString "~b~Mudar de Jogador ~y~->"
+Call @AddOption
+fPush_4.0
+PushString "~b~Armas ~y~->"
+Call @AddOption
+fPush_5.0
+PushString "Imortal"
+Call @AddOption
+fPush_6.0
+PushString "Invisivel"
+Call @AddOption
+fPush_7.0
+PushString "Super Pulo"
+Call @AddOption
+fPush 8
+PushString "Sem Policia"
+Call @AddOption
+fPush 9
+PushString "Encolher Personagem"
+Call @AddOption
+fPush 10
+PushString "Correr mais rapido"
+Call @AddOption
+fPush 11
+PushString "Atravessar os Objetos"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Jogador
+Jump @Fim_Menu_Jogador
+
+:Switch_Menu_Jogador
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Jogador_Opcao_1][2=@Menu_Jogador_Opcao_2][3=@Menu_Jogador_Opcao_3][4=@Menu_Jogador_Opcao_4][5=@Menu_Jogador_Opcao_5][6=@Menu_Jogador_Opcao_6][7=@Menu_Jogador_Opcao_7][8=@Menu_Jogador_Opcao_8][9=@Menu_Jogador_Opcao_9][10=@Menu_Jogador_Opcao_10][11=@Menu_Jogador_Opcao_11]
+
+:Menu_Jogador_Opcao_1
+Push 9
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_2
+Push 10
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_3
+Push 11
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_4
+Push 24
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_5
+StaticGet2 439
+PushString "Ativado"
+PushString "Desativado"
+Call @ToogleBools
+//Call @Void_GodMod
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_ENTITY_VISIBLE" 1 1
+push_0
+JumpEQ @Desativar_Invisivel
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_ENTITY_VISIBLE" 2 0
+push_1
+StaticSet2 440
+PushString "Invisivel ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Jogador
+
+:Desativar_Invisivel
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "SET_ENTITY_VISIBLE" 2 0
+push_0
+StaticSet2 440
+PushString "Invisivel ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_7
+Call @Void_Super_Pulo
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_8
+Call @Void_Sem_Policia
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_9
+Call @Void_Shrink
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_10
+Call @Void_Corridinha
+Jump @Fim_Menu_Jogador
+
+:Menu_Jogador_Opcao_11
+Call @Void_Atravessar_Objetos
+Jump @Fim_Menu_Jogador
+
+
+:Fim_Menu_Jogador
+Return 0 0
+
+//----------------------------------ARMAS---------------------
+
+:Menu_Opcoes_Armas
+Function 0 2 0
+
+fPush 8
+StaticSet1 3
+push_4
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Opcoes Armas"
+Call @AddTitle
+fPush_1.0
+PushString "Todas as Armas"
+Call @AddOption
+fPush_2.0
+PushString "Municao Infinita"
+Call @AddOption
+fPush_3.0
+PushString "Matar com 1 tiro"
+Call @AddOption
+fPush_4.0
+PushString "Arma de Dinheiro"
+Call @AddOption
+fPush_5.0
+PushString "Municao Explosiva"
+Call @AddOption
+fPush_6.0
+PushString "Municao Incendiaria"
+Call @AddOption
+fPush_7.0
+PushString "Arma Deletadora"
+Call @AddOption
+fPush 8
+PushString "Arma de Teleport"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Opcoes_Armas
+Jump @Fim_Menu_Opcoes_Armas
+
+:Switch_Menu_Opcoes_Armas
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Opcoes_Armas_Opcao_1][2=@Menu_Opcoes_Armas_Opcao_2][3=@Menu_Opcoes_Armas_Opcao_3][4=@Menu_Opcoes_Armas_Opcao_4][5=@Menu_Opcoes_Armas_Opcao_5][6=@Menu_Opcoes_Armas_Opcao_6][7=@Menu_Opcoes_Armas_Opcao_7][8=@Menu_Opcoes_Armas_Opcao_8]
+
+:Menu_Opcoes_Armas_Opcao_1
+Push 2578778090
+Call @Dar_arma
+Push 1737195953
+Call @Dar_arma
+Push 1317494643
+Call @Dar_arma
+Push 2508868239
+Call @Dar_arma
+Push 1141786504
+Call @Dar_arma
+Push 2227010557
+Call @Dar_arma
+Push 453432689
+Call @Dar_arma
+Push 1593441988
+Call @Dar_arma
+Push 584646201
+Call @Dar_arma
+Push 2578377531
+Call @Dar_arma
+Push 324215364
+Call @Dar_arma
+Push 736523883
+Call @Dar_arma
+Push 4024951519
+Call @Dar_arma
+Push 3220176749
+Call @Dar_arma
+Push 2210333304
+Call @Dar_arma
+Push 2937143193
+Call @Dar_arma
+Push 2634544996
+Call @Dar_arma
+Push 2144741730
+Call @Dar_arma
+Push 487013001
+Call @Dar_arma
+Push 2017895192
+Call @Dar_arma
+Push 3800352039
+Call @Dar_arma
+Push 2640438543
+Call @Dar_arma
+Push 911657153
+Call @Dar_arma
+Push 100416529
+Call @Dar_arma
+Push 205991906
+Call @Dar_arma
+Push 2726580491
+Call @Dar_arma
+Push 1305664598
+Call @Dar_arma
+Push 2982836145
+Call @Dar_arma
+Push 1119849093
+Call @Dar_arma
+Push 2481070269
+Call @Dar_arma
+Push 741814745
+Call @Dar_arma
+Push 4256991824
+Call @Dar_arma
+Push 2694266206
+Call @Dar_arma
+Push 615608432
+Call @Dar_arma
+Push 101631238
+Call @Dar_arma
+Push 883325847
+Call @Dar_arma
+Push 600439132
+Call @Dar_arma
+Push 1233104067
+Call @Dar_arma
+Push 4192643659
+Call @Dar_arma
+Push 1627465347
+Call @Dar_arma
+Push 3231910285
+Call @Dar_arma
+Push 3523564046
+Call @Dar_arma
+Push 3218215474
+Call @Dar_arma
+Push 2132975508
+Call @Dar_arma
+Push 2460120199
+Call @Dar_arma
+Push 137902532
+Call @Dar_arma
+Push 2138347493
+Call @Dar_arma
+Push 2828843422
+Call @Dar_arma
+Push 984333226
+Call @Dar_arma
+Push 3342088282
+Call @Dar_arma
+Push 1672152130
+Call @Dar_arma
+Push 2874559379
+Call @Dar_arma
+Push 126349499
+Call @Dar_arma
+Push 1198879012
+Call @Dar_arma
+Push 171789620
+Call @Dar_arma
+Push 3696079510
+Call @Dar_arma
+Push 3638508604
+Call @Dar_arma
+Jump @Fim_Menu_Opcoes_Armas
+
+:Menu_Opcoes_Armas_Opcao_2
+Call @Void_Municao_Infinita
+Jump @Fim_Menu_Opcoes_Armas
+
+:Menu_Opcoes_Armas_Opcao_3
+Call @Void_Matar_1_Tiro
+Jump @Fim_Menu_Opcoes_Armas
+
+:Menu_Opcoes_Armas_Opcao_4
+Call @Void_Arma_Dinheiro
+Jump @Fim_Menu_Opcoes_Armas
+
+:Menu_Opcoes_Armas_Opcao_5
+Call @Void_Municao_Explosiva
+Jump @Fim_Menu_Opcoes_Armas
+
+:Menu_Opcoes_Armas_Opcao_6
+Call @Void_Arma_Fogo
+Jump @Fim_Menu_Opcoes_Armas
+
+:Menu_Opcoes_Armas_Opcao_7
+Call @Void_Arma_Deletadora
+Jump @Fim_Menu_Opcoes_Armas
+
+:Menu_Opcoes_Armas_Opcao_8
+Call @Void_Arma_Teleport
+Jump @Fim_Menu_Opcoes_Armas
+
+
+:Fim_Menu_Opcoes_Armas
+Return 0 0
+
+//=============SCENARIOS==========================
+
+:Menu_Scenarios
+Function 0 2 0
+
+fPush 10
+StaticSet1 3
+push_4
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Scenarios"
+Call @AddTitle
+fPush_1.0
+PushString "~r~Parar Animacao"
+Call @AddOption
+fPush_2.0
+PushString "Musica"
+Call @AddOption
+fPush_3.0
+PushString "Beber Cafe"
+Call @AddOption
+fPush_4.0
+PushString "Binoculos"
+Call @AddOption
+fPush_5.0
+PushString "Britadeira"
+Call @AddOption
+fPush_6.0
+PushString "Fumar"
+Call @AddOption
+fPush_7.0
+PushString "Jardineiro"
+Call @AddOption
+fPush 8
+PushString "Musculacao"
+Call @AddOption
+fPush 9
+PushString "Pescando"
+Call @AddOption
+fPush 10
+PushString "Soldando"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Scenarios
+Jump @Fim_Menu_Scenarios
+
+:Switch_Menu_Scenarios
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Scenarios_Opcao_1][2=@Menu_Scenarios_Opcao_2][3=@Menu_Scenarios_Opcao_3][4=@Menu_Scenarios_Opcao_4][5=@Menu_Scenarios_Opcao_5][6=@Menu_Scenarios_Opcao_6][7=@Menu_Scenarios_Opcao_7][8=@Menu_Scenarios_Opcao_8][9=@Menu_Scenarios_Opcao_9][10=@Menu_Scenarios_Opcao_10]
+
+:Menu_Scenarios_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_PED_TASKS_IMMEDIATELY" 1 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_MUSICIAN"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_AA_COFFEE"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_BINOCULARS"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_CONST_DRILL"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_SMOKING_POT"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_GARDENER_LEAF_BLOWER"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_MUSCLE_FREE_WEIGHTS"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_STAND_FISHING"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Menu_Scenarios_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_WELDING"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+Jump @Fim_Menu_Scenarios
+
+:Fim_Menu_Scenarios
+Return 0 0
+
+//=================TRAJES==============
+:Menu_Trajes
+Function 0 2 0
+
+fPush 15
+StaticSet1 3
+push_4
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Trajes"
+Call @AddTitle
+fPush_1.0
+PushString "~r~Resetar Aparencia"
+Call @AddOption
+fPush_2.0
+PushString "Xadrez ~b~(Homem)~s~"
+Call @AddOption
+fPush_3.0
+PushString "Policial ~b~(Homem)~s~"
+Call @AddOption
+fPush_4.0
+PushString "Invisivel ~b~(Homem)~s~"
+Call @AddOption
+fPush_5.0
+PushString "Presidiario ~b~(Homem)~s~"
+Call @AddOption
+fPush_6.0
+PushString "USA Americano ~b~(Homem)~s~"
+Call @AddOption
+fPush_7.0
+PushString "GunMan ~b~(Homem)~s~"
+Call @AddOption
+fPush 8
+PushString "Seguranca ~b~(Homem)~s~"
+Call @AddOption
+fPush 9
+PushString "Piloto ~b~(Homem)~s"
+Call @AddOption
+fPush 10
+PushString "Papai Noel ~b~(Homem)~s~"
+Call @AddOption
+fPush 11
+PushString "Lixeiro ~b~(Homem)~s~"
+Call @AddOption
+fPush 12
+PushString "Pelada ~p~(Mulher)~s"
+Call @AddOption
+fPush 13
+PushString "Policial Sexy ~p~(Mulher)~s~"
+Call @AddOption
+fPush 14
+PushString "Policial Normal ~p~(Mulher)~s~"
+Call @AddOption
+fPush 15
+PushString "USA Americana ~p~(Mulher)~s~"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Trajes
+Jump @Fim_Menu_Trajes
+
+:Switch_Menu_Trajes
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Trajes_Opcao_1][2=@Menu_Trajes_Opcao_2][3=@Menu_Trajes_Opcao_3][4=@Menu_Trajes_Opcao_4][5=@Menu_Trajes_Opcao_5][6=@Menu_Trajes_Opcao_6][7=@Menu_Trajes_Opcao_7][8=@Menu_Trajes_Opcao_8][9=@Menu_Trajes_Opcao_9][10=@Menu_Trajes_Opcao_10][11=@Menu_Trajes_Opcao_11][12=@Menu_Trajes_Opcao_12][13=@Menu_Trajes_Opcao_13][14=@Menu_Trajes_Opcao_14][15=@Menu_Trajes_Opcao_15]
+
+:Menu_Trajes_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0 
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+push_2
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+push_2
+Push 15
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 57
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+push_2
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 35
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 25
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 58
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 55
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+Push 57
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 13
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 11
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 13
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 15
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 15
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+push_5
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 9
+push_4
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 25
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+Push 17
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 15
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+push_5
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 93
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 29
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 22
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 52
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 46
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+Push 57
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 96
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 39
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 25
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 58
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_6
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 66
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+push_4
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 26
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 24
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 58
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 53
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 16
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 30
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+Push 39
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 24
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 15
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 48
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+Push 8
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 12
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 19
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+push_4
+push_4
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+Push 10
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 21
+push_2
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 19
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_11
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 95
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 36
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 25
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+Push 60
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 59
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 56
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_12
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_0
+Push 31
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_3
+push_2
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 15
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 15
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 14
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_2
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+push_2
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+push_0
+Push 16
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_13
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_0
+Push 31
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_3
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 15
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 20
+push_2
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 14
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_2
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 35
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+push_5
+push_7
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_14
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_0
+Push 31
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_4
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 14
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 8
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 25
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_6
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+Push 35
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 48
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Menu_Trajes_Opcao_15
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_ALL_PED_PROPS" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_0
+Push 31
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_4
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+Push 9
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+Push 28
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+Push 14
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_6
+push_1
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+push_2
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+Push 39
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+Jump @Fim_Menu_Trajes
+
+:Fim_Menu_Trajes
+Return 0 0
+
+//=================Skins=======================
+
+:Menu_Skins
+Function 0 2 0
+
+fPush 11
+StaticSet1 3
+push_4
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Skins"
+Call @AddTitle
+fPush_1.0
+PushString "Chop"
+Call @AddOption
+fPush_2.0
+PushString "Alien"
+Call @AddOption
+fPush_3.0
+PushString "Maromba"
+Call @AddOption
+fPush_4.0
+PushString "Palhaco"
+Call @AddOption
+fPush_5.0
+PushString "Stripper"
+Call @AddOption
+fPush_6.0
+PushString "SWAT"
+Call @AddOption
+fPush_7.0
+PushString "Peladao"
+Call @AddOption
+fPush 8
+PushString "Jesus"
+Call @AddOption
+fPush 9
+PushString "Pogo"
+Call @AddOption
+fPush 10
+PushString "Zumbi"
+Call @AddOption
+fPush 11
+PushString "Bigfoot"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Skins
+Jump @Fim_Menu_Skins
+
+:Switch_Menu_Skins
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Skins_Opcao_1][2=@Menu_Skins_Opcao_2][3=@Menu_Skins_Opcao_3][4=@Menu_Skins_Opcao_4][5=@Menu_Skins_Opcao_5][6=@Menu_Skins_Opcao_6][7=@Menu_Skins_Opcao_7][8=@Menu_Skins_Opcao_8][9=@Menu_Skins_Opcao_9][10=@Menu_Skins_Opcao_10][11=@Menu_Skins_Opcao_11]
+
+:Menu_Skins_Opcao_1
+PushString "a_c_chop"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "a_c_chop"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_2
+PushString "s_m_m_movalien_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "s_m_m_movalien_01"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_3
+PushString "u_m_y_babyd"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "u_m_y_babyd"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_4
+PushString "s_m_y_clown_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "s_m_y_clown_01"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_5
+PushString "csb_stripper_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "csb_stripper_01"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_6
+PushString "s_m_y_swat_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "s_m_y_swat_01"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_7
+PushString "a_m_y_acult_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "a_m_y_acult_01"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_8
+PushString "u_m_m_jesus_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "u_m_m_jesus_01"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_9
+PushString "u_m_y_pogo_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "u_m_y_pogo_01"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_10
+PushString "u_m_y_zombie_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "u_m_y_zombie_01"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+:Menu_Skins_Opcao_11
+PushString "ig_orleans"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+CallNative "PLAYER_ID" 0 1
+PushString "ig_orleans"
+CallNative "GET_HASH_KEY" 1 1
+CallNative "SET_PLAYER_MODEL" 2 0
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_RANDOM_COMPONENT_VARIATION" 2 0
+Jump @Fim_Menu_Skins
+
+
+:Fim_Menu_Skins
+Return 0 0
+
+//================================================
+
+:Segundo_Sub_menu
+Function 0 2 0
+
+fPush 13
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Veiculo"
+Call @AddTitle
+fPush_1.0
+PushString "~b~Modificacoes ~y~->"
+Call @AddOption
+fPush_2.0
+PushString "Nitro"
+Call @AddOption
+fPush_3.0
+PushString "Super Freio"
+Call @AddOption
+fPush_4.0
+PushString "Tornar Indestrutivel"
+Call @AddOption
+fPush_5.0
+PushString "Carro Invisivel"
+Call @AddOption
+fPush_6.0
+PushString "Modo Drift"
+Call @AddOption
+fPush_7.0
+PushString "Tunagem Completa"
+Call @AddOption
+fPush 8
+PushString "Desvirar"
+Call @AddOption
+fPush 9
+PushString "Carbonizar"
+Call @AddOption
+fPush 10
+PushString "Consertar Veiculo"
+Call @AddOption
+fPush 11
+PushString "------"
+Call @AddOption
+fPush 12
+PushString "-------"
+Call @AddOption
+fPush 13
+PushString "-------"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Segundo_Sub_menu
+Jump @Fim_Segundo_Sub_menu
+
+:Switch_Segundo_Sub_menu
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Segundo_Sub_menu_Opcao_1][2=@Segundo_Sub_menu_Opcao_2][3=@Segundo_Sub_menu_Opcao_3][4=@Segundo_Sub_menu_Opcao_4][5=@Segundo_Sub_menu_Opcao_5][6=@Segundo_Sub_menu_Opcao_6][7=@Segundo_Sub_menu_Opcao_7][8=@Segundo_Sub_menu_Opcao_8][9=@Segundo_Sub_menu_Opcao_9][10=@Segundo_Sub_menu_Opcao_10][11=@Segundo_Sub_menu_Opcao_11][12=@Segundo_Sub_menu_Opcao_12][13=@Segundo_Sub_menu_Opcao_13]
+
+:Segundo_Sub_menu_Opcao_1
+Push 26
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+//Push 1663218586
+//Call @CarregarModelo
+//Push 1663218586
+//CallNative "PLAYER_PED_ID" 0 1
+//push_1
+//CallNative "GET_ENTITY_COORDS" 2 3
+//push_0
+//push_0
+//push_0
+//CallNative "CREATE_VEHICLE" 7 1
+//setF1 6
+//getF1 6
+//CallNative "UNK_31A630A4" 1 0
+//getF1 6
+//CallNative "VEH_TO_NET" 1 1
+//push_1
+//CallNative "SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES" 2 0
+Jump @Fim_Segundo_Sub_menu
+
+
+:Segundo_Sub_menu_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+fPush 100
+CallNative "SET_VEHICLE_FORWARD_SPEED" 2 0
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+fPush 0
+CallNative "SET_VEHICLE_FORWARD_SPEED" 2 0
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+setF1 3
+getF1 3
+push_1
+push_1
+CallNative "SET_ENTITY_INVINCIBLE" 3 0
+getF1 3
+push_0
+CallNative "SET_VEHICLE_CAN_BE_VISIBLY_DAMAGED" 2 0
+getF1 3
+push_0
+CallNative "SET_VEHICLE_TYRES_CAN_BURST" 2 0
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+Call @Void_Carro_Invisivel
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+Call @Void_Drift
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+Call @Void_Max_Upgrade
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+StaticSet2 533
+StaticGet2 533
+StaticGet2 533
+CallNative "DOES_ENTITY_EXIST" 1 1
+JumpFalse @Fim_Segundo_Sub_menu
+StaticGet2 533
+Call @RequestControlOfEntiity
+push_0
+JumpEQ @Fim_Segundo_Sub_menu
+StaticGet2 533
+CallNative "SET_VEHICLE_ON_GROUND_PROPERLY" 1 1
+Drop
+PushString "~b~Veiculo desvirado"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_9
+Call @Void_Carbonizar
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+CallNative "SET_VEHICLE_FIXED" 1 0
+PushString "~b~Veiculo consertado"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_11
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_12
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_13
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Fim_Segundo_Sub_menu
+Return 0 0
+
+//------------------MODIFICACOES DO CARRO
+
+:Menu_Veiculo_Modificacoes
+Function 0 2 0
+
+fPush 9
+StaticSet1 3
+push_5
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Modificacoes"
+Call @AddTitle
+fPush_1.0
+PushString "Cor Aleatoria"
+Call @AddOption
+fPush_2.0
+PushString "Abaixar os Vidros"
+Call @AddOption
+fPush_3.0
+PushString "Levantar os Vidros"
+Call @AddOption
+fPush_4.0
+PushString "Abrir as portas"
+Call @AddOption
+fPush_5.0
+PushString "Fechar todas as portas"
+Call @AddOption
+fPush_6.0
+PushString "Aplicar Som de Muscle Car"
+Call @AddOption
+fPush_7.0
+PushString "Aumentar Velocidade"
+Call @AddOption
+fPush 8
+PushString "Super Torque"
+Call @AddOption
+fPush 9
+PushString "Ativar Neon ~b~(Cor do Mod)"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Veiculo_Modificacoes
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Switch_Menu_Veiculo_Modificacoes
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Veiculo_Modificacoes_Opcao_1][2=@Menu_Veiculo_Modificacoes_Opcao_2][3=@Menu_Veiculo_Modificacoes_Opcao_3][4=@Menu_Veiculo_Modificacoes_Opcao_4][5=@Menu_Veiculo_Modificacoes_Opcao_5][6=@Menu_Veiculo_Modificacoes_Opcao_6][7=@Menu_Veiculo_Modificacoes_Opcao_7][8=@Menu_Veiculo_Modificacoes_Opcao_8][9=@Menu_Veiculo_Modificacoes_Opcao_9]
+
+:Menu_Veiculo_Modificacoes_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_0
+Push 157
+CallNative "GET_RANDOM_INT_IN_RANGE" 2 1
+push_0
+Push 157
+CallNative "GET_RANDOM_INT_IN_RANGE" 2 1
+CallNative "SET_VEHICLE_COLOURS" 3 0
+PushString "~g~Cores aplicadas"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Menu_Veiculo_Modificacoes_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Call @RequestControlOfEntiity
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+CallNative "UNK_51A16DC6" 1 0
+PushString "~g~Vidros abaixados"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Menu_Veiculo_Modificacoes_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Call @RequestControlOfEntiity
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_0
+CallNative "UNK_83B7E06A" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_1
+CallNative "UNK_83B7E06A" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_2
+CallNative "UNK_83B7E06A" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_3
+CallNative "UNK_83B7E06A" 1 0
+PushString "~g~Vidros levantados"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Menu_Veiculo_Modificacoes_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Call @RequestControlOfEntiity
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_0
+push_0
+push_0
+CallNative "UNK_BB75D38B" 4 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_1
+push_0
+push_0
+CallNative "UNK_BB75D38B" 4 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_2
+push_0
+push_0
+CallNative "UNK_BB75D38B" 4 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_3
+push_0
+push_0
+CallNative "UNK_BB75D38B" 4 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_4
+push_0
+push_0
+CallNative "UNK_BB75D38B" 4 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_5
+push_0
+push_0
+CallNative "UNK_BB75D38B" 4 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_6
+push_0
+push_0
+CallNative "UNK_BB75D38B" 4 0
+PushString "~g~Portas abertas"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Menu_Veiculo_Modificacoes_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Call @RequestControlOfEntiity
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_0
+push_0
+CallNative "UNK_142606BD" 3 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_1
+push_0
+CallNative "UNK_142606BD" 3 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_2
+push_0
+CallNative "UNK_142606BD" 3 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_3
+push_0
+CallNative "UNK_142606BD" 3 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_4
+push_0
+CallNative "UNK_142606BD" 3 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_5
+push_0
+CallNative "UNK_142606BD" 3 0
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_6
+push_0
+CallNative "UNK_142606BD" 3 0
+PushString "~g~Portas abertas"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Menu_Veiculo_Modificacoes_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Call @RequestControlOfEntiity
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+PushString "monster"
+CallNative "UNK_33B0B007" 2 0
+PushString "~g~Novo motor aplicado"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Menu_Veiculo_Modificacoes_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Call @RequestControlOfEntiity
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+fPush 105.0
+CallNative "UNK_E943B09C" 2 0
+PushString "~g~Velocidade aumentada"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Menu_Veiculo_Modificacoes_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Call @RequestControlOfEntiity
+//-----------
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+:Menu_Veiculo_Modificacoes_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro_2
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Call @RequestControlOfEntiity
+//-----------
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+
+:Max_Upgrade_semCarro_2
+PushString "~r~Voce precisa de um veiculo"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Menu_Veiculo_Modificacoes
+
+
+:Fim_Menu_Veiculo_Modificacoes
+Return 0 0
+
+//========================
+
+:Terceiro_Sub_menu
+Function 0 2 0
+
+fPush 8
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Objetos"
+Call @AddTitle
+fPush_1.0
+PushString "Mancha de Oleo"
+Call @AddOption
+fPush_2.0
+PushString "Maconha"
+Call @AddOption
+fPush_3.0
+PushString "Boia"
+Call @AddOption
+fPush_4.0
+PushString "Guitarra"
+Call @AddOption
+fPush_5.0
+PushString "Cone de Transito"
+Call @AddOption
+fPush_6.0
+PushString "Bola de Volei"
+Call @AddOption
+fPush_7.0
+PushString "Barril Radiotivo"
+Call @AddOption
+fPush 8
+PushString "Lampada Acesa"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Terceiro_Sub_menu
+Jump @Fim_Terceiro_Sub_menu
+
+:Switch_Terceiro_Sub_menu
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Terceiro_Sub_menu_Opcao_1][2=@Terceiro_Sub_menu_Opcao_2][3=@Terceiro_Sub_menu_Opcao_3][4=@Terceiro_Sub_menu_Opcao_4][5=@Terceiro_Sub_menu_Opcao_5][6=@Terceiro_Sub_menu_Opcao_6][7=@Terceiro_Sub_menu_Opcao_7][8=@Terceiro_Sub_menu_Opcao_8]
+
+:Terceiro_Sub_menu_Opcao_1
+Push 3802531855
+Call @CarregarModelo
+Push 3802531855
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+CallNative "OBJ_TO_NET" 1 1
+Drop
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_2
+Push 452618762
+Call @CarregarModelo
+Push 452618762
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+CallNative "OBJ_TO_NET" 1 1
+Drop
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_3
+Push 1677315747
+Call @CarregarModelo
+Push 1677315747
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+CallNative "OBJ_TO_NET" 1 1
+Drop
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_4
+Push 2766659751
+Call @CarregarModelo
+Push 2766659751
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+CallNative "OBJ_TO_NET" 1 1
+Drop
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_5
+Push 3258159972
+Call @CarregarModelo
+Push 3258159972
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+CallNative "OBJ_TO_NET" 1 1
+Drop
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_6
+Push 1017479830
+Call @CarregarModelo
+Push 1017479830
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+CallNative "OBJ_TO_NET" 1 1
+Drop
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_7
+Push 1200261250
+Call @CarregarModelo
+Push 1200261250
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+CallNative "OBJ_TO_NET" 1 1
+Drop
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_8
+Push 3577076310
+Call @CarregarModelo
+Push 3577076310
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+CallNative "OBJ_TO_NET" 1 1
+Drop
+Jump @Fim_Terceiro_Sub_menu
+
+:Fim_Terceiro_Sub_menu
+Return 0 0
+
+//-------------------------------------------------
+
+:Quarto_Sub_menu
+Function 0 2 0
+
+fPush 9
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Teleports"
+Call @AddTitle
+fPush_1.0
+PushString "Interiores ~y~->"
+Call @AddOption
+fPush_2.0
+PushString "Montanhas ~y~->"
+Call @AddOption
+fPush_3.0
+PushString "Aeroportos ~y~->"
+Call @AddOption
+fPush_4.0
+PushString "Cidade ~y~->"
+Call @AddOption
+fPush_5.0
+PushString "Deserto ~y~->"
+Call @AddOption
+fPush_6.0
+PushString "Locais Legais e Uteis ~y~->"
+Call @AddOption
+fPush_7.0
+PushString "Debaixo da Agua ~y~->"
+Call @AddOption
+fPush 8
+PushString "~b~Veiculo mais proximo"
+Call @AddOption
+fPush 9
+PushString "~b~2 metros a frente"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Quarto_Sub_menu
+Jump @Fim_Quarto_Sub_menu
+
+:Switch_Quarto_Sub_menu
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Quarto_Sub_menu_Opcao_1][2=@Quarto_Sub_menu_Opcao_2][3=@Quarto_Sub_menu_Opcao_3][4=@Quarto_Sub_menu_Opcao_4][5=@Quarto_Sub_menu_Opcao_5][6=@Quarto_Sub_menu_Opcao_6][7=@Quarto_Sub_menu_Opcao_7][8=@Quarto_Sub_menu_Opcao_8][9=@Quarto_Sub_menu_Opcao_9]
+
+:Quarto_Sub_menu_Opcao_1
+Push 12
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_2
+Push 13
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_3
+Push 14
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_4
+Push 15
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_5
+Push 16
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_6
+Push 17
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_7
+Push 18
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "GET_ENTITY_COORDS" 2 3
+fPush 100
+push_0
+Push 4
+CallNative "GET_CLOSEST_VEHICLE" 6 1
+setF1 3
+getF1 3
+CallNative "DOES_ENTITY_EXIST" 1 1
+CallNative "PLAYER_PED_ID" 0 1
+getF1 3
+Push -1
+CallNative "SET_PED_INTO_VEHICLE" 3 0
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+fPush_0.0
+fPush_2.0
+fPush_0.0
+CallNative "GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS" 4 3
+StaticSet2 472
+StaticSet2 473
+StaticSet2 474
+CallNative "PLAYER_PED_ID" 0 1
+StaticGet2 474
+StaticGet2 473
+StaticGet2 472
+push_0
+push_0
+push_0
+CallNative "SET_ENTITY_COORDS_NO_OFFSET" 7 0
+Jump @Fim_Quarto_Sub_menu
+
+:Fim_Quarto_Sub_menu
+Return 0 0
+
+//------------------------Tleports Interios--------------------
+
+
+:Menu_Teleports_Interior
+Function 0 2 0
+
+fPush 14
+StaticSet1 3
+push_7
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Interiores"
+Call @AddTitle
+fPush_1.0
+PushString "Departamento de Policia"
+Call @AddOption
+fPush_2.0
+PushString "Escritorio da Ammunation"
+Call @AddOption
+fPush_3.0
+PushString "Cofre do Banco"
+Call @AddOption
+fPush_4.0
+PushString "Banco de Blaine County"
+Call @AddOption
+fPush_5.0
+PushString "Sala de Tortura"
+Call @AddOption
+fPush_6.0
+PushString "Predio do FIB"
+Call @AddOption
+fPush_7.0
+PushString "Escritorio da IAA"
+Call @AddOption
+fPush 8
+PushString "Tunel da Humane"
+Call @AddOption
+fPush 9
+PushString "Apartamento Secreto"
+Call @AddOption
+fPush 10
+PushString "Apartamento Eclipse"
+Call @AddOption
+fPush 11
+PushString "Torre do Zancudo"
+Call @AddOption
+fPush 12
+PushString "Escritorio do StripClub"
+Call @AddOption
+fPush 13
+PushString "Quartos do StripClub"
+Call @AddOption
+fPush 14
+PushString "Mansao do Madrazo"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Teleports_Interior
+Jump @Fim_Menu_Teleports_Interior
+
+:Switch_Menu_Teleports_Interior
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Teleports_Interior_Opcao_1][2=@Menu_Teleports_Interior_Opcao_2][3=@Menu_Teleports_Interior_Opcao_3][4=@Menu_Teleports_Interior_Opcao_4][5=@Menu_Teleports_Interior_Opcao_5][6=@Menu_Teleports_Interior_Opcao_6][7=@Menu_Teleports_Interior_Opcao_7][8=@Menu_Teleports_Interior_Opcao_8][9=@Menu_Teleports_Interior_Opcao_9][10=@Menu_Teleports_Interior_Opcao_10][11=@Menu_Teleports_Interior_Opcao_11][12=@Menu_Teleports_Interior_Opcao_12][13=@Menu_Teleports_Interior_Opcao_13][14=@Menu_Teleports_Interior_Opcao_14]
+
+:Menu_Teleports_Interior_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+fPush 436.491
+fPush -982.172
+fPush 30.699
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+fPush 12.494
+fPush -1110.130
+fPush 29.797
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+fPush 255.851
+fPush 217.030
+fPush 101.683
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+fPush -109.299
+fPush 6464.035
+fPush 31.627
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+fPush 147.170
+fPush -2201.804
+fPush 4.688
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+fPush 135.733
+fPush -749.216
+fPush 258.152
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+fPush 117.220
+fPush -620.938
+fPush 206.047
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+fPush 3525.495
+fPush 3705.301
+fPush 20.992
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+fPush -110.5973
+fPush -8.3426
+fPush 70.5196
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+fPush -795.7271
+fPush 335.1845
+fPush 206.2184
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_11
+CallNative "PLAYER_PED_ID" 0 1
+fPush -2356.094
+fPush 3248.6450
+fPush 101.4474
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_12
+CallNative "PLAYER_PED_ID" 0 1
+fPush 95.4870
+fPush -1290.876
+fPush 29.2688
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_13
+CallNative "PLAYER_PED_ID" 0 1
+fPush 112.0143
+fPush -1303.848
+fPush 29.0194
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Menu_Teleports_Interior_Opcao_14
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1019.163
+fPush 670.3194
+fPush 156.2754
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Interior
+
+:Fim_Menu_Teleports_Interior
+Return 0 0
+
+
+//==============teleports montanhas
+
+:Menu_Teleports_Montanhas
+Function 0 2 0
+
+fPush_3.0
+StaticSet1 3
+push_7
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Montanhas"
+Call @AddTitle
+fPush_1.0
+PushString "Mount Chilliad"
+Call @AddOption
+fPush_2.0
+PushString "Mount Gordo"
+Call @AddOption
+fPush_3.0
+PushString "Mount Josiah"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Teleports_Montanhas
+Jump @Fim_Menu_Teleports_Montanhas
+
+:Switch_Menu_Teleports_Montanhas
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Teleports_Montanhas_Opcao_1][2=@Menu_Teleports_Montanhas_Opcao_2][3=@Menu_Teleports_Montanhas_Opcao_3]
+
+:Menu_Teleports_Montanhas_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+fPush 494.7804
+fPush 5586.4990
+fPush 794.1320
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Montanhas
+
+:Menu_Teleports_Montanhas_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+fPush 2877.633
+fPush 5911.078
+fPush 369.624
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Montanhas
+
+:Menu_Teleports_Montanhas_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1184.308
+fPush 3862.640
+fPush 488.6655
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Montanhas
+
+:Fim_Menu_Teleports_Montanhas
+Return 0 0
+
+
+//=========TELEPORTS AEROPORTOS=======
+
+
+:Menu_Teleports_Aeroportos
+Function 0 2 0
+
+fPush_4.0
+StaticSet1 3
+push_7
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Aeroportos"
+Call @AddTitle
+fPush_1.0
+PushString "Aeroporto de LS"
+Call @AddOption
+fPush_2.0
+PushString "Aeroporto de Sandy Shores"
+Call @AddOption
+fPush_3.0
+PushString "Aeroporto Zancudo"
+Call @AddOption
+fPush_4.0
+PushString "Aeroporto do Trevor"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Teleports_Aeroportos
+Jump @Fim_Menu_Teleports_Aeroportos
+
+:Switch_Menu_Teleports_Aeroportos
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Teleports_Aeroportos_Opcao_1][2=@Menu_Teleports_Aeroportos_Opcao_2][3=@Menu_Teleports_Aeroportos_Opcao_3][4=@Menu_Teleports_Aeroportos_Opcao_4]
+
+:Menu_Teleports_Aeroportos_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1135.331
+fPush -2885.236
+fPush 13.9432
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Aeroportos
+
+:Menu_Teleports_Aeroportos_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+fPush 1792.4514
+fPush 3247.9148
+fPush 42.6140
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Aeroportos
+
+:Menu_Teleports_Aeroportos_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+fPush -2216.118
+fPush 3222.1270
+fPush 32.8101
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Aeroportos
+
+:Menu_Teleports_Aeroportos_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+fPush 2126.4783
+fPush 4793.7568
+fPush 41.1365
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Aeroportos
+
+:Fim_Menu_Teleports_Aeroportos
+Return 0 0
+
+
+//=========TELEPORTS CIDADE============
+
+:Menu_Teleports_Cidade
+Function 0 2 0
+
+fPush 13
+StaticSet1 3
+push_7
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Cidade"
+Call @AddTitle
+fPush_1.0
+PushString "Letreiro de Vinewood"
+Call @AddOption
+fPush_2.0
+PushString "Maze Bank"
+Call @AddOption
+fPush_3.0
+PushString "Predio do FIB"
+Call @AddOption
+fPush_4.0
+PushString "Predio do IAA"
+Call @AddOption
+fPush_5.0
+PushString "Eclipse Tower"
+Call @AddOption
+fPush_6.0
+PushString "Represa"
+Call @AddOption
+fPush_7.0
+PushString "Predio Epsilon"
+Call @AddOption
+fPush 8
+PushString "Campo de Golf"
+Call @AddOption
+fPush 9
+PushString "Observatorio Galileu"
+Call @AddOption
+fPush 10
+PushString "Docas de LS"
+Call @AddOption
+fPush 11
+PushString "Grove Street"
+Call @AddOption
+fPush 12
+PushString "Estudio de Cinema"
+Call @AddOption
+fPush 13
+PushString "Metro"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Teleports_Cidade
+Jump @Fim_Menu_Teleports_Cidade
+
+:Switch_Menu_Teleports_Cidade
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Teleports_Cidade_Opcao_1][2=@Menu_Teleports_Cidade_Opcao_2][3=@Menu_Teleports_Cidade_Opcao_3][4=@Menu_Teleports_Cidade_Opcao_4][5=@Menu_Teleports_Cidade_Opcao_5][6=@Menu_Teleports_Cidade_Opcao_6][7=@Menu_Teleports_Cidade_Opcao_7][8=@Menu_Teleports_Cidade_Opcao_8][9=@Menu_Teleports_Cidade_Opcao_9][10=@Menu_Teleports_Cidade_Opcao_10][11=@Menu_Teleports_Cidade_Opcao_11][12=@Menu_Teleports_Cidade_Opcao_12][13=@Menu_Teleports_Cidade_Opcao_13]
+
+:Menu_Teleports_Cidade_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+fPush 711.362
+fPush 1198.134
+fPush 348.526
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+fPush -75.015
+fPush -818.215
+fPush 326.176
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+fPush 150.126
+fPush -754.591
+fPush 262.8656
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+fPush 134.085
+fPush -637.859
+fPush 262.851
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+fPush -773.8005
+fPush 297.4301
+fPush 85.7313
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+fPush 1660.360
+fPush -12.013
+fPush 170.020
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+fPush -695.025
+fPush 82.955
+fPush 55.855
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1336.715
+fPush 59.051
+fPush 55.246
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+fPush -438.804
+fPush 1076.097
+fPush 352.411
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+fPush 877.4026
+fPush -3162.763
+fPush 5.9248
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_11
+CallNative "PLAYER_PED_ID" 0 1
+fPush 106.8835
+fPush -1940.167
+fPush 20.803
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_12
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1177.709
+fPush -505.4342
+fPush 34.5666
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Menu_Teleports_Cidade_Opcao_13
+CallNative "PLAYER_PED_ID" 0 1
+fPush -809.9315
+fPush -129.6475
+fPush 19.9503
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Cidade
+
+:Fim_Menu_Teleports_Cidade
+Return 0 0
+
+
+//================Teleports Deserto
+
+:Menu_Teleports_Deserto
+Function 0 2 0
+
+fPush 11
+StaticSet1 3
+push_7
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Deserto"
+Call @AddTitle
+fPush_1.0
+PushString "Laboratorio do Trevor"
+Call @AddOption
+fPush_2.0
+PushString "Pier de Paleto Bay"
+Call @AddOption
+fPush_3.0
+PushString "Acampamento Altruista"
+Call @AddOption
+fPush_4.0
+PushString "Acampamento Hippie"
+Call @AddOption
+fPush_5.0
+PushString "Mina Abandonada"
+Call @AddOption
+fPush_6.0
+PushString "Parque Eolico"
+Call @AddOption
+fPush_7.0
+PushString "Ponte Montanha"
+Call @AddOption
+fPush 8
+PushString "Trailer do Trevor"
+Call @AddOption
+fPush 9
+PushString "Rodovia Zancudo"
+Call @AddOption
+fPush 10
+PushString "Acampamento Lost"
+Call @AddOption
+fPush 11
+PushString "Caverna da Ritual"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Teleports_Deserto
+Jump @Fim_Menu_Teleports_Deserto
+
+:Switch_Menu_Teleports_Deserto
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Teleports_Deserto_Opcao_1][2=@Menu_Teleports_Deserto_Opcao_2][3=@Menu_Teleports_Deserto_Opcao_3][4=@Menu_Teleports_Deserto_Opcao_4][5=@Menu_Teleports_Deserto_Opcao_5][6=@Menu_Teleports_Deserto_Opcao_6][7=@Menu_Teleports_Deserto_Opcao_7][8=@Menu_Teleports_Deserto_Opcao_8][9=@Menu_Teleports_Deserto_Opcao_9][10=@Menu_Teleports_Deserto_Opcao_10][11=@Menu_Teleports_Deserto_Opcao_11]
+
+:Menu_Teleports_Deserto_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+fPush 1391.773
+fPush 3608.716
+fPush 38.942
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+fPush -275.522
+fPush 6635.835
+fPush 7.425
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1170.841
+fPush 4926.646
+fPush 224.295
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+fPush 2476.712
+fPush 3789.645
+fPush 41.226
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+fPush -595.342
+fPush 2086.008
+fPush 131.412
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+fPush 2026.677
+fPush 1842.684
+fPush 133.313
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+fPush -521.2655
+fPush 4422.3501
+fPush 89.6467
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+fPush 1975.4355
+fPush 3820.4102
+fPush 33.4484
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1908.827
+fPush 4623.1406
+fPush 57.0480
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+fPush 79.2129
+fPush 3641.4534
+fPush 39.7155
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+:Menu_Teleports_Deserto_Opcao_11
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1119.656
+fPush 4977.2354
+fPush 186.4552
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Deserto
+
+
+:Fim_Menu_Teleports_Deserto
+Return 0 0
+
+//============TELEPORTS UTEIS========
+
+:Menu_Teleports_Uteis
+Function 0 2 0
+
+fPush 16
+StaticSet1 3
+push_7
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Uteis"
+Call @AddTitle
+fPush_1.0
+PushString "Strip Club (cabine do DJ)"
+Call @AddOption
+fPush_2.0
+PushString "Los Santos Customs"
+Call @AddOption
+fPush_3.0
+PushString "Praia (Pier)"
+Call @AddOption
+fPush_4.0
+PushString "Fazenda da Maconha"
+Call @AddOption
+fPush_5.0
+PushString "Atmosfera"
+Call @AddOption
+fPush_6.0
+PushString "Caverna no Mar"
+Call @AddOption
+fPush_7.0
+PushString "Cemiterio"
+Call @AddOption
+fPush 8
+PushString "Porta Aviao ~b~Online"
+Call @AddOption
+fPush 9
+PushString "Topo do Guindaste"
+Call @AddOption
+fPush 10
+PushString "Barracas Abandonadas"
+Call @AddOption
+fPush 11
+PushString "Caverna Secreta"
+Call @AddOption
+fPush 12
+PushString "Academia da Cadeia"
+Call @AddOption
+fPush 13
+PushString "Loja Ponsonbys"
+Call @AddOption
+fPush 14
+PushString "Cabelereiro"
+Call @AddOption
+fPush 15
+PushString "Loja de Mascaras"
+Call @AddOption
+fPush 16
+PushString "Ammu Nation"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Teleports_Uteis
+Jump @Fim_Menu_Teleports_Uteis
+
+:Switch_Menu_Teleports_Uteis
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Teleports_Uteis_Opcao_1][2=@Menu_Teleports_Uteis_Opcao_2][3=@Menu_Teleports_Uteis_Opcao_3][4=@Menu_Teleports_Uteis_Opcao_4][5=@Menu_Teleports_Uteis_Opcao_5][6=@Menu_Teleports_Uteis_Opcao_6][7=@Menu_Teleports_Uteis_Opcao_7][8=@Menu_Teleports_Uteis_Opcao_8][9=@Menu_Teleports_Uteis_Opcao_9][10=@Menu_Teleports_Uteis_Opcao_10][11=@Menu_Teleports_Uteis_Opcao_11][12=@Menu_Teleports_Uteis_Opcao_12][13=@Menu_Teleports_Uteis_Opcao_13][14=@Menu_Teleports_Uteis_Opcao_14][15=@Menu_Teleports_Uteis_Opcao_15][16=@Menu_Teleports_Uteis_Opcao_16]
+
+:Menu_Teleports_Uteis_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+fPush 126.135
+fPush -1278.583
+fPush 29.270
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+fPush -365.425
+fPush -131.809
+fPush 37.873
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1850.127
+fPush -1231.751
+fPush 13.017
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+fPush 2208.777
+fPush 5578.235
+fPush 53.735
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+fPush -129.964
+fPush 8130.873
+fPush 6705.307
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+fPush 3108.6555
+fPush 2193.5334
+fPush 10.08640
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1728.153
+fPush -191.7002
+fPush 58.5053
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+fPush 3069.330
+fPush -4704.220
+fPush 15.043
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+fPush -119.6342
+fPush -977.4086
+fPush 304.2479
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+fPush 2940.7549
+fPush 5327.3462
+fPush 101.1098
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Menu_Teleports_Uteis_Opcao_11
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1911.282
+fPush 1388.5392
+fPush 218.9872
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+
+:Menu_Teleports_Uteis_Opcao_12
+CallNative "PLAYER_PED_ID" 0 1
+fPush 1641.9847
+fPush 2529.8162
+fPush 45.5648
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+
+:Menu_Teleports_Uteis_Opcao_13
+CallNative "PLAYER_PED_ID" 0 1
+fPush -159.6752
+fPush -303.4884
+fPush 39.7333
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+
+:Menu_Teleports_Uteis_Opcao_14
+CallNative "PLAYER_PED_ID" 0 1
+fPush -34.1811
+fPush -155.1044
+fPush 57.0765
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+
+:Menu_Teleports_Uteis_Opcao_15
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1339.101
+fPush -1281.544
+fPush 4.8385
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+
+:Menu_Teleports_Uteis_Opcao_16
+CallNative "PLAYER_PED_ID" 0 1
+fPush 844.3753
+fPush -1031.632
+fPush 28.1948
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Uteis
+
+:Fim_Menu_Teleports_Uteis
+Return 0 0
+
+//====================TELEPORTS AGUA
+
+:Menu_Teleports_Agua
+Function 0 2 0
+
+fPush 12
+StaticSet1 3
+push_7
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Agua"
+Call @AddTitle
+fPush_1.0
+PushString "Baleia Morta"
+Call @AddOption
+fPush_2.0
+PushString "Tanque da Segunda Guerra"
+Call @AddOption
+fPush_3.0
+PushString "Ufo"
+Call @AddOption
+fPush_4.0
+PushString "Aviao"
+Call @AddOption
+fPush_5.0
+PushString "Caminhao Abandonado"
+Call @AddOption
+fPush_6.0
+PushString "Navio Naufragado"
+Call @AddOption
+fPush_7.0
+PushString "Cargueiro Naufragado"
+Call @AddOption
+fPush 8
+PushString "Turbina de Aviao"
+Call @AddOption
+fPush 9
+PushString "Barco Pesqueiro"
+Call @AddOption
+fPush 10
+PushString "Partes de Aviao"
+Call @AddOption
+fPush 11
+PushString "Escotilha Lost"
+Call @AddOption
+fPush 12
+PushString "Submarino"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Teleports_Agua
+Jump @Fim_Menu_Teleports_Agua
+
+:Switch_Menu_Teleports_Agua
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Teleports_Agua_Opcao_1][2=@Menu_Teleports_Agua_Opcao_2][3=@Menu_Teleports_Agua_Opcao_3][4=@Menu_Teleports_Agua_Opcao_4][5=@Menu_Teleports_Agua_Opcao_5][6=@Menu_Teleports_Agua_Opcao_6][7=@Menu_Teleports_Agua_Opcao_7][8=@Menu_Teleports_Agua_Opcao_8][9=@Menu_Teleports_Agua_Opcao_9][10=@Menu_Teleports_Agua_Opcao_10][11=@Menu_Teleports_Agua_Opcao_11][12=@Menu_Teleports_Agua_Opcao_12]
+
+:Menu_Teleports_Agua_Opcao_1
+CallNative "PLAYER_PED_ID" 0 1
+fPush -3373.726
+fPush 504.714
+fPush -24.656
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_2
+CallNative "PLAYER_PED_ID" 0 1
+fPush 4201.633
+fPush 3643.821
+fPush -39.016
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_3
+CallNative "PLAYER_PED_ID" 0 1
+fPush 762.426
+fPush 7380.371
+fPush -111.377
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_4
+CallNative "PLAYER_PED_ID" 0 1
+fPush -942.350
+fPush 6608.752
+fPush -20.912
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_5
+CallNative "PLAYER_PED_ID" 0 1
+fPush 4171.9902
+fPush 3660.0972
+fPush -35.3291
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_6
+CallNative "PLAYER_PED_ID" 0 1
+fPush -2838.401
+fPush -456.7925
+fPush -31.0804
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_7
+CallNative "PLAYER_PED_ID" 0 1
+fPush 3174.3191
+fPush -339.4168
+fPush -19.5795
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_8
+CallNative "PLAYER_PED_ID" 0 1
+fPush -3158.704
+fPush 3628.0247
+fPush -21.1126
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_9
+CallNative "PLAYER_PED_ID" 0 1
+fPush -3182.860
+fPush 3029.0493
+fPush -33.4189
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+fPush 1818.0656
+fPush -2967.790
+fPush -33.4537
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Menu_Teleports_Agua_Opcao_11
+CallNative "PLAYER_PED_ID" 0 1
+fPush 4281.4106
+fPush 2972.0964
+fPush -176.3553
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+
+:Menu_Teleports_Agua_Opcao_12
+CallNative "PLAYER_PED_ID" 0 1
+fPush 2656.7898
+fPush 6659.5542
+fPush -7.1517
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+Jump @Fim_Menu_Teleports_Agua
+
+:Fim_Menu_Teleports_Agua
+Return 0 0
+
+//============Menu opcoes diversas===============
+
+
+:Menu_Opcoes_Diversas
+Function 0 2 0
+
+fPush 11
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Diversas"
+Call @AddTitle
+fPush_1.0
+PushString "~b~Clima ~y~->"
+Call @AddOption
+fPush_2.0
+PushString "~b~Efeitos de Tela ~y~->"
+Call @AddOption
+fPush_3.0
+PushString "~b~Horario ~y~->"
+Call @AddOption
+fPush_4.0
+PushString "~b~IPLs ~y~->"
+Call @AddOption
+fPush_5.0
+PushString "~b~Particulas ~y~->"
+Call @AddOption
+fPush_6.0
+PushString "Apagao Geral"
+Call @AddOption
+fPush_7.0
+PushString "Ligar Radio"
+Call @AddOption
+fPush 8
+PushString "Modo Camera Lenta"
+Call @AddOption
+fPush 9
+PushString "Pular Cena do Prologo"
+Call @AddOption
+fPush 10
+PushString "Recarregar Mapa"
+Call @AddOption
+fPush 11
+PushString "-----"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Opcoes_Diversas
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Switch_Menu_Opcoes_Diversas
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Opcoes_Diversas_Opcao_1][2=@Menu_Opcoes_Diversas_Opcao_2][3=@Menu_Opcoes_Diversas_Opcao_3][4=@Menu_Opcoes_Diversas_Opcao_4][5=@Menu_Opcoes_Diversas_Opcao_5][6=@Menu_Opcoes_Diversas_Opcao_6][7=@Menu_Opcoes_Diversas_Opcao_7][8=@Menu_Opcoes_Diversas_Opcao_8][9=@Menu_Opcoes_Diversas_Opcao_9][10=@Menu_Opcoes_Diversas_Opcao_10][11=@Menu_Opcoes_Diversas_Opcao_11]
+
+:Menu_Opcoes_Diversas_Opcao_1
+Push 20
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_2
+Push 21
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_3
+Push 22
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_4
+Push 23
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_5
+fPush 0.5
+StaticSet2 244
+PushString "scr_rcbarry2"
+StaticSet2 241
+PushString "scr_clown_bul"
+StaticSet2 242
+Push 25
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_6
+Call @Void_Apagao_Geral
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_7
+Call @Void_Ligar_Radio
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_8
+Call @Void_Camera_Lenta
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_9
+push_1
+CallNative "FORCE_CLEANUP" 1 0
+push_2
+CallNative "FORCE_CLEANUP" 1 0
+Push 8
+CallNative "FORCE_CLEANUP" 1 0
+Push 64
+CallNative "FORCE_CLEANUP" 1 0
+Push 128
+CallNative "FORCE_CLEANUP" 1 0
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_10
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "GET_ENTITY_COORDS" 2 3
+fPush 500
+push_0
+push_0
+push_0
+push_0
+CallNative "UNK_20E4FFD9" 8 0
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Menu_Opcoes_Diversas_Opcao_11
+//==============
+Jump @Fim_Menu_Opcoes_Diversas
+
+:Fim_Menu_Opcoes_Diversas
+Return 0 0
+
+
+
+
+//==========MENU de Protecoes============
+
+:Menu_Antimodder
+Function 0 2 0
+
+fPush 11
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Anti Modder"
+Call @AddTitle
+fPush_1.0
+PushString "Controle de Veiculo"
+Call @AddOption
+fPush_2.0
+PushString "Remover as Armas"
+Call @AddOption
+fPush_3.0
+PushString "Anti Fogo e Explosoes"
+Call @AddOption
+fPush_4.0
+PushString "Anti Level de Policia"
+Call @AddOption
+fPush_5.0
+PushString "Anti Clear Area"
+Call @AddOption
+fPush_6.0
+PushString "Anti Animacoes e Teleport"
+Call @AddOption
+fPush_7.0
+PushString "Anti Sons"
+Call @AddOption
+fPush 8
+PushString "Anti Kicks"
+Call @AddOption
+fPush 9
+PushString "Anti Particulas"
+Call @AddOption
+fPush 10
+PushString "Non Host Kick"
+Call @AddOption
+fPush 11
+PushString "Anti Mudar de Radio"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Antimodder
+Jump @Fim_Menu_Antimodder
+
+:Switch_Menu_Antimodder
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Antimodder_Opcao_1][2=@Menu_Antimodder_Opcao_2][3=@Menu_Antimodder_Opcao_3][4=@Menu_Antimodder_Opcao_4][5=@Menu_Antimodder_Opcao_5][6=@Menu_Antimodder_Opcao_6][7=@Menu_Antimodder_Opcao_7][8=@Menu_Antimodder_Opcao_8][9=@Menu_Antimodder_Opcao_9][10=@Menu_Antimodder_Opcao_10][11=@Menu_Antimodder_Opcao_11]
+
+:Menu_Antimodder_Opcao_1
+Push 0x12BD36C
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiVehicleControl_
+Push 0x7C0802A6
+Push 0x12BD36C
+pSet
+PushString "Anti Controle ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiVehicleControl_
+Push 0x4E800020
+Push 0x12BD36C
+pSet
+PushString "Anti Controle ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_2
+Push 0x12C37EC
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiGiveRemoveWeapons_
+Push 0x7C0802A6
+Push 0x12C37EC
+pSet
+Push 0x7C0802A6
+Push 0x12C3ACC
+pSet
+Push 0x7C0802A6
+Push 0x12C3C74
+pSet
+PushString "Remover armas ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiGiveRemoveWeapons_
+Push 0x4E800020
+Push 0x12C37EC
+pSet
+Push 0x4E800020
+Push 0x12C3ACC
+pSet
+Push 0x4E800020
+Push 0x12C3C74
+pSet
+PushString "Remover armas ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_3
+Push 0x12C4A44
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiFireExplosions_
+Push 0x7C0802A6
+Push 0x12C4A44
+pSet
+Push 0x7C0802A6
+Push 0x12C5638
+pSet
+PushString "Fogo e Explosoes ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiFireExplosions_
+Push 0x4E800020
+Push 0x12C4A44
+pSet
+Push 0x4E800020
+Push 0x12C5638
+pSet
+PushString "Fogo e Explosoes ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_4
+Push 0x12C78DC
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiWantedLevel_
+Push 0x7C0802A6
+Push 0x12C78DC
+pSet
+PushString "Anti Policia ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiWantedLevel_
+Push 0x4E800020
+Push 0x12C78DC
+pSet
+PushString "Anti Policia ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_5
+Push 0x12CAE68
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiClearArea_
+Push 0x7C0802A6
+Push 0x12CAE68
+pSet
+PushString "Clear Area ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiClearArea_
+Push 0x4E800020
+Push 0x12CAE68
+pSet
+PushString "Clear Area ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_6
+Push 0x12CB55C
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiAnimationsTeleportation_
+Push 0x7C0802A6
+Push 0x12CB55C
+pSet
+Push 0x7C0802A6
+Push 0x12CC958
+pSet
+PushString "Teleports e Anims ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiAnimationsTeleportation_
+Push 0x4E800020
+Push 0x12CB55C
+pSet
+Push 0x4E800020
+Push 0x12CC958
+pSet
+PushString "Teleports e Anims ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_7
+Push 0x12CFDE8
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiPlaySounds_
+Push 0x7C0802A6
+Push 0x12CFDE8
+pSet
+PushString "Sons ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiPlaySounds_
+Push 0x4E800020
+Push 0x12CFDE8
+pSet
+PushString "Sons ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_8
+Push 0x12D1E28
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiKickVotes_
+Push 0x7C0802A6
+Push 0x12D1E28
+pSet
+PushString "Anti Kicks ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiKickVotes_
+Push 0x4E800020
+Push 0x12D1E28
+pSet
+PushString "Anti Kicks ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_9
+Push 0x12D5098
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiParticleFX_
+Push 0x7C0802A6
+Push 0x12D5098
+pSet
+PushString "Anti particulas ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiParticleFX_
+Push 0x4E800020
+Push 0x12D5098
+pSet
+PushString "Anti particulas ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_10
+Push 0x12C8D60
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiNonHostKick_
+Push 0x7C0802A6
+Push 0x12C8D60
+pSet
+PushString "Non Host Kick ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiNonHostKick_
+Push 0x4E800020
+Push 0x12C8D60
+pSet
+PushString "Non Host Kick ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+:Menu_Antimodder_Opcao_11
+Push 0x12C7D74
+pGet
+Push 0x7C0802A6
+JumpEQ @TurnOnAntiChangeRadioStation_
+Push 0x7C0802A6
+Push 0x12C7D74 
+pSet
+PushString "Mudar de Radio ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+:TurnOnAntiChangeRadioStation_
+Push 0x4E800020
+Push 0x12C7D74
+pSet
+PushString "Mudar de Radio ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Antimodder
+
+
+:Fim_Menu_Antimodder
+Return 0 0
+
+//============MENU DE RECOVERY PRINCIPAL=============
+
+
+:Menu_Recovery
+Function 0 2 0
+
+fPush 14
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Recovery"
+Call @AddTitle
+fPush_1.0
+PushString "~b~Level ~y~->"
+Call @AddOption
+fPush_2.0
+PushString "~b~Dinheiro ~y~->"
+Call @AddOption
+fPush_3.0
+PushString "~b~Outros Valores ~y~->"
+Call @AddOption
+fPush_4.0
+PushString "Desbloquear LSC"
+Call @AddOption
+fPush_5.0
+PushString "Desbloquear Tatuagens"
+Call @AddOption
+fPush_6.0
+PushString "Unlocks Extras"
+Call @AddOption
+fPush_7.0
+PushString "Desbloquear Cortes de Cabelo"
+Call @AddOption
+fPush 8
+PushString "Veiculos das Heist"
+Call @AddOption
+fPush 9
+PushString "Camisas Especiais"
+Call @AddOption
+fPush 10
+PushString "Rodas Cromadas Gratis"
+Call @AddOption
+fPush 11
+PushString "Lanches, Cigarros e Coletes"
+Call @AddOption
+fPush 12
+PushString "Maximo de Fogos de Artificio"
+Call @AddOption
+fPush 13
+PushString "Roladinha Modder"
+Call @AddOption
+fPush 14
+PushString "Stats ao Maximo"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Recovery
+Jump @Fim_Menu_Recovery
+
+:Switch_Menu_Recovery
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Recovery_Opcao_1][2=@Menu_Recovery_Opcao_2][3=@Menu_Recovery_Opcao_3][4=@Menu_Recovery_Opcao_4][5=@Menu_Recovery_Opcao_5][6=@Menu_Recovery_Opcao_6][7=@Menu_Recovery_Opcao_7][8=@Menu_Recovery_Opcao_8][9=@Menu_Recovery_Opcao_9][10=@Menu_Recovery_Opcao_10][11=@Menu_Recovery_Opcao_11][12=@Menu_Recovery_Opcao_12][13=@Menu_Recovery_Opcao_13][14=@Menu_Recovery_Opcao_14]
+
+:Menu_Recovery_Opcao_1
+Push 29
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_2
+Push 30
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_3
+Push 31
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_4
+PushString "mp0_races_won"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_1_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_2_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_3_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_4_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_5_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_6_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_7_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_fmwinsearace"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_fmwinsearace"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_number_turbo_starts_in_race"
+CallNative "GET_HASH_KEY" 1 1
+Push 120
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_usjs_completed"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_fm_races_fastest_lap"
+CallNative "GET_HASH_KEY" 1 1
+Push 120
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_number_slipstreams_in_race"
+CallNative "GET_HASH_KEY" 1 1
+Push 140
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_races_won"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_1_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_2_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_3_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_4_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_5_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_6_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_7_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_fmwinsearace"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_fmwinsearace"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_number_turbo_starts_in_race"
+CallNative "GET_HASH_KEY" 1 1
+Push 120
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_usjs_completed"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_fm_races_fastest_lap"
+CallNative "GET_HASH_KEY" 1 1
+Push 120
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_number_slipstreams_in_race"
+CallNative "GET_HASH_KEY" 1 1
+Push 140
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_5
+PushString "mp0_tattoo_fm_unlocks_0"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_8"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_9"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_10"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_11"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_12"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_13"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_14"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_15"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_16"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_0"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_8"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_9"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_10"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_11"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_12"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_6
+PushString "mp0_tattoo_fm_unlocks_0"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_8"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_9"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_10"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_11"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_12"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_13"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_14"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_15"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_16"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_0"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_8"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_9"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_10"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_11"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_12"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_7
+PushString "mp0_clths_available_hair"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_8
+PushString "MP0_CHAR_FM_VEHICLE_1_UNLCK"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_CHAR_FM_VEHICLE_2_UNLCK"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_CHAR_FM_VEHICLE_1_UNLCK"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+PushString "MP0_CHAR_FM_VEHICLE_2_UNLCK"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_9
+
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_10
+PushString "mp0_awd_win_captures"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_dropoff_cap_packages"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_kill_carrier_capture"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_finish_heists"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_finish_heist_setup_job"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_nightvision_kills"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_win_last_team_standings"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_only_player_alive_lts"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_win_captures"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_dropoff_cap_packages"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_kill_carrier_capture"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_finish_heists"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_finish_heist_setup_job"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_nightvision_kills"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_win_last_team_standings"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_only_player_alive_lts"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_11
+PushString "mp0_cigarettes_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_no_bought_yum_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_no_bought_health_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_no_bought_epic_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_number_of_bourge_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_number_of_orange_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_cigarettes_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_no_bought_yum_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_no_bought_health_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp1_no_bought_epic_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_number_of_bourge_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_number_of_orange_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp0_mp_char_armour_1_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mp_char_armour_2_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mp_char_armour_3_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mp_char_armour_4_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mp_char_armour_5_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_current_health"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_current_armour"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mp_char_armour_1_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mp_char_armour_2_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mp_char_armour_3_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mp_char_armour_4_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mp_char_armour_5_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_12
+PushString "MP0_FIREWORK_TYPE_1_WHITE"
+CallNative "GET_HASH_KEY" 1 1
+Push 100000
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_FIREWORK_TYPE_2_WHITE"
+CallNative "GET_HASH_KEY" 1 1
+Push 100000
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_FIREWORK_TYPE_3_WHITE"
+CallNative "GET_HASH_KEY" 1 1
+Push 100000
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_FIREWORK_TYPE_4_WHITE"
+CallNative "GET_HASH_KEY" 1 1
+Push 100000
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_FIREWORK_TYPE_4_WHITE"
+CallNative "GET_HASH_KEY" 1 1
+Push 100000
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_FIREWORK_TYPE_1_RED"
+CallNative "GET_HASH_KEY" 1 1
+Push 100000
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_FIREWORK_TYPE_2_RED"
+CallNative "GET_HASH_KEY" 1 1
+Push 100000
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_FIREWORK_TYPE_3_RED"
+CallNative "GET_HASH_KEY" 1 1
+Push 100000
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_13
+PushString "MP0_SHOOTING_ABILITY"
+CallNative "GET_HASH_KEY" 1 1
+Push 150
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_SHOOTING_ABILITY"
+CallNative "GET_HASH_KEY" 1 1
+Push 150
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+PushString "MP0_COMBAT_ROOL"
+CallNative "GET_HASH_KEY" 1 1
+Push 99999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP0_COMBAT_ROOL"
+CallNative "GET_HASH_KEY" 1 1
+Push 99999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Recovery
+
+:Menu_Recovery_Opcao_14
+PushString "mp0_script_increase_stam"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_strn"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_lung"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_driv"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_fly"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_sho"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_stl"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_mech"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_stam"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_strn"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_lung"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_driv"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_fly"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_sho"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_stl"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_mech"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Recovery
+
+
+:Fim_Menu_Recovery
+Return 0 0
+
+//============MENU DE LEVELS=============
+
+:Menu_Levels
+Function 0 2 0
+
+fPush 11
+StaticSet1 3
+Push 27
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Levels"
+Call @AddTitle
+fPush_1.0
+PushString "30"
+Call @AddOption
+fPush_2.0
+PushString "50"
+Call @AddOption
+fPush_3.0
+PushString "100"
+Call @AddOption
+fPush_4.0
+PushString "120"
+Call @AddOption
+fPush_5.0
+PushString "200"
+Call @AddOption
+fPush_6.0
+PushString "250"
+Call @AddOption
+fPush_7.0
+PushString "300"
+Call @AddOption
+fPush 8
+PushString "500"
+Call @AddOption
+fPush 9
+PushString "666"
+Call @AddOption
+fPush 10
+PushString "1000"
+Call @AddOption
+fPush 11
+PushString "8000"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Levels
+Jump @Fim_Menu_Levels
+
+:Switch_Menu_Levels
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Levels_Opcao_1][2=@Menu_Levels_Opcao_2][3=@Menu_Levels_Opcao_3][4=@Menu_Levels_Opcao_4][5=@Menu_Levels_Opcao_5][6=@Menu_Levels_Opcao_6][7=@Menu_Levels_Opcao_7][8=@Menu_Levels_Opcao_8][9=@Menu_Levels_Opcao_9][10=@Menu_Levels_Opcao_10][11=@Menu_Levels_Opcao_11]
+
+:Menu_Levels_Opcao_1
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 177100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_2
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 448800
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_3
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 1584350
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_4
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 2165850
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_5
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 4691850
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_6
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 6433100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_7
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 8299350
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_8
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 17014350
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_9
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 25766700
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_10
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 47551850
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+:Menu_Levels_Opcao_11
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 1787576850
+push_1
+CallNative "STAT_SET_INT" 3 1
+Jump @Fim_Menu_Levels
+
+
+:Fim_Menu_Levels
+Return 0 0
+
+//=========MENU DINHEIRO----------------
+
+:Menu_Dinheiro
+Function 0 2 0
+
+fPush_5.0
+StaticSet1 3
+Push 27
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Dinheiro"
+Call @AddTitle
+fPush_1.0
+PushString "50 mil"
+Call @AddOption
+fPush_2.0
+PushString "100 mil"
+Call @AddOption
+fPush_3.0
+PushString "1 milhao"
+Call @AddOption
+fPush_4.0
+PushString "10 milhoes"
+Call @AddOption
+fPush_5.0
+PushString "100 milhoes"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Dinheiro
+Jump @Fim_Menu_Dinheiro
+
+:Switch_Menu_Dinheiro
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Dinheiro_Opcao_1][2=@Menu_Dinheiro_Opcao_2][3=@Menu_Dinheiro_Opcao_3][4=@Menu_Dinheiro_Opcao_4][5=@Menu_Dinheiro_Opcao_5]
+
+:Menu_Dinheiro_Opcao_1
+Push 50000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Jump @Fim_Menu_Dinheiro
+
+:Menu_Dinheiro_Opcao_2
+Push 100000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Jump @Fim_Menu_Dinheiro
+
+:Menu_Dinheiro_Opcao_3
+Push 1000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Jump @Fim_Menu_Dinheiro
+
+:Menu_Dinheiro_Opcao_4
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Jump @Fim_Menu_Dinheiro
+
+:Menu_Dinheiro_Opcao_5
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Push 10000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+Jump @Fim_Menu_Dinheiro
+
+
+:Fim_Menu_Dinheiro
+Return 0 0
+
+//=============MENU DE OUTROS VALORES RECOVEY-------------
+
+:Menu_Valores
+Function 0 2 0
+
+fPush_7.0
+StaticSet1 3
+Push 27
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Valores"
+Call @AddTitle
+fPush_1.0
+PushString "Estado Mental Alto"
+Call @AddOption
+fPush_2.0
+PushString "Aumentar VM para 100"
+Call @AddOption
+fPush_3.0
+PushString "Zerar tempo de venda"
+Call @AddOption
+fPush_4.0
+PushString "Desbloquear Roosevelt"
+Call @AddOption
+fPush_5.0
+PushString "Refazer o Player ao Logar"
+Call @AddOption
+fPush_6.0
+PushString "1000 Corridas Vencidas"
+Call @AddOption
+fPush_7.0
+PushString "Zerar Mortes de Explosao"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Valores
+Jump @Fim_Menu_Valores
+
+:Switch_Menu_Valores
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Valores_Opcao_1][2=@Menu_Valores_Opcao_2][3=@Menu_Valores_Opcao_3][4=@Menu_Valores_Opcao_4][5=@Menu_Valores_Opcao_5][6=@Menu_Valores_Opcao_6][7=@Menu_Valores_Opcao_7]
+
+:Menu_Valores_Opcao_1
+PushString "mp0_player_mental_state"
+CallNative "GET_HASH_KEY" 1 1
+fPush 100
+push_1
+CallNative "STAT_SET_FLOAT" 3 1
+Drop
+Jump @Fim_Menu_Valores
+
+:Menu_Valores_Opcao_2
+PushString "mpply_kills_players"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MPPLY_DEATHS_PLAYER"
+CallNative "GET_HASH_KEY" 1 1
+Push 0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Valores
+
+:Menu_Valores_Opcao_3
+PushString "mpply_vehicle_sell_time"
+CallNative "GET_HASH_KEY" 1 1
+Push 0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Valores
+
+:Menu_Valores_Opcao_4
+PushString "mpply_vehicle_id_admin_web"
+CallNative "GET_HASH_KEY" 1 1
+Push 117401876
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Valores
+
+:Menu_Valores_Opcao_5
+PushString "mp0_fm_changechar_asked"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_fm_changechar_asked"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+Jump @Fim_Menu_Valores
+
+:Menu_Valores_Opcao_6
+PushString "MPPLY_TOTAL_RACES_WON"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Valores
+
+:Menu_Valores_Opcao_7
+PushString "MP0_DIED_IN_EXPLOSION"
+CallNative "GET_HASH_KEY" 1 1
+Push 0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Fim_Menu_Valores
+
+
+:Fim_Menu_Valores
+Return 0 0
+
+//================OPCOES DE CLIMA======
+
+:Menu_Opcoes_Diversas_Clima
+Function 0 2 0
+
+fPush 10
+StaticSet1 3
+Push 19
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Clima"
+Call @AddTitle
+fPush_1.0
+PushString "Ensolarado"
+Call @AddOption
+fPush_2.0
+PushString "Ceu Limpo"
+Call @AddOption
+fPush_3.0
+PushString "Tempestade"
+Call @AddOption
+fPush_4.0
+PushString "Neblina"
+Call @AddOption
+fPush_5.0
+PushString "Nuvens"
+Call @AddOption
+fPush_6.0
+PushString "Neve Fraca"
+Call @AddOption
+fPush_7.0
+PushString "Neve Forte"
+Call @AddOption
+fPush 8
+PushString "Ventania"
+Call @AddOption
+fPush 9
+PushString "Nevasca"
+Call @AddOption
+fPush 10
+PushString "Ceu Verde (Neutral)"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Opcoes_Diversas_Clima
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Switch_Menu_Opcoes_Diversas_Clima
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Opcoes_Diversas_Clima_Opcao_1][2=@Menu_Opcoes_Diversas_Clima_Opcao_2][3=@Menu_Opcoes_Diversas_Clima_Opcao_3][4=@Menu_Opcoes_Diversas_Clima_Opcao_4][5=@Menu_Opcoes_Diversas_Clima_Opcao_5][6=@Menu_Opcoes_Diversas_Clima_Opcao_6][7=@Menu_Opcoes_Diversas_Clima_Opcao_7][8=@Menu_Opcoes_Diversas_Clima_Opcao_8][9=@Menu_Opcoes_Diversas_Clima_Opcao_9][10=@Menu_Opcoes_Diversas_Clima_Opcao_10]
+
+:Menu_Opcoes_Diversas_Clima_Opcao_1
+PushString "EXTRASUNNY"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "EXTRASUNNY"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "EXTRASUNNY"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "EXTRASUNNY"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_2
+PushString "CLEAR"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "CLEAR"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "CLEAR"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "CLEAR"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_3
+PushString "THUNDER"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "THUNDER"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "THUNDER"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "THUNDER"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_4
+PushString "SMOG"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "SMOG"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "SMOG"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "SMOG"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_5
+PushString "CLOUDS"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "CLOUDS"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "CLOUDS"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "CLOUDS"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_6
+PushString "SNOWLIGHT"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "SNOWLIGHT"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "SNOWLIGHT"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "SNOWLIGHT"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_7
+PushString "SNOW"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "SNOW"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "SNOW"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "SNOW"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_8
+PushString "OVERCAST"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "OVERCAST"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "OVERCAST"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "OVERCAST"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_9
+PushString "BLIZZARD"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "BLIZZARD"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "BLIZZARD"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "BLIZZARD"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+:Menu_Opcoes_Diversas_Clima_Opcao_10
+PushString "NEUTRAL"
+CallNative "SET_OVERRIDE_WEATHER" 1 0
+PushString "NEUTRAL"
+CallNative "SET_WEATHER_TYPE_PERSIST" 1 0
+PushString "NEUTRAL"
+CallNative "SET_WEATHER_TYPE_NOW_PERSIST" 1 0
+PushString "NEUTRAL"
+CallNative "SET_WEATHER_TYPE_NOW" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Clima
+
+
+:Fim_Menu_Opcoes_Diversas_Clima
+Return 0 0
+
+//==============MENU DE EFEITOS===========
+
+:Menu_Opcoes_Diversas_Efeitos
+Function 0 2 0
+
+fPush 10
+StaticSet1 3
+Push 19
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Efeitos"
+Call @AddTitle
+fPush_1.0
+PushString "~r~Desativar Efeitos"
+Call @AddOption
+fPush_2.0
+PushString "Visao 3D"
+Call @AddOption
+fPush_3.0
+PushString "Debaixo da Agua"
+Call @AddOption
+fPush_4.0
+PushString "Aumentar Visao"
+Call @AddOption
+fPush_5.0
+PushString "Melhorar Grafico e Sombras"
+Call @AddOption
+fPush_6.0
+PushString "Visao da Morte"
+Call @AddOption
+fPush_7.0
+PushString "Modo GTA IV"
+Call @AddOption
+fPush 8
+PushString "Visao de Bebado"
+Call @AddOption
+fPush 9
+PushString "Efeito Retro"
+Call @AddOption
+fPush 10
+PushString "Filme Antigo"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Opcoes_Diversas_Efeitos
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Switch_Menu_Opcoes_Diversas_Efeitos
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Opcoes_Diversas_Efeitos_Opcao_1][2=@Menu_Opcoes_Diversas_Efeitos_Opcao_2][3=@Menu_Opcoes_Diversas_Efeitos_Opcao_3][4=@Menu_Opcoes_Diversas_Efeitos_Opcao_4][5=@Menu_Opcoes_Diversas_Efeitos_Opcao_5][6=@Menu_Opcoes_Diversas_Efeitos_Opcao_6][7=@Menu_Opcoes_Diversas_Efeitos_Opcao_7][8=@Menu_Opcoes_Diversas_Efeitos_Opcao_8][9=@Menu_Opcoes_Diversas_Efeitos_Opcao_9][10=@Menu_Opcoes_Diversas_Efeitos_Opcao_10]
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_1
+PushString "DEFAULT"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_2
+PushString "michealspliff_blend"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_3
+PushString "SALTONSEA"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_4
+PushString "INT_NO_fogALPHA"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_5
+PushString "v_torture"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_6
+PushString "damage"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_7
+PushString "Bikers"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_8
+PushString "drunk"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_9
+PushString "hud_def_desat_Michael"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+:Menu_Opcoes_Diversas_Efeitos_Opcao_10
+PushString "hud_def_desatcrunch"
+CallNative "SET_TIMECYCLE_MODIFIER" 1 0
+Jump @Fim_Menu_Opcoes_Diversas_Efeitos
+
+
+:Fim_Menu_Opcoes_Diversas_Efeitos
+Return 0 0
+
+//=================DIVERSAS HORARIO============
+
+:Menu_Opcoes_Diversas_Horario
+Function 0 2 0
+
+fPush_4.0
+StaticSet1 3
+Push 19
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Horario"
+Call @AddTitle
+fPush_1.0
+PushString "Meio Dia"
+Call @AddOption
+fPush_2.0
+PushString "Meia Noite"
+Call @AddOption
+fPush_3.0
+PushString "Sempre Dia"
+Call @AddOption
+fPush_4.0
+PushString "Sempre Noite"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Opcoes_Diversas_Horario
+Jump @Fim_Menu_Opcoes_Diversas_Horario
+
+:Switch_Menu_Opcoes_Diversas_Horario
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Opcoes_Diversas_Horario_Opcao_1][2=@Menu_Opcoes_Diversas_Horario_Opcao_2][3=@Menu_Opcoes_Diversas_Horario_Opcao_3][4=@Menu_Opcoes_Diversas_Horario_Opcao_4]
+
+:Menu_Opcoes_Diversas_Horario_Opcao_1
+Push 12
+push_0
+push_0
+CallNative "SET_CLOCK_TIME" 3 0
+Push 12
+push_0
+push_0
+CallNative "NETWORK_OVERRIDE_CLOCK_TIME" 3 0
+Jump @Fim_Menu_Opcoes_Diversas_Horario
+
+:Menu_Opcoes_Diversas_Horario_Opcao_2
+push_0
+push_0
+push_0
+CallNative "SET_CLOCK_TIME" 3 0
+push_0
+push_0
+push_0
+CallNative "NETWORK_OVERRIDE_CLOCK_TIME" 3 0
+Jump @Fim_Menu_Opcoes_Diversas_Horario
+
+:Menu_Opcoes_Diversas_Horario_Opcao_3
+Call @Void_Sempre_Dia
+Jump @Fim_Menu_Opcoes_Diversas_Horario
+
+:Menu_Opcoes_Diversas_Horario_Opcao_4
+Call @Void_Sempre_Noite
+Jump @Fim_Menu_Opcoes_Diversas_Horario
+
+:Fim_Menu_Opcoes_Diversas_Horario
+Return 0 0
+
+//================MENU DE IPLS=================
+
+:Menu_Opcoes_Diversas_IPL
+Function 0 2 0
+
+fPush 10
+StaticSet1 3
+Push 19
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "IPL"
+Call @AddTitle
+fPush_1.0
+PushString "~r~Desativar Todos da Lista"
+Call @AddOption
+fPush_2.0
+PushString "North Yankton"
+Call @AddOption
+fPush_3.0
+PushString "Life Invader"
+Call @AddOption
+fPush_4.0
+PushString "Iate na Praia"
+Call @AddOption
+fPush_5.0
+PushString "Necroterio"
+Call @AddOption
+fPush_6.0
+PushString "Ovnis no Ceu"
+Call @AddOption
+fPush_7.0
+PushString "Casa dos Oneils Aberta"
+Call @AddOption
+fPush 8
+PushString "Joalheria"
+Call @AddOption
+fPush 9
+PushString "Cluckin Bell"
+Call @AddOption
+fPush 10
+PushString "Porta Aviao (Online)"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Opcoes_Diversas_IPL
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Switch_Menu_Opcoes_Diversas_IPL
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Opcoes_Diversas_IPL_Opcao_1][2=@Menu_Opcoes_Diversas_IPL_Opcao_2][3=@Menu_Opcoes_Diversas_IPL_Opcao_3][4=@Menu_Opcoes_Diversas_IPL_Opcao_4][5=@Menu_Opcoes_Diversas_IPL_Opcao_5][6=@Menu_Opcoes_Diversas_IPL_Opcao_6][7=@Menu_Opcoes_Diversas_IPL_Opcao_7][8=@Menu_Opcoes_Diversas_IPL_Opcao_8][9=@Menu_Opcoes_Diversas_IPL_Opcao_9][10=@Menu_Opcoes_Diversas_IPL_Opcao_10]
+
+:Menu_Opcoes_Diversas_IPL_Opcao_1
+PushString "hei_carrier"
+CallNative "REMOVE_IPL" 1 0
+PushString "hei_carrier_DistantLights"
+CallNative "REMOVE_IPL" 1 0
+PushString "hei_Carrier_int1"
+CallNative "REMOVE_IPL" 1 0
+PushString "hei_Carrier_int2"
+CallNative "REMOVE_IPL" 1 0
+PushString "hei_Carrier_int3"
+CallNative "REMOVE_IPL" 1 0
+PushString "hei_Carrier_int4"
+CallNative "REMOVE_IPL" 1 0
+PushString "hei_Carrier_int5"
+CallNative "REMOVE_IPL" 1 0
+PushString "hei_Carrier_int6"
+CallNative "REMOVE_IPL" 1 0
+PushString "hei_carrier_LODLights"
+CallNative "REMOVE_IPL" 1 0
+PushString "CS1_02_cf_onmission1"
+CallNative "REMOVE_IPL" 1 0
+PushString "CS1_02_cf_onmission2"
+CallNative "REMOVE_IPL" 1 0
+PushString "CS1_02_cf_onmission3"
+CallNative "REMOVE_IPL" 1 0
+PushString "CS1_02_cf_onmission4"
+CallNative "REMOVE_IPL" 1 0
+PushString "CS1_02_cf_offmission"
+CallNative "REQUEST_IPL" 1 0
+PushString "post_hiest_unload"
+CallNative "REMOVE_IPL" 1 0
+PushString "bh1_16_refurb"
+CallNative "REQUEST_IPL" 1 0
+PushString "jewel2fake"
+CallNative "REQUEST_IPL" 1 0
+PushString "farm"
+CallNative "REMOVE_IPL" 1 0
+PushString "farm_props"
+CallNative "REMOVE_IPL" 1 0
+PushString "farmint"
+CallNative "REMOVE_IPL" 1 0
+PushString "farmint_cap"
+CallNative "REQUEST_IPL" 1 0
+PushString "ufo"
+CallNative "REMOVE_IPL" 1 0
+PushString "Coroner_Int_on"
+CallNative "REMOVE_IPL" 1 0
+PushString "smboat"
+CallNative "REMOVE_IPL" 1 0
+PushString "facelobby"
+CallNative "REMOVE_IPL" 1 0
+PushString "facelobbyfake"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue01"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue02"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue03"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue04"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue05"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue06"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologuerd"
+CallNative "REMOVE_IPL" 1 0
+PushString "Prologue01c"
+CallNative "REMOVE_IPL" 1 0
+PushString "Prologue01d"
+CallNative "REMOVE_IPL" 1 0
+PushString "Prologue01e"
+CallNative "REMOVE_IPL" 1 0
+PushString "Prologue01f"
+CallNative "REMOVE_IPL" 1 0
+PushString "Prologue01g"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue01h"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue01i"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue01j"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue01k"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue01z"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue03b"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue04b"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue05b"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue06b"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologuerdb"
+CallNative "REMOVE_IPL" 1 0
+PushString "DES_ProTree_start"
+CallNative "REMOVE_IPL" 1 0
+PushString "DES_ProTree_start_lod"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue04_cover"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue03_grv_fun"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue_LODLights"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue_DistantLights"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue06_int"
+CallNative "REMOVE_IPL" 1 0
+PushString "prologue_m2_door"
+CallNative "REMOVE_IPL" 1 0
+PushString "~r~Todos os IPLs foram desativados"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_2
+PushString "prologue01"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue02"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue03"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue04"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue05"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue06"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologuerd"
+CallNative "REQUEST_IPL" 1 0
+PushString "Prologue01c"
+CallNative "REQUEST_IPL" 1 0
+PushString "Prologue01d"
+CallNative "REQUEST_IPL" 1 0
+PushString "Prologue01e"
+CallNative "REQUEST_IPL" 1 0
+PushString "Prologue01f"
+CallNative "REQUEST_IPL" 1 0
+PushString "Prologue01g"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue01h"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue01i"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue01j"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue01k"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue01z"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue03b"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue04b"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue05b"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue06b"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologuerdb"
+CallNative "REQUEST_IPL" 1 0
+PushString "DES_ProTree_start"
+CallNative "REQUEST_IPL" 1 0
+PushString "DES_ProTree_start_lod"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue04_cover"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue03_grv_fun"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue_LODLights"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue_DistantLights"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue06_int"
+CallNative "REQUEST_IPL" 1 0
+PushString "prologue_m2_door"
+CallNative "REQUEST_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush 3585.0947
+fPush -4879.8100
+fPush 111.3787
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "North Yankton ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_3
+PushString "facelobby"
+CallNative "REQUEST_IPL" 1 0
+PushString "facelobbyfake"
+CallNative "REMOVE_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush -1047.9
+fPush -233.0
+fPush 39.0
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "Life Invader ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_4
+PushString "smboat"
+CallNative "REQUEST_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush -2023.079
+fPush -1038.061
+fPush 5.578
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "Iate ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_5
+PushString "Coroner_Int_on"
+CallNative "REQUEST_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush 244.9
+fPush -1374.7
+fPush 39.5
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "Necroterio ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_6
+PushString "ufo"
+CallNative "REQUEST_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush -2051.99463
+fPush 3237.05835
+fPush 1456.97021
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "Ovnis ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_7
+PushString "farm"
+CallNative "REQUEST_IPL" 1 0
+PushString "farm_props"
+CallNative "REQUEST_IPL" 1 0
+PushString "farmint"
+CallNative "REQUEST_IPL" 1 0
+PushString "farmint_cap"
+CallNative "REMOVE_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush 2441.2
+fPush 4968.5
+fPush 51.7
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "Oneils aberta ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_8
+PushString "post_hiest_unload"
+CallNative "REQUEST_IPL" 1 0
+PushString "bh1_16_refurb"
+CallNative "REMOVE_IPL" 1 0
+PushString "jewel2fake"
+CallNative "REMOVE_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush -630.4
+fPush -236.7
+fPush 40.0
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "Joalheria ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_9
+PushString "CS1_02_cf_onmission1"
+CallNative "REQUEST_IPL" 1 0
+PushString "CS1_02_cf_onmission2"
+CallNative "REQUEST_IPL" 1 0
+PushString "CS1_02_cf_onmission3"
+CallNative "REQUEST_IPL" 1 0
+PushString "CS1_02_cf_onmission4"
+CallNative "REQUEST_IPL" 1 0
+PushString "CS1_02_cf_offmission"
+CallNative "REMOVE_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush -66.1215
+fPush 6242.1377
+fPush 31.0830
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "Cluckin Bell ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Menu_Opcoes_Diversas_IPL_Opcao_10
+PushString "hei_carrier"
+CallNative "REQUEST_IPL" 1 0
+PushString "hei_carrier_DistantLights"
+CallNative "REQUEST_IPL" 1 0
+PushString "hei_Carrier_int1"
+CallNative "REQUEST_IPL" 1 0
+PushString "hei_Carrier_int2"
+CallNative "REQUEST_IPL" 1 0
+PushString "hei_Carrier_int3"
+CallNative "REQUEST_IPL" 1 0
+PushString "hei_Carrier_int4"
+CallNative "REQUEST_IPL" 1 0
+PushString "hei_Carrier_int5"
+CallNative "REQUEST_IPL" 1 0
+PushString "hei_Carrier_int6"
+CallNative "REQUEST_IPL" 1 0
+PushString "hei_carrier_LODLights"
+CallNative "REQUEST_IPL" 1 0
+CallNative "PLAYER_PED_ID" 0 1
+fPush 3069.9
+fPush -4632.4
+fPush 16.2
+push_1
+push_0
+push_0
+push_1
+CallNative "SET_ENTITY_COORDS" 8 0
+PushString "Porta Avioes ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas_IPL
+
+:Fim_Menu_Opcoes_Diversas_IPL
+Return 0 0
+
+
+
+//===============MENU DE PARTICULAS==============
+
+:Menu_Particulas
+Function 0 2 0
+
+fPush 12
+StaticSet1 3
+Push 19
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Particulas"
+Call @AddTitle
+fPush_1.0
+PushString "~b~Ativar/Desativar"
+Call @AddOption
+fPush_2.0
+PushString "Saltando Dinheiro"
+Call @AddOption
+fPush_3.0
+PushString "Aurea Laranja"
+Call @AddOption
+fPush_4.0
+PushString "Flores"
+Call @AddOption
+fPush_5.0
+PushString "Raios"
+Call @AddOption
+fPush_6.0
+PushString "Fogo"
+Call @AddOption
+fPush_7.0
+PushString "Penas de Galinha"
+Call @AddOption
+fPush 8
+PushString "Lagoa de Sangue"
+Call @AddOption
+fPush 9
+PushString "Faiscas"
+Call @AddOption
+fPush 10
+PushString "Fumaca Roxa"
+Call @AddOption
+fPush 11
+PushString "Cartoon"
+Call @AddOption
+fPush 12
+PushString "Bolinhas"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Particulas
+Jump @Fim_Menu_Particulas
+
+:Switch_Menu_Particulas
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Particulas_Opcao_1][2=@Menu_Particulas_Opcao_2][3=@Menu_Particulas_Opcao_3][4=@Menu_Particulas_Opcao_4][5=@Menu_Particulas_Opcao_5][6=@Menu_Particulas_Opcao_6][7=@Menu_Particulas_Opcao_7][8=@Menu_Particulas_Opcao_8][9=@Menu_Particulas_Opcao_9][10=@Menu_Particulas_Opcao_10][11=@Menu_Particulas_Opcao_11][12=@Menu_Particulas_Opcao_12]
+
+:Menu_Particulas_Opcao_1
+Call @Void_Particulas
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_2
+fPush 2.0
+StaticSet2 244
+PushString "scr_ornate_heist"
+StaticSet2 241
+PushString "scr_heist_ornate_banknotes"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_3
+fPush 0.1
+StaticSet2 244
+PushString "scr_rcbarry1"
+StaticSet2 241
+PushString "scr_alien_disintegrate"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_4
+fPush 0.5
+StaticSet2 244
+PushString "scr_rcbarry2"
+StaticSet2 241
+PushString "scr_clown_bul"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_5
+fPush 2.0
+StaticSet2 244
+PushString "wpn_stungun"
+StaticSet2 241
+PushString "blood_stungun"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_6
+fPush 2.0
+StaticSet2 244
+PushString "scr_carsteal4"
+StaticSet2 241
+PushString "scr_carsteal5_car_muzzle_flash"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_7
+fPush 0.5
+StaticSet2 244
+PushString "ent_cluck_int"
+StaticSet2 241
+PushString "ent_dst_chick_carcass"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_8
+fPush 0.5
+StaticSet2 244
+PushString "ent_liquid_cont1"
+StaticSet2 241
+PushString "ent_sht_gloopy_liquid"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_9
+fPush 0.5
+StaticSet2 244
+PushString "ent_damage_spark"
+StaticSet2 241
+PushString "ent_brk_sparking_wires"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_10
+fPush 0.5
+StaticSet2 244
+PushString "scr_rcbarry2"
+StaticSet2 241
+PushString "scr_clown_death"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_11
+fPush 2.0
+StaticSet2 244
+PushString "scr_rcbarry2"
+StaticSet2 241
+PushString "muz_clown"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Menu_Particulas_Opcao_12
+fPush 4.0
+StaticSet2 244
+PushString "scr_rcbarry2"
+StaticSet2 241
+PushString "eject_clown"
+StaticSet2 242
+Jump @Fim_Menu_Particulas
+
+:Fim_Menu_Particulas
+Return 0 0
+
+
+//=================================
+:Menu_Creditos
+Function 0 2 0
+
+push_1
+StaticSet1 8
+PushString "Creditos"
+Call @AddTitle
+fPush_1.0
+PushString "Base - ~b~2much4u"
+Call @Draw_Text
+fPush_2.0
+PushString "Layout - ~b~EdUaRdO"
+Call @Draw_Text
+fPush_3.0
+PushString "Code/Mods - ~b~EdUaRdO"
+Call @Draw_Text
+fPush_4.0
+PushString "----------------------------------"
+Call @Draw_Text
+fPush_5.0
+PushString "Agradecimentos:"
+Call @Draw_Text
+fPush_6.0
+PushString "~g~Karrasco"
+Call @Draw_Text
+fPush_7.0
+PushString "Ajuda e Suporte"
+Call @Draw_Text
+fPush 8
+PushString ""
+Call @Draw_Text
+fPush 9
+PushString "~g~NotYourDope"
+Call @Draw_Text
+fPush 10
+PushString "Duvidas e ajudas adicionais"
+Call @Draw_Text
+fPush 11
+PushString ""
+Call @Draw_Text
+fPush 12
+PushString "~g~EROOTIIK"
+Call @Draw_Text
+fPush 13
+PushString "Script Assembler"
+Call @Draw_Text
+Return 0 0
+
+//---------------------------VOIDS----------
+
+:CarregarModelo
+Function 1 2 0
+
+getF1 0
+CallNative "REQUEST_MODEL" 1 0
+
+:CarregarModelo_Check
+getF1 0
+CallNative "HAS_MODEL_LOADED" 1 1
+Not
+JumpFalse @CarregarModelo_Fim
+push_0
+CallNative "WAIT" 1 0
+Jump @CarregarModelo_Check
+
+:CarregarModelo_Fim
+Return 1 0
+
+//----------------------------------------------------------------------
+
+:RequestControlOfEntiity
+Function 1 2 0
+
+push_0
+StaticSet2 300
+getF1 0
+CallNative "NETWORK_REQUEST_CONTROL_OF_ENTITY" 1 1
+Not
+JumpFalse @RequestControlOfEntiity_Fim
+
+:RequestControlOfEntiity_Check
+getF1 0
+CallNative "NETWORK_HAS_CONTROL_OF_ENTITY" 1 1
+Not
+JumpFalse @RequestControlOfEntiity_Fim
+push_0
+CallNative "WAIT" 1 0
+StaticGet2 300
+Add1 1
+StaticSet2 300
+StaticGet2 300
+Push 50
+Jump @RequestControlOfEntiity_Check
+
+:RequestControlOfEntiity_Fim
+Return 1 0
+
+//-------------------------------------------
+
+:DrawNotification
+Function 2 3 0
+
+PushString "STRING"
+CallNative "UNK_F42C43C7" 1 0
+getF1 0
+CallNative "UNK_27A244D8" 1 0
+getF1 1
+push_1
+CallNative "UNK_38F82261" 2 0
+:EndDrawNotification
+Return 2 0
+
+//-----------------------------------------------
+
+:Void_GodMod
+Function 0 2 0
+
+StaticGet2 439
+push_0
+JumpEQ @Ativar_GodMod
+push_0
+StaticSet2 439
+PushString "Modo imortal ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @FimGodMod
+
+:Ativar_GodMod
+push_1
+StaticSet2 439
+PushString "Modo imortal ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Call @Add_Toogle_Cores
+
+:FimGodMod
+Return 0 0
+
+//=-=====================
+
+:Void_Sempre_Dia
+Function 0 2 0
+
+StaticGet2 441
+push_0
+JumpEQ @Ativar_Sempre_Dia
+push_0
+StaticSet2 441
+PushString "Sempre dia ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @FimSempre_Dia
+
+:Ativar_Sempre_Dia
+push_1
+StaticSet2 441
+push_0
+StaticSet2 442
+PushString "Sempre dia ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Call @Add_Toogle_Cores
+
+:FimSempre_Dia
+Return 0 0
+
+//==================================
+
+:Void_Sempre_Noite
+Function 0 2 0
+
+StaticGet2 442
+push_0
+JumpEQ @Ativar_Sempre_Noite
+push_0
+StaticSet2 442
+PushString "Sempre Noite ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @FimSempre_Noite
+
+:Ativar_Sempre_Noite
+push_1
+StaticSet2 442
+push_0
+StaticSet2 441
+PushString "Sempre Noite ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Call @Add_Toogle_Cores
+
+:FimSempre_Noite
+Return 0 0
+
+//================
+
+:Void_Apagao_Geral
+StaticGet2 230
+push_0
+JumpEQ @Ativar_Apagao_Geral
+Jump @Destivar_Apagao_Geral
+:Destivar_Apagao_Geral
+push_0
+StaticSet2 230
+push_0
+CallNative "UNK_AA2A0EAF" 1 0
+Jump @Fim_Menu_Opcoes_Diversas
+:Ativar_Apagao_Geral
+push_1
+StaticSet2 230
+push_1
+CallNative "UNK_AA2A0EAF" 1 0
+Jump @Fim_Menu_Opcoes_Diversas
+
+//=============
+
+:Void_Ligar_Radio
+StaticGet2 231
+push_0
+JumpEQ @Ativar_Ligar_Radio
+Jump @Destivar_Ligar_Radio
+:Destivar_Ligar_Radio
+push_0
+StaticSet2 231
+push_0
+CallNative "SET_MOBILE_PHONE_RADIO_STATE" 1 0
+push_0
+CallNative "SET_MOBILE_RADIO_ENABLED_DURING_GAMEPLAY" 1 0
+PushString "Radio ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas
+:Ativar_Ligar_Radio
+push_1
+StaticSet2 231
+push_1
+CallNative "SET_MOBILE_PHONE_RADIO_STATE" 1 0
+push_1
+CallNative "SET_MOBILE_RADIO_ENABLED_DURING_GAMEPLAY" 1 0
+PushString "Radio ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Diversas
+
+//=======================
+
+:Void_Camera_Lenta
+Function 0 2 0
+
+StaticGet2 445
+push_0
+JumpEQ @Ativar_Camera_Lenta
+push_0
+StaticSet2 445
+fPush 1.0
+CallNative "SET_TIME_SCALE" 1 0
+PushString "Camera lenta ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @FimCamera_Lenta
+
+:Ativar_Camera_Lenta
+push_1
+StaticSet2 445
+fPush 0.1
+CallNative "SET_TIME_SCALE" 1 0
+PushString "Camera lenta ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Call @Add_Toogle_Cores
+
+:FimCamera_Lenta
+Return 0 0
+
+//---------------------------
+
+:Void_Municao_Explosiva
+Function 0 2 0
+
+StaticGet2 100
+push_0
+JumpEQ @Ativar_Municao_Explosiva
+push_0
+StaticSet2 100
+PushString "Municao Explosiva ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @FimMunicao_Explosiva
+
+:Ativar_Municao_Explosiva
+push_1
+StaticSet2 100
+PushString "Municao Explosiva ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Call @Add_Toogle_Cores
+
+:FimMunicao_Explosiva
+Return 0 0
+
+//---------------------------------------
+
+
+:Void_Super_Pulo
+Function 0 2 0
+
+StaticGet2 101
+push_0
+JumpEQ @Ativar_Super_Pulo
+push_0
+StaticSet2 101
+PushString "Super pulo ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @FimSuper_Pulo
+
+:Ativar_Super_Pulo
+push_1
+StaticSet2 101
+PushString "Super pulo ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Call @Add_Toogle_Cores
+
+:FimSuper_Pulo
+Return 0 0
+
+//-----------------------------
+:Dar_arma
+Function 1 2 0
+
+CallNative "PLAYER_PED_ID" 0 1
+getF1 0
+Push 9999
+push_0
+push_0
+CallNative "GIVE_WEAPON_TO_PED" 5 0
+Return 1 0
+
+//===========================================
+
+:Void_Municao_Infinita
+Function 0 2 0
+
+StaticGet2 446
+push_0
+JumpEQ @Ativar_Municao_Infinita
+push_0
+StaticSet2 446
+CallNative "PLAYER_PED_ID" 0 1
+push_0
+CallNative "SET_PED_INFINITE_AMMO_CLIP" 2 0
+PushString "Municao Infinita ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @FimMunicao_Infinita
+
+:Ativar_Municao_Infinita
+push_1
+StaticSet2 446
+CallNative "PLAYER_PED_ID" 0 1
+push_1 
+CallNative "SET_PED_INFINITE_AMMO_CLIP" 2 0
+PushString "Municao Infinita ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Call @Add_Toogle_Cores
+
+:FimMunicao_Infinita
+Return 0 0
+
+//=================
+
+:Void_Sem_Policia
+Function 0 2 0
+
+StaticGet2 447
+push_0
+JumpEQ @Ativar_Sem_Policia
+push_0
+StaticSet2 447
+PushString "Sem Policia ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @FimSem_Policia
+
+:Ativar_Sem_Policia
+push_1
+StaticSet2 447
+PushString "Sem Policia ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Call @Add_Toogle_Cores
+
+:FimSem_Policia
+Return 0 0
+
+//====================================
+
+:Void_Shrink
+StaticGet2 448
+push_0
+JumpEQ @Ativar_Shrink
+Jump @Desativar_Shrink
+:Desativar_Shrink
+push_0
+StaticSet2 448
+CallNative "PLAYER_PED_ID" 0 1
+Push 223
+push_0
+CallNative "SET_PED_CONFIG_FLAG" 3 0
+PushString "Encolhido ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Shrink
+:Ativar_Shrink
+push_1
+StaticSet2 448
+CallNative "PLAYER_PED_ID" 0 1
+Push 223
+push_1
+CallNative "SET_PED_CONFIG_FLAG" 3 0
+PushString "Encolhido ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Shrink
+
+:Fim_Shrink
+Return 0 0
+
+//===============================
+
+:Void_Corridinha
+StaticGet2 449
+push_0
+JumpEQ @Ativar_Corridinha
+Jump @Desativar_Corridinha
+:Desativar_Corridinha
+push_0
+StaticSet2 449
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "PLAYER_ID" 0 1
+fPush 1.00
+CallNative "SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER" 2 0
+PushString "Super Corrida ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Corridinha
+:Ativar_Corridinha
+push_1
+StaticSet2 449
+CallNative "PLAYER_ID" 0 1
+fPush 1.48
+CallNative "SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER" 2 0
+PushString "Super Corrida ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Corridinha
+
+:Fim_Corridinha
+Return 0 0
+
+//========================
+
+:Void_Matar_1_Tiro
+StaticGet2 232
+push_0
+JumpEQ @Ativar_Matar_1_Tiro
+Jump @Desativar_Matar_1_Tiro
+:Desativar_Matar_1_Tiro
+push_0
+StaticSet2 232
+CallNative "PLAYER_ID" 0 1
+fPush 1.0
+CallNative "SET_PLAYER_WEAPON_DAMAGE_MODIFIER" 2 0
+PushString "Matar com 1 tiro ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Jogador
+
+:Ativar_Matar_1_Tiro
+push_1
+StaticSet2 232
+CallNative "PLAYER_ID" 0 1
+fPush 9999.0
+CallNative "SET_PLAYER_WEAPON_DAMAGE_MODIFIER" 2 0
+PushString "Matar com 1 tiro ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Jogador
+
+//---------------------
+
+
+
+:Void_Carro_Invisivel
+StaticGet2 233
+push_0
+JumpEQ @Ativar_Carro_Invisivel
+Jump @Desativar_Carro_Invisivel
+:Desativar_Carro_Invisivel
+push_0
+StaticSet2 233
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_1
+CallNative "SET_ENTITY_VISIBLE" 2 0
+PushString "Veiculo invisivel ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+:Ativar_Carro_Invisivel
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Fim_Segundo_Sub_menu
+push_1
+StaticSet2 233
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_0
+CallNative "SET_ENTITY_VISIBLE" 2 0
+PushString "Veiculo invisivel ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+
+//================
+
+:Void_Drift
+StaticGet2 234
+push_0
+JumpEQ @Ativar_Drift
+Jump @Desativar_Drift
+:Desativar_Drift
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+push_0
+StaticSet2 234
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_0
+CallNative "SET_VEHICLE_REDUCE_GRIP" 2 0
+PushString "Modo Drift ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+:Ativar_Drift
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Fim_Segundo_Sub_menu
+push_1
+StaticSet2 234
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_1
+CallNative "SET_VEHICLE_REDUCE_GRIP" 2 0
+PushString "Modo Drift ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+
+//================================
+
+:Void_Max_Upgrade
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Max_Upgrade_semCarro
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+StaticSet2 526
+StaticGet2 526
+push_0
+CallNative "SET_VEHICLE_MOD_KIT" 2 0
+StaticGet2 526
+Push 16
+Push 4
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 12
+Push 2
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 11
+Push 3
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 13
+Push 2
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 18
+Push 1
+CallNative "TOGGLE_VEHICLE_MOD" 3 0
+StaticGet2 526
+push_0
+CallNative "SET_VEHICLE_TYRES_CAN_BURST" 2 0
+StaticGet2 526
+PushString "Bresolin"
+CallNative "SET_VEHICLE_NUMBER_PLATE_TEXT" 2 0
+StaticGet2 526
+Push 1
+CallNative "SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX" 2 0
+StaticGet2 526
+Push 18
+Push 1
+CallNative "TOGGLE_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 22
+Push 1
+CallNative "TOGGLE_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 16
+Push 5
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 12
+Push 2
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 11
+Push 3
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 14
+Push 14
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 15
+Push 3
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 13
+Push 2
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 6
+CallNative "SET_VEHICLE_WHEEL_TYPE" 2 0
+StaticGet2 526
+Push 5
+CallNative "SET_VEHICLE_WINDOW_TINT" 2 0 
+StaticGet2 526
+Push 23
+Push 19
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 0
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 1
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 2
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 3
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 4
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 5
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 6
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 7
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 8
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 9
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 10
+Push 1
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+
+PushString "Tunagem completa ~g~aplicada"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+
+:Max_Upgrade_semCarro
+PushString "~r~Voce precisa de um veiculo"
+PushS 2500
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+
+
+
+//==============
+
+
+
+
+:Void_Carbonizar
+StaticGet2 235
+push_0
+JumpEQ @Ativar_Carbonizar
+Jump @Desativar_Carbonizar
+
+:Desativar_Carbonizar
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Fim_Segundo_Sub_menu
+push_0
+StaticSet2 235
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_0
+CallNative "SET_ENTITY_RENDER_SCORCHED" 2 0
+PushString "Modo Carbonizar ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+
+:Ativar_Carbonizar
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "IS_PED_SITTING_IN_ANY_VEHICLE" 1 1
+JumpFalse @Fim_Segundo_Sub_menu
+push_1
+StaticSet2 235
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+push_1
+CallNative "SET_ENTITY_RENDER_SCORCHED" 2 0
+PushString "Modo Carbonizar ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Segundo_Sub_menu
+
+//===============================
+
+:Void_Atravessar_Objetos
+StaticGet2 236
+push_0
+JumpEQ @Ativar_Atravessar_Objetos
+Jump @Desativar_Atravessar_Objetos
+:Desativar_Atravessar_Objetos
+push_0
+StaticSet2 236
+PushString "Atravessar Objetos ~r~desativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Jogador
+
+:Ativar_Atravessar_Objetos
+push_1
+StaticSet2 236
+PushString "Atravessar Objetos ~g~ativado"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Jogador
+
+//============
+
+:Void_Arma_Dinheiro
+StaticGet2 237
+push_0
+JumpEQ @Ativar_Arma_Dinheiro
+Jump @Desativar_Arma_Dinheiro
+:Desativar_Arma_Dinheiro
+push_0
+StaticSet2 237
+PushString "Arma de dinheiro ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Jogador
+:Ativar_Arma_Dinheiro
+push_1
+StaticSet2 237
+PushString "Arma de dinheiro ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Jogador
+
+//==================
+
+:Void_Arma_Fogo
+StaticGet2 238
+push_0
+JumpEQ @Ativar_Arma_Fogo
+Jump @Desativar_Arma_Fogo
+:Desativar_Arma_Fogo
+push_0
+StaticSet2 238
+PushString "Arma de Fogo ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Armas
+:Ativar_Arma_Fogo
+push_1
+StaticSet2 238
+PushString "Arma de Fogo ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Armas
+
+//================================
+
+:Void_Arma_Deletadora
+StaticGet2 239
+push_0
+JumpEQ @Ativar_Arma_Deletadora
+Jump @Desativar_Arma_Deletadora
+:Desativar_Arma_Deletadora
+push_0
+StaticSet2 239
+PushString "Arma Deletadora ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Armas
+:Ativar_Arma_Deletadora
+push_1
+StaticSet2 239
+PushString "Arma Deletadora ~g~ativada, mire em um objeto para apagar"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Armas
+
+//=============================
+
+:Void_Arma_Teleport
+StaticGet2 240
+push_0
+JumpEQ @Ativar_Arma_Teleport
+Jump @Desativar_Arma_Teleport
+:Desativar_Arma_Teleport
+push_0
+StaticSet2 240
+PushString "Arma Teleport ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Armas
+:Ativar_Arma_Teleport
+push_1
+StaticSet2 240
+PushString "Arma Teleport ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Opcoes_Armas
+
+//=========================
+
+:Void_Particulas
+StaticGet2 243
+push_0
+JumpEQ @Ativar_Particulas
+Jump @Desativar_Particulas
+:Desativar_Particulas
+push_0
+StaticSet2 243
+PushString "Particulas ~r~desativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Particulas
+:Ativar_Particulas
+push_1
+StaticSet2 243
+PushString "Particulas ~g~ativada"
+PushS 3000
+Call @DrawNotification
+Jump @Fim_Menu_Particulas
+
+//-----------------------
