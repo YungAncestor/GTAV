@@ -1,0 +1,2354 @@
+//clear task
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_PED_TASKS_IMMEDIATELY" 1 0
+ 
+//scenario
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_MUSICIAN"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+ 
+///tunagem performanse maxima
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+StaticSet2 526//=========ver esses 526 oq é
+StaticGet2 526
+push_0
+CallNative "SET_VEHICLE_MOD_KIT" 2 0
+StaticGet2 526
+Push 16
+Push 4
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 12
+Push 2
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 11
+Push 3
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 13
+Push 2
+Push 0
+CallNative "SET_VEHICLE_MOD" 4 0
+StaticGet2 526
+Push 18
+Push 1
+CallNative "TOGGLE_VEHICLE_MOD" 3 0
+StaticGet2 526
+push_0
+CallNative "SET_VEHICLE_TYRES_CAN_BURST" 2 0
+ 
+//municao infinita
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "SET_PED_INFINITE_AMMO_CLIP" 2 0
+ 
+ 
+//dar armas
+Push 2578778090
+Call @GiveWeapon_
+Push 1737195953
+Call @GiveWeapon_
+Push 1317494643
+Call @GiveWeapon_
+Push 2508868239
+Call @GiveWeapon_
+Push 1141786504
+Call @GiveWeapon_
+Push 2227010557
+Call @GiveWeapon_
+Push 453432689
+Call @GiveWeapon_
+Push 1593441988
+Call @GiveWeapon_
+Push 584646201
+Call @GiveWeapon_
+Push 2578377531
+Call @GiveWeapon_
+Push 324215364
+Call @GiveWeapon_
+Push 736523883
+Call @GiveWeapon_
+Push 4024951519
+Call @GiveWeapon_
+Push 3220176749
+Call @GiveWeapon_
+Push 2210333304
+Call @GiveWeapon_
+Push 2937143193
+Call @GiveWeapon_
+Push 2634544996
+Call @GiveWeapon_
+Push 2144741730
+Call @GiveWeapon_
+Push 487013001
+Call @GiveWeapon_
+Push 2017895192
+Call @GiveWeapon_
+Push 3800352039
+Call @GiveWeapon_
+Push 2640438543
+Call @GiveWeapon_
+Push 911657153
+Call @GiveWeapon_
+Push 100416529
+Call @GiveWeapon_
+Push 205991906
+Call @GiveWeapon_
+Push 2726580491
+Call @GiveWeapon_
+Push 1305664598
+Call @GiveWeapon_
+Push 2982836145
+Call @GiveWeapon_
+Push 1119849093
+Call @GiveWeapon_
+Push 2481070269
+Call @GiveWeapon_
+Push 741814745
+Call @GiveWeapon_
+Push 4256991824
+Call @GiveWeapon_
+Push 2694266206
+Call @GiveWeapon_
+Push 615608432
+Call @GiveWeapon_
+Push 101631238
+Call @GiveWeapon_
+Push 883325847
+Call @GiveWeapon_
+Push 600439132
+Call @GiveWeapon_
+Push 1233104067
+Call @GiveWeapon_
+Push 4192643659
+Call @GiveWeapon_
+Push 1627465347
+Call @GiveWeapon_
+Push 3231910285
+Call @GiveWeapon_
+Push 3523564046
+Call @GiveWeapon_
+Push 3218215474
+Call @GiveWeapon_
+Push 2132975508
+Call @GiveWeapon_
+Push 2460120199
+Call @GiveWeapon_
+Push 137902532
+Call @GiveWeapon_
+Push 2138347493
+Call @GiveWeapon_
+Push 2828843422
+Call @GiveWeapon_
+Push 984333226
+Call @GiveWeapon_
+Push 3342088282
+Call @GiveWeapon_
+Push 1672152130
+Call @GiveWeapon_
+Push 2874559379
+Call @GiveWeapon_
+Push 126349499
+Call @GiveWeapon_
+Push 1198879012
+Call @GiveWeapon_
+Push 171789620
+Call @GiveWeapon_
+Push 3696079510
+Call @GiveWeapon_
+Push 3638508604
+Call @GiveWeapon_
+//fazer um jump para um "Return 0 0"
+ 
+:GiveWeapon_
+Function 1 2 0
+CallNative "PLAYER_PED_ID" 0 1
+getF1 0
+Push 9999
+push_0
+push_0
+CallNative "GIVE_WEAPON_TO_PED" 5 0
+Return 1 0
+ 
+ 
+ 
+//remover armas
+CallNative "PLAYER_PED_ID" 0 1
+push_1
+CallNative "REMOVE_ALL_PED_WEAPONS" 2 0
+ 
+ 
+ 
+//carregar IPL
+ 
+:IPLControlLifeInvader_
+PushString "facelobby"
+CallNative "IS_IPL_ACTIVE" 1 1
+push_1
+JumpEQ @UnloadLifeInvader_
+PushString "facelobby"
+CallNative "REQUEST_IPL" 1 0
+PushString "facelobbyfake"
+CallNative "REMOVE_IPL" 1 0
+PushString "~b~Info:~s~ Life Invader loaded."
+PushS 2500
+Call @PrintText_
+Jump @EndIPLControl_
+ 
+:UnloadLifeInvader_
+PushString "facelobby"
+CallNative "REMOVE_IPL" 1 0
+PushString "facelobbyfake"
+CallNative "REQUEST_IPL" 1 0
+PushString "~b~Info:~s~ Life Invader unloaded."
+PushS 2500
+Call @PrintText_
+Jump @EndIPLControl_
+ 
+ 
+ 
+//Shrink
+:SelfOptionsShrink_
+CallNative "PLAYER_PED_ID" 0 1
+Push 223
+push_1
+CallNative "GET_PED_CONFIG_FLAG" 3 1
+push_1
+JumpEQ @TurnOffShrink_
+CallNative "PLAYER_PED_ID" 0 1
+Push 223
+push_1
+CallNative "SET_PED_CONFIG_FLAG" 3 0
+Jump @SelfOptionsReturn_
+:TurnOffShrink_
+CallNative "PLAYER_PED_ID" 0 1
+Push 223
+push_0
+CallNative "SET_PED_CONFIG_FLAG" 3 0
+Jump @SelfOptionsReturn_
+ 
+ 
+//Correr Rapido
+:SelfOptionsFasterRun_
+StaticGet2 537
+push_0
+JumpEQ @TurnOnFasterRun_
+Jump @TurnOffFasterRun_
+:TurnOnFasterRun_
+push_1
+StaticSet2 537
+CallNative "PLAYER_ID" 0 1
+fPush 1.48
+CallNative "SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER" 2 0
+Jump @SelfOptionsReturn_
+:TurnOffFasterRun_
+push_0
+StaticSet2 537
+CallNative "PLAYER_ID" 0 1
+fPush 1.00
+CallNative "SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER" 2 0
+Jump @SelfOptionsReturn_
+ 
+ 
+ 
+ 
+//Exemplo de IF
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Push 1621617168
+CallNative "IS_VEHICLE_MODEL" 2 1
+push_1
+JumpEQ @ErrorWrongCargobob_ //confirma se é o veiculo, ELSE aqui
+Jump @ErrorVehicleIsNotACargobob_ //veiculo certo
+ 
+ 
+ 
+ 
+ 
+//Traje
+CallNative "PLAYER_PED_ID" 0 1
+// Hat
+push_0
+push_0
+push_0
+push_0
+CallNative "SET_PED_PROP_INDEX" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Glasses
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_PROP_INDEX" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Head
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0    
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2
+Push 11
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0
+
+//clear task
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "CLEAR_PED_TASKS_IMMEDIATELY" 1 0
+
+//scenario
+CallNative "PLAYER_PED_ID" 0 1
+PushString "WORLD_HUMAN_MUSICIAN"
+push_0
+push_0
+CallNative "TASK_START_SCENARIO_IN_PLACE" 4 0
+
+
+
+//municao infinita
+CallNative "PLAYER_PED_ID" 0 1
+push_1 
+CallNative "SET_PED_INFINITE_AMMO_CLIP" 2 0
+
+
+
+
+
+//carregar IPL
+
+:IPLControlLifeInvader_
+PushString "facelobby"
+CallNative "IS_IPL_ACTIVE" 1 1
+push_1
+JumpEQ @UnloadLifeInvader_
+PushString "facelobby"
+CallNative "REQUEST_IPL" 1 0
+PushString "facelobbyfake"
+CallNative "REMOVE_IPL" 1 0
+PushString "~b~Info:~s~ Life Invader loaded."
+PushS 2500
+Call @PrintText_
+Jump @EndIPLControl_
+
+:UnloadLifeInvader_
+PushString "facelobby"
+CallNative "REMOVE_IPL" 1 0
+PushString "facelobbyfake"
+CallNative "REQUEST_IPL" 1 0
+PushString "~b~Info:~s~ Life Invader unloaded."
+PushS 2500
+Call @PrintText_
+Jump @EndIPLControl_
+
+
+
+
+
+//Correr Rapido
+:SelfOptionsFasterRun_
+StaticGet2 537
+push_0
+JumpEQ @TurnOnFasterRun_
+Jump @TurnOffFasterRun_
+:TurnOnFasterRun_
+push_1
+StaticSet2 537
+CallNative "PLAYER_ID" 0 1
+fPush 1.48
+CallNative "SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER" 2 0
+Jump @SelfOptionsReturn_
+:TurnOffFasterRun_
+push_0
+StaticSet2 537
+CallNative "PLAYER_ID" 0 1
+fPush 1.00
+CallNative "SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER" 2 0
+Jump @SelfOptionsReturn_
+
+
+
+
+//Exemplo de IF
+CallNative "PLAYER_PED_ID" 0 1
+CallNative "GET_VEHICLE_PED_IS_USING" 1 1
+Push 1621617168
+CallNative "IS_VEHICLE_MODEL" 2 1
+push_1
+JumpEQ @ErrorWrongCargobob_ //confirma se é o veiculo, ELSE aqui
+Jump @ErrorVehicleIsNotACargobob_ //veiculo certo
+
+
+
+
+
+//Traje
+CallNative "PLAYER_PED_ID" 0 1
+// Hat 
+push_0
+push_0
+push_0
+push_0
+CallNative "SET_PED_PROP_INDEX" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+// Glasses
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_PROP_INDEX" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+// Head 
+push_1
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+// Hair
+push_2
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+// Torso
+push_3
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 	
+CallNative "PLAYER_PED_ID" 0 1
+// Legs
+push_4
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+// Hands
+push_5
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+//  Shoes
+push_6
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 1 
+push_7
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 2
+Push 8
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+//  Special 3
+Push 9
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+// Texture
+Push 10
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+CallNative "PLAYER_PED_ID" 0 1
+// Torso 2 
+Push 11
+push_0
+push_0
+push_0
+CallNative "SET_PED_COMPONENT_VARIATION" 5 0 
+
+
+
+//RP
+PushString "mp0_char_xp_fm"
+CallNative "GET_HASH_KEY" 1 1
+Push 2464100
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+//grana
+Push 5000000
+CallNative "NETWORK_EARN_FROM_ROCKSTAR" 1 0
+PushString "You have been given ~g~1000000"
+
+
+//stats ao maximo
+PushString "mp0_script_increase_stam"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_strn"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_lung"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_driv"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_fly"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_sho"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_stl"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_script_increase_mech"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_stam"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_strn"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_lung"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_driv"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_fly"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_sho"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_stl"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_script_increase_mech"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+
+//lsc
+PushString "mp0_races_won"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_1_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_2_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_3_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_4_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_5_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_6_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_carmod_7_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_fmwinsearace"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_fmwinsearace"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_number_turbo_starts_in_race"
+CallNative "GET_HASH_KEY" 1 1
+Push 120
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_usjs_completed"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_fm_races_fastest_lap"
+CallNative "GET_HASH_KEY" 1 1
+Push 120
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_number_slipstreams_in_race"
+CallNative "GET_HASH_KEY" 1 1
+Push 140
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_races_won"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_1_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_2_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_3_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_4_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_5_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_6_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_carmod_7_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_fmwinsearace"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_fmwinsearace"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_number_turbo_starts_in_race"
+CallNative "GET_HASH_KEY" 1 1
+Push 120
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_usjs_completed"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_fm_races_fastest_lap"
+CallNative "GET_HASH_KEY" 1 1
+Push 120
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_number_slipstreams_in_race"
+CallNative "GET_HASH_KEY" 1 1
+Push 140
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+
+//tatuagens
+PushString "mp0_tattoo_fm_unlocks_0"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_8"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_9"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_10"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_11"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_12"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_13"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_14"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_15"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_16"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_0"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_8"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_9"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_10"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_11"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_12"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+
+//unlocks adicionais
+PushString "mp0_tattoo_fm_unlocks_0"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_8"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_9"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_10"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_11"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_12"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_13"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_14"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_15"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_tattoo_fm_unlocks_16"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_0"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_8"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_9"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_10"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_11"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_tattoo_fm_unlocks_12"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//crtes de cabelo
+PushString "mp0_clths_available_hair"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_1"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_2"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_3"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_4"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_5"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_6"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_clths_available_hair_7"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//carros das heists
+PushString "mpply_heist_ach_tracker"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_vehicle_1_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_char_fm_vehicle_2_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_vehicle_1_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_char_fm_vehicle_2_unlck"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_unlock_hipster_tshirt_dog"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_unlock_hipster_tshirt_vinyl"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_unlock_hipster_tshirt_mess"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_unlock_race_hipster_tshirt"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_unlock_dm_hipster_tshirt"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_unlock_hipster_tshirt_dog"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_unlock_hipster_tshirt_vinyl"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_unlock_hipster_tshirt_mess"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_unlock_race_hipster_tshirt"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_unlock_dm_hipster_tshirt"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//camisas especiais
+PushString "mp0_awd_fmhordwavessurvive"
+CallNative "GET_HASH_KEY" 1 1
+Push 10
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_fmpickupdlccrate1st"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp0_awd_win_capture_dont_dying"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_do_heist_as_member"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_pickup_cap_packages"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_finish_heist_no_damage"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp0_awd_win_gold_medal_heists"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_kill_team_yourself_lts"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_kill_psychopaths"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_do_heist_as_the_leader"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_store_20_car_in_garages"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_awd_fmhordwavessurvive"
+CallNative "GET_HASH_KEY" 1 1
+Push 10
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_fmpickupdlccrate1st"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_awd_win_capture_dont_dying"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_do_heist_as_member"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_pickup_cap_packages"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_finish_heist_no_damage"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_awd_win_gold_medal_heists"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_kill_team_yourself_lts"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_kill_psychopaths"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_do_heist_as_the_leader"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_store_20_car_in_garages"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+
+//rodas cromadaas
+PushString "mp0_awd_win_captures"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_dropoff_cap_packages"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_kill_carrier_capture"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_finish_heists"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_finish_heist_setup_job"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_nightvision_kills"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_win_last_team_standings"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_awd_only_player_alive_lts"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_win_captures"
+CallNative "GET_HASH_KEY" 1 1
+Push 25
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_dropoff_cap_packages"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_kill_carrier_capture"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_finish_heists"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_finish_heist_setup_job"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_nightvision_kills"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_win_last_team_standings"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_awd_only_player_alive_lts"
+CallNative "GET_HASH_KEY" 1 1
+Push 50
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+Jump @Label_111
+
+:Label_122
+PushString "mp0_player_mental_state"
+CallNative "GET_HASH_KEY" 1 1
+fPush 100
+push_1
+CallNative "STAT_SET_FLOAT" 3 1
+Drop
+PushString "mp1_player_mental_state"
+CallNative "GET_HASH_KEY" 1 1
+fPush 100
+push_1
+CallNative "STAT_SET_FLOAT" 3 1
+Drop
+
+
+//maximo de alanches cigarros
+PushString "mp0_cigarettes_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+
+PushString "mp0_no_bought_yum_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp0_no_bought_health_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp0_no_bought_epic_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp0_number_of_bourge_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp0_number_of_orange_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp1_cigarettes_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp1_no_bought_yum_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp1_no_bought_health_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp1_no_bought_epic_snacks"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp1_number_of_bourge_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+ 
+PushString "mp1_number_of_orange_bought"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+
+
+//coletes
+PushString "mp0_mp_char_armour_1_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp0_mp_char_armour_2_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp0_mp_char_armour_3_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp0_mp_char_armour_4_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp0_mp_char_armour_5_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp0_char_current_health"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp0_char_current_armour"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp1_mp_char_armour_1_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp1_mp_char_armour_2_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp1_mp_char_armour_3_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp1_mp_char_armour_4_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+PushString "mp1_mp_char_armour_5_count"
+CallNative "GET_HASH_KEY" 1 1
+Push 624999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+//fogos
+PushString "mp0_firework_type_1_white"
+CallNative "GET_HASH_KEY" 1 1
+Push 999999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+PushString "MP0_FIREWORK_TYPE_1_RED"
+CallNative "GET_HASH_KEY" 1 1
+Push 999999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+PushString "MP0_FIREWORK_TYPE_1_BLUE"
+CallNative "GET_HASH_KEY" 1 1
+Push 999999999
+push_1
+CallNative "STAT_SET_INT" 3 1
+
+
+//roladinha
+PushString "MP0_SHOOTING_ABILITY"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP1_SHOOTING_ABILITY"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//corridinha e no recoiil
+PushString "MP0_CHAR_ABILITY_1_UNLCK"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MP1_CHAR_ABILITY_1_UNLCK"
+CallNative "GET_HASH_KEY" 1 1
+push_-1
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//KD alto
+
+PushString "mpply_kills_players"
+CallNative "GET_HASH_KEY" 1 1
+Push 10
+//valor do KD
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//tempo de venda zerar
+PushString "mpply_vehicle_sell_time"
+CallNative "GET_HASH_KEY" 1 1
+Push 0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//roosevelt
+PushString "mpply_vehicle_id_admin_web"
+CallNative "GET_HASH_KEY" 1 1
+Push 117401876
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//recriar player
+PushString "mp0_fm_changechar_asked"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_fm_changechar_asked"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+
+//limpar denuncias
+PushString "mp0_times_cheated"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_times_cheated"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_is_cheater"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp0_cheat_bitset"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_cheat_bitset"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_was_i_cheater"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mpply_overall_cheat"
+CallNative "GET_HASH_KEY" 1 1
+fPush_0.0
+push_1
+CallNative "STAT_SET_FLOAT" 3 1
+Drop
+PushString "mpply_became_cheater_num"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_dm_cheat_tally"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_race_cheat_tally"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_mc_cheat_tally"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_mgame_cheat_tally"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "scadmin_is_cheater"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mpply_cap_cheat_tally"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_sur_cheat_tally"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_lts_cheat_tally"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mpply_para_cheat_tally"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//remover mal perdedor
+PushString "mp0_bad_sport_bitset"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mpply_was_i_bad_sport"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mpply_overall_badsport"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mpply_char_is_badsport"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mpply_became_badsport_num"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp0_mpply_destroyed_pvehicles"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_bad_sport_bitset"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mpply_was_i_bad_sport"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mpply_overall_badsport"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mpply_char_is_badsport"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mpply_became_badsport_num"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "mp1_mpply_destroyed_pvehicles"
+CallNative "GET_HASH_KEY" 1 1
+push_0
+push_0
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//pular tutorial
+PushString "mp0_no_tut_spawn"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp0_front_end_jip_unlocked"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp0_fm_trigtut_done"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp0_fm_holdtut_done"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp0_fm_cmodtut_done"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp0_fm_racetut_done"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_no_tut_spawn"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_front_end_jip_unlocked"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_fm_trigtut_done"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_fm_holdtut_done"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_fm_cmodtut_done"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+PushString "mp1_fm_racetut_done"
+CallNative "GET_HASH_KEY" 1 1
+push_1
+push_1
+CallNative "STAT_SET_BOOL" 3 1
+Drop
+
+//mortes com pistola
+PushString "MP0_PISTOL_KILLS"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//mortes com arma de combate
+PushString "MP0_CMBTPISTOL_KILLS"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//corridas ganhas
+PushString "MP0_RACES_WON"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+//numero de corridas
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MPPLY_TOTAL_RACES_WON"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+//numero de corridas
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//corridas perdidads
+PushString "MPPLY_TOTAL_RACES_LOST"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+//numero de corridas
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//mata mata ganhos
+PushString "MPPLY_TOTAL_TDEATHMATCH_WON"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+//numero
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MPPLY_TOTAL_DEATHMATCH_WON"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+//numero
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+
+//partidas de tenis ganhas
+PushString "MPPLY_TENNIS_MATCHES_WON"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+//numero
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//partidas de golf ganhas
+PushString "MPPLY_GOLF_WINS"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+//numero
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+
+//partidas de dardo ganhas
+PushString "MPPLY_DARTS_TOTAL_WINS"
+CallNative "GET_HASH_KEY" 1 1
+Push 1000
+//numero
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+
+
+//crew
+PushString "MPPLY_CURRENT_CREW_RANK"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+PushString "MPPLY_NEXT_CREW_RANK"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//estado mental alto
+PushString "MP0_PLAYER_MENTAL_STATE"
+CallNative "GET_HASH_KEY" 1 1
+Push 100
+push_1
+CallNative "STAT_SET_INT" 3 1
+Drop
+
+//globo (por no rect do banner)
+PushString "MP_MENU_GLARE"
+CallNative "REQUEST_SCALEFORM_MOVIE" 1 1
+fPush 0.425000011921
+fPush 0.469000011683
+fPush 0.819999992847
+fPush 0.870000004768
+Push3 255 255 255
+Push1 255
+CallNative "DRAW_SCALEFORM_MOVIE" 9 0
+
+//particula
+:ParticleMan_
+PushString "scr_rcbarry2" 
+CallNative "REQUEST_NAMED_PTFX_ASSET" 1 0
+PushString "scr_rcbarry2"
+CallNative "HAS_NAMED_PTFX_ASSET_LOADED" 1 1
+JumpFalse @FimParticula
+PushString "scr_rcbarry2"
+CallNative "UNK_9C720B61" 1 0
+PushString "scr_clown_appears"
+CallNative "PLAYER_PED_ID" 0 1
+fPush_0.0
+fPush_0.0
+fPush_0.0
+fPush_0.0
+fPush_0.0
+fPush_0.0
+Push 31086
+fPush 0.05
+push_0
+push_0
+push_0
+CallNative "UNK_161780C1" 13 1
+Drop
+
+:FimParticula
+Return 0 0
+
+//Objeto
+PushString "prop_inflatearch_01"
+CallNative "GET_HASH_KEY" 1 1
+Call @CarregarModelo
+PushString "prop_inflatearch_01"
+CallNative "GET_HASH_KEY" 1 1
+fPush -393.6448
+fPush -108.1343
+fPush 37.5889
+push_1
+push_0
+push_0
+CallNative "CREATE_OBJECT" 7 1
+setF1 3
+getF1 3
+CallNative "OBJ_TO_NET" 1 1
+Drop
+
+//visao noturna
+CallNative "SET_SEETHROUGH" 1 0
+
+//valor aleatorio
+push_0
+push_7
+CallNative "GET_RANDOM_INT_IN_RANGE" 2 1
+
+//money drop
+Push 289396019
+CallNative "REQUEST_MODEL" 1 0
+Push 289396019
+CallNative "HAS_MODEL_LOADED" 1 1
+JumpFalse @InstructionalButtons_
+Push 3463437675
+StaticGet2 603
+CallNative "GET_PLAYER_PED" 1 1
+fPush_0.0
+fPush_0.0
+fPush_2.0
+CallNative "GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS" 4 3
+push_0
+Push 40000
+Push 289396019
+push_0
+push_0
+CallNative "CREATE_AMBIENT_PICKUP" 9 1
+Drop
+Push 289396019
+CallNative "SET_MODEL_AS_NO_LONGER_NEEDED" 1 0
+
+//neve
+push_1
+pGlobal3 262145
+SetImmediate2 4715
+
+//liberar dlcs
+push_1
+pGlobal3 262145
+SetImmediate2 4724
+push_1
+pGlobal3 262145
+SetImmediate2 4827
+push_1
+pGlobal3 262145
+SetImmediate2 6003
+push_1
+pGlobal3 262145
+SetImmediate2 6016
+push_1
+pGlobal3 262145
+SetImmediate2 6017
+push_0
+pGlobal3 262145
+SetImmediate2 6011
+push_0
+pGlobal3 262145
+SetImmediate2 6015
+push_0
+pGlobal3 262145
+SetImmediate2 6884
+push_0
+pGlobal3 262145
+SetImmediate2 6885
+push_0
+pGlobal3 262145
+SetImmediate2 6886
+push_1
+pGlobal3 262145
+SetImmediate2 6935
+push_1
+pGlobal3 262145
+SetImmediate2 6936
+push_1
+pGlobal3 262145
+SetImmediate2 6937
+push_1
+pGlobal3 262145
+SetImmediate2 4860
+push_1
+pGlobal3 262145
+SetImmediate2 6843
+push_0
+pGlobal3 262145
+SetImmediate2 6880
+push_0
+pGlobal3 262145
+SetImmediate2 6881
+push_0
+pGlobal3 262145
+SetImmediate2 6882
+push_0
+pGlobal3 262145
+SetImmediate2 6883
+push_0
+pGlobal3 262145
+SetImmediate2 6884
+push_0
+pGlobal3 262145
+SetImmediate2 6885
+push_0
+pGlobal3 262145
+SetImmediate2 6886
+PushString "All dlc has been enabled."
+
+// criar explosao
+Push1 29
+fPush_7.0
+push_1
+push_0
+fPush_0.0
+CallNative "ADD_OWNED_EXPLOSION" 9 0
+
+//clone
+CallNative "GET_PLAYER_PED" 1 1
+push_1
+push_1
+push_1
+CallNative "CLONE_PED" 4 1
+Drop
