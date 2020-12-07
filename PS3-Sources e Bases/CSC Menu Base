@@ -1,0 +1,1428 @@
+Function 0 2 0
+
+CallNative "NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME" 0 0
+Call @Inicio_CSA
+Return 0 0
+
+:Inicio_CSA
+Function 0 2 0
+
+push_0
+StaticSet1 1
+fPush_1.0
+StaticSet1 2
+fPush_1.0
+StaticSet1 3
+fPush 0.179000005126
+StaticSet1 4
+fPush_1.0
+StaticSet1 5
+fPush_1.0
+StaticSet1 6
+fPush_1.0
+StaticSet1 7
+push_1
+StaticSet1 8
+push_7
+StaticSet2 434
+Push 100
+StaticSet2 435
+Push 199
+StaticSet2 436
+push_1
+StaticSet2 437
+fPush 0.14499999582767
+StaticSet2 438
+
+:Label_11
+push_0
+CallNative "WAIT" 1 0
+Call @OtherLoop
+StaticGet1 1
+Switch [0=@Label_1][1=@Menu_Principal_Enum][2=@Menu_Config_Enum][3=@Menu_Cores_Enum][4=@Primeiro_Sub_menu_Enum][5=@Segundo_Sub_menu_Enum][6=@Terceiro_Sub_menu_Enum][7=@Quarto_Sub_menu_Enum][8=@Menu_Creditos_Enum]
+
+:Label_1
+Call @Label_10
+Jump @Label_11
+
+:Menu_Principal_Enum
+Call @Menu_Principal
+Jump @Label_13
+
+:Menu_Config_Enum
+Call @Menu_Config
+Jump @Label_13
+
+:Menu_Cores_Enum
+Call @Menu_Cores
+Jump @Label_13
+
+:Primeiro_Sub_menu_Enum
+Call @Primeiro_Sub_menu
+Jump @Label_13
+
+:Segundo_Sub_menu_Enum
+Call @Segundo_Sub_menu
+Jump @Label_13
+
+:Terceiro_Sub_menu_Enum
+Call @Terceiro_Sub_menu
+Jump @Label_13
+
+:Quarto_Sub_menu_Enum
+Call @Quarto_Sub_menu
+Jump @Label_13
+
+:Menu_Creditos_Enum
+Call @Menu_Creditos
+Jump @Label_21
+
+:Label_13
+Call @Label_22
+Jump @Label_11
+
+:Label_21
+Call @Label_23
+Jump @Label_11
+Return 0 0
+
+//-------------------------LOOP
+
+:OtherLoop
+Function 0 2 0
+
+StaticGet2 100 
+JumpFalse @Loop_2
+CallNative PLAYER_ID 0 1
+CallNative "SET_EXPLOSIVE_AMMO_THIS_FRAME" 1 0
+
+:Loop_2
+StaticGet2 101
+JumpFalse @Fim_Loop
+CallNative PLAYER_ID 0 1
+CallNative "SET_SUPER_JUMP_THIS_FRAME" 1 0
+
+:Fim_Loop
+Return 0 0
+
+//========================================
+
+:Label_22
+Function 0 2 0
+
+Call @Draw_rect_3
+Call @Desativar_Controles
+push_2
+Push 202
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+push_1
+JumpEQ @Label_26
+push_2
+Push 203
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+push_1
+JumpEQ @Label_27
+push_2
+Push 195
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+push_1
+JumpEQ @Label_28
+Jump @Label_29
+
+:Label_28
+PushString "BACK"
+Call @Tocar_som
+StaticGet1 1
+push_1
+JumpEQ @Habilitar_Todos_Controles
+StaticGet1 8
+StaticSet1 1
+StaticGet2 443
+StaticSet1 2
+StaticGet2 444
+StaticSet1 4
+Jump @Label_29
+
+:Label_26
+StaticGet1 2
+fPush_1.0
+JumpEQ @Label_32
+StaticGet1 2
+fPush_1.0
+fSub
+StaticSet1 2
+StaticGet1 4
+fPush 0.03999999910593
+fSub
+StaticSet1 4
+PushString "NAV_UP_DOWN"
+Call @Tocar_som
+Jump @Label_29
+
+:Label_32
+StaticGet1 3
+fPush 0.03999999910593
+fMul
+fPush 0.13899999856949
+fAdd
+StaticSet1 4
+StaticGet1 3
+StaticSet1 2
+PushString "NAV_UP_DOWN"
+Call @Tocar_som
+Jump @Label_29
+
+:Label_27
+StaticGet1 2
+StaticGet1 3
+JumpEQ @Label_33
+StaticGet1 2
+fPush_1.0
+fAdd
+StaticSet1 2
+StaticGet1 4
+fPush 0.03999999910593
+fAdd
+StaticSet1 4
+PushString "NAV_UP_DOWN"
+Call @Tocar_som
+Jump @Label_29
+
+:Label_33
+fPush 0.179000005126
+StaticSet1 4
+fPush_1.0
+StaticSet1 2
+PushString "NAV_UP_DOWN"
+Call @Tocar_som
+Jump @Label_29
+
+:Habilitar_Todos_Controles
+push_2
+CallNative "ENABLE_ALL_CONTROL_ACTIONS" 1 0
+PushString "BACK"
+Call @Tocar_som
+push_0
+StaticSet1 1
+
+:Label_29
+Return 0 0
+
+//----------------------------
+
+:Label_10
+Function 0 2 0
+
+push_2
+Push 182
+CallNative "IS_CONTROL_PRESSED" 2 1
+push_1
+JumpEQ @Label_34
+Jump @Label_35
+
+:Label_34
+push_2
+Push 179
+CallNative "IS_CONTROL_PRESSED" 2 1
+push_1
+JumpEQ @Label_36
+Jump @Label_35
+
+:Label_36
+PushString "SELECT"
+Call @Tocar_som
+push_1
+StaticSet1 1
+push_1
+StaticSet1 8
+fPush_1.0
+StaticSet1 2
+fPush 0.179000005126
+StaticSet1 4
+
+:Label_35
+Return 0 0
+
+//==============================
+
+:Void_Setar_Sub_Menus
+Function 0 2 0
+
+StaticGet1 2
+StaticSet2 443
+StaticGet1 4
+StaticSet2 444
+fPush_1.0
+StaticSet1 2
+fPush 0.179000005126
+StaticSet1 4
+Return 0 0
+
+:Label_23
+Function 0 2 0
+
+fPush 15
+StaticSet1 3
+Call @Draw_rect_2
+Call @Desativar_Controles
+push_2
+Push 195
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+push_1
+JumpEQ @Label_38
+Jump @Label_39
+
+:Label_38
+PushString "BACK"
+Call @Tocar_som
+StaticGet1 8
+StaticSet1 1
+StaticGet2 443
+StaticSet1 2
+StaticGet2 444
+StaticSet1 4
+
+:Label_39
+Return 0 0
+
+:Draw_Text
+Function 2 2 0
+
+getF1 0
+fPush 0.029999999329448
+fMul
+fPush 0.12999999523163
+fAdd
+StaticSet1 7
+Call @Configuracao_de_Texto
+PushString "STRING"
+CallNative "UNK_3E35563E" 1 0
+getF1 1
+CallNative "UNK_27A244D8" 1 0
+fPush 0.059999998658895
+StaticGet1 7
+CallNative "UNK_6F8350CE" 2 0
+Return 2 0
+
+:Botao_X_apertado
+Function 0 2 0
+
+push_2
+Push 193
+CallNative "IS_DISABLED_CONTROL_JUST_PRESSED" 2 1
+Return 0 1
+
+:Tocar_som
+Function 1 2 0
+
+push_-1
+getF1 0
+PushString "HUD_FRONTEND_DEFAULT_SOUNDSET"
+CallNative "PLAY_SOUND_FRONTEND" 3 0
+Return 1 0
+
+:Desativar_Controles
+Function 0 2 0
+
+CallNative "HIDE_HELP_TEXT_THIS_FRAME" 0 0
+push_0
+CallNative "SET_CINEMATIC_BUTTON_ACTIVE" 1 0
+push_0
+push_3
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 92
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 71
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 75
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 179
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 177
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 178
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_0
+Push 48
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 164
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 165
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 177
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 178
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 166
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 167
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 164
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_2
+Push 165
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+Push 10
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+push_6
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+push_7
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+Push 9
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+Push 8
+CallNative "HIDE_HUD_COMPONENT_THIS_FRAME" 1 0
+push_2
+Push 166
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_2
+Push 167
+CallNative "SET_INPUT_EXCLUSIVE" 2 0
+push_0
+Push 37
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 139
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 140
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 141
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 142
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 143
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 144
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 145
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 146
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 147
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 14
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 15
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 52
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 53
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 123
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 124
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 126
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 47
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 69
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 78
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 51
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 45
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 54
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 75
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 22
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 92
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 106
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 149
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 148
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 150
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 151
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+push_0
+Push 19
+CallNative "DISABLE_CONTROL_ACTION" 2 0
+Return 0 0
+
+:Configuracao_de_Texto
+Function 0 2 0
+
+//fonte opcoes
+push_4
+CallNative "SET_TEXT_FONT" 1 0
+fPush 0.51300000596046
+fPush 0.51300000596046
+//0.40000000596046
+CallNative "SET_TEXT_SCALE" 2 0
+Push 255
+Push 255
+Push 255
+Push 255
+CallNative "SET_TEXT_COLOUR" 4 0
+fPush_0.0
+fPush_1.0
+CallNative "SET_TEXT_WRAP" 2 0
+//opcoes centralizadas
+push_0
+CallNative "SET_TEXT_CENTRE" 1 0
+push_0
+push_0
+push_0
+push_0
+push_0
+CallNative "SET_TEXT_DROPSHADOW" 5 0
+push_0
+push_0
+push_0
+push_0
+push_0
+CallNative "SET_TEXT_EDGE" 5 0
+CallNative "SET_TEXT_OUTLINE" 0 0
+Return 0 0
+
+:AddOption
+Function 2 2 0
+
+getF1 0
+fPush 0.03999999910593
+fMul
+fPush 0.125
+fAdd
+StaticSet1 7
+Call @Configuracao_de_Texto
+PushString "STRING"
+CallNative "UNK_3E35563E" 1 0
+getF1 1
+CallNative "UNK_27A244D8" 1 0
+fPush 0.070000000298023
+StaticGet1 7
+CallNative "UNK_6F8350CE" 2 0
+Return 2 0
+
+:AddTitle
+Function 1 2 0
+
+Call @Configuracao_de_Texto
+//fonte do titulo
+push_1
+CallNative "SET_TEXT_FONT" 1 0
+fPush 0.80000001192093
+fPush 0.80000001192093
+CallNative "SET_TEXT_SCALE" 2 0
+StaticGet2 437
+CallNative "SET_TEXT_CENTRE" 1 0
+PushString "STRING"
+CallNative "UNK_3E35563E" 1 0
+getF1 0
+CallNative "UNK_27A244D8" 1 0
+StaticGet2 438
+fPush 0.10000000149012
+CallNative "UNK_6F8350CE" 2 0
+Return 1 0
+
+:Draw_rect_2
+Function 0 2 0
+
+StaticGet1 3
+fPush 0.03999999910593
+fMul
+fPush_2.0
+fDiv
+fPush 0.15899999439716
+fAdd
+StaticSet1 5
+StaticGet1 3
+fPush 0.03999999910593
+fMul
+StaticSet1 6
+fPush 0.14499999582767
+StaticGet1 5
+fPush 0.18999999761581
+StaticGet1 6
+Push3 16 16 16
+Push 130
+CallNative "DRAW_RECT" 8 0
+fPush 0.14499999582767
+fPush 0.11749999970198
+fPush 0.18999999761581
+fPush 0.082999996840954
+StaticGet2 434
+StaticGet2 435
+StaticGet2 436
+Push 130
+CallNative "DRAW_RECT" 8 0
+//globo
+PushString "MP_MENU_GLARE"
+CallNative "REQUEST_SCALEFORM_MOVIE" 1 1
+fPush 0.425000011921
+fPush 0.469000011683
+fPush 0.819999992847
+fPush 0.870000004768
+Push3 255 255 255
+Push1 255
+CallNative "DRAW_SCALEFORM_MOVIE" 9 0
+Return 0 0
+
+:AddRodape
+Function 1 2 0
+
+StaticGet1 3
+fPush 0.03999999910593
+fMul
+fPush 0.179000005126
+fAdd
+StaticSet2 432
+fPush 0.14499999582767
+StaticGet2 432
+fPush 0.18999999761581
+fPush 0.03999999910593
+StaticGet2 434
+StaticGet2 435
+StaticGet2 436
+Push 130
+CallNative "DRAW_RECT" 8 0
+StaticGet1 3
+fPush_1.0
+fAdd
+fPush 0.03999999910593
+fMul
+fPush 0.125
+fAdd
+StaticSet2 433
+Call @Configuracao_de_Texto
+fPush 0.34999999403954
+fPush 0.34999999403954
+CallNative "SET_TEXT_SCALE" 2 0
+StaticGet2 437
+CallNative "SET_TEXT_CENTRE" 1 0
+PushString "STRING"
+CallNative "UNK_3E35563E" 1 0
+getF1 0
+CallNative "UNK_27A244D8" 1 0
+StaticGet2 438
+StaticGet2 433
+CallNative "UNK_6F8350CE" 2 0
+Return 1 0
+
+:Draw_rect_1
+Function 0 2 0
+
+fPush 0.14499999582767
+StaticGet1 4
+fPush 0.18999999761581
+fPush 0.03999999910593
+Push3 255 255 255
+Push 130
+CallNative "DRAW_RECT" 8 0
+Return 0 0
+
+//=============================
+
+:Add_Toogle_Cores
+Function 1 2 0
+
+getF1 0
+Switch [0=@Toogle_desativado][1=@Toogle_Ativado][2=@Toogle_Desconhecido]
+
+:Toogle_desativado
+fPush 0.14499999582767
+StaticGet1 4
+fPush 0.18999999761581
+fPush 0.03999999910593
+Push3 255 0 0
+Push 130
+CallNative "DRAW_RECT" 8 0
+Jump @Fim_Toogle_Cores
+
+:Toogle_Ativado
+fPush 0.14499999582767
+StaticGet1 4
+fPush 0.18999999761581
+fPush 0.03999999910593
+Push3 0 255 0
+Push 130
+CallNative "DRAW_RECT" 8 0
+Jump @Fim_Toogle_Cores
+
+:Toogle_Desconhecido
+fPush 0.14499999582767
+StaticGet1 4
+fPush 0.18999999761581
+fPush 0.03999999910593
+StaticGet2 434
+StaticGet2 435
+StaticGet2 436
+Push 130
+CallNative "DRAW_RECT" 8 0
+Jump @Fim_Toogle_Cores
+
+:Fim_Toogle_Cores
+Return 1 0
+
+//==================
+
+:Draw_rect_3
+Function 0 2 0
+
+fPush 0.059999998658895
+StaticGet1 4
+fPush -0.0049999998882413
+fPush 0.03999999910593
+StaticGet2 434
+StaticGet2 435
+StaticGet2 436
+Push 130
+CallNative "DRAW_RECT" 8 0
+Return 0 0
+
+:Menu_Principal
+Function 0 2 0
+
+fPush_6.0
+StaticSet1 3
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString "Menu By EdUaRdO"
+Call @AddRodape
+PushString "Breso CSC"
+Call @AddTitle
+fPush_1.0
+PushString "Sub-Menu 1"
+Call @AddOption
+fPush_2.0
+PushString "Sub-Menu 2"
+Call @AddOption
+fPush_3.0
+PushString "Sub-Menu 3"
+Call @AddOption
+fPush_4.0
+PushString "Sub-Menu 4"
+Call @AddOption
+fPush_5.0
+PushString "Configuracoes"
+Call @AddOption
+fPush_6.0
+PushString "Creditos"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Principal
+Jump @Fim_Menu_Principal
+
+:Switch_Menu_Principal
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Principal_Opcao_1][2=@Menu_Principal_Opcao_2][3=@Menu_Principal_Opcao_3][4=@Menu_Principal_Opcao_4][5=@Menu_Principal_Opcao_5][6=@Menu_Principal_Opcao_6]
+
+:Menu_Principal_Opcao_1
+push_4
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_2
+push_5
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_3
+push_6
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_4
+push_7
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_5
+push_2
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Menu_Principal_Opcao_6
+Push 8
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Principal
+
+:Fim_Menu_Principal
+Return 0 0
+
+//-------------------------------------------------
+
+:Menu_Config
+Function 0 2 0
+
+fPush_2.0
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+PushString "COnfig"
+Call @AddTitle
+fPush_1.0
+PushString "Cores"
+Call @AddOption
+fPush_2.0
+PushString "Centralizar o Titulo"
+Call @AddOption
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Config_Opcao_1][2=@Centralizar_Titulo]
+
+:Menu_Config_Opcao_1
+Call @Draw_rect_1
+Jump @Menu_Config_Check
+
+:Centralizar_Titulo
+Call @Toggle_Texto_Centralizado_Secundario
+
+:Menu_Config_Check
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Menu_Config
+Jump @Fim_Menu_Config
+
+:Switch_Menu_Config
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Menu_Config_Opcao_2_1][2=@Menu_Config_Opcao_2_2]
+
+:Menu_Config_Opcao_2_1
+push_3
+StaticSet1 1
+Call @Void_Setar_Sub_Menus
+Jump @Fim_Menu_Config
+
+:Menu_Config_Opcao_2_2
+Call @Toggle_Texto_Centralizado
+
+:Fim_Menu_Config
+Return 0 0
+
+//===================================================
+
+:Menu_Cores
+Function 0 2 0
+
+fPush 10
+StaticSet1 3
+push_2
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString "Cores"
+Call @AddTitle
+fPush_1.0
+PushString "~b~Padrao"
+Call @AddOption
+fPush_2.0
+PushString "Vermelho"
+Call @AddOption
+fPush_3.0
+PushString "Verde"
+Call @AddOption
+fPush_4.0
+PushString "Amarelo"
+Call @AddOption
+fPush_5.0
+PushString "Rosa"
+Call @AddOption
+fPush_6.0
+PushString "Roxo"
+Call @AddOption
+fPush_7.0
+PushString "Laranja"
+Call @AddOption
+fPush 8
+PushString "Cyano"
+Call @AddOption
+fPush 9
+PushString "Marron"
+Call @AddOption
+fPush 10
+PushString "Preto"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Cores
+Jump @Fim_Menu_Cores
+
+:Switch_Cores
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Cores_Opcao_1][2=@Cores_Opcao_2][3=@Cores_Opcao_3][4=@Cores_Opcao_4][5=@Cores_Opcao_5][6=@Cores_Opcao_6][7=@Cores_Opcao_7][8=@Cores_Opcao_8][9=@Cores_Opcao_9][10=@Cores_Opcao_10]
+
+:Cores_Opcao_1
+push_7
+StaticSet2 434
+Push 100
+StaticSet2 435
+Push 199
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_2
+Push 255
+StaticSet2 434
+push_0
+StaticSet2 435
+push_0
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_3
+push_0
+StaticSet2 434
+Push 255
+StaticSet2 435
+push_0
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_4
+Push 255
+StaticSet2 434
+Push 255
+StaticSet2 435
+push_0
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_5
+Push 255
+StaticSet2 434
+push_0
+StaticSet2 435
+Push 235
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_6
+Push 75
+StaticSet2 434
+push_0
+StaticSet2 435
+Push 75
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_7
+Push 255
+StaticSet2 434
+Push 160
+StaticSet2 435
+push_0
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_8
+push_0
+StaticSet2 434
+Push 255
+StaticSet2 435
+Push 255
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_9
+Push 63
+StaticSet2 434
+Push 33
+StaticSet2 435
+Push 17
+StaticSet2 436
+Jump @Fim_Menu_Cores
+
+:Cores_Opcao_10
+push_0
+StaticSet2 434
+push_0
+StaticSet2 435
+push_0
+StaticSet2 436
+
+:Fim_Menu_Cores
+Return 0 0
+
+//--------------------------------------------------------------
+
+:Toggle_Texto_Centralizado_Secundario
+Function 0 2 0
+
+StaticGet2 437
+push_0
+JumpEQ @Toggle_Texto_Centralizado_Secundario_Check
+push_1
+Call @Add_Toogle_Cores
+Jump @Toggle_Texto_Centralizado_Secundario_Fim
+
+:Toggle_Texto_Centralizado_Secundario_Check
+push_0
+Call @Add_Toogle_Cores
+
+:Toggle_Texto_Centralizado_Secundario_Fim
+Return 0 0
+
+//================
+
+:Toggle_Texto_Centralizado
+Function 0 2 0
+
+StaticGet2 437
+push_0
+JumpEQ @Toggle_Texto_Centralizado_2
+push_0
+StaticSet2 437
+fPush 0.070000000298023
+StaticSet2 438
+Jump @Fim_Toggle_Texto_Centralizado
+
+:Toggle_Texto_Centralizado_2
+push_1
+StaticSet2 437
+fPush 0.14499999582767
+StaticSet2 438
+
+:Fim_Toggle_Texto_Centralizado
+Return 0 0
+
+
+//===============================================
+
+:Primeiro_Sub_menu
+Function 0 2 0
+
+fPush_6.0
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Sub_Menu 1"
+Call @AddTitle
+fPush_1.0
+PushString "Opcao 1"
+Call @AddOption
+fPush_2.0
+PushString "Opcao 2"
+Call @AddOption
+fPush_3.0
+PushString "Opcao 3"
+Call @AddOption
+fPush_4.0
+PushString "Opcao 4"
+Call @AddOption
+fPush_5.0
+PushString "Opcao 5"
+Call @AddOption
+fPush_6.0
+PushString "Opcao 6"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Primeiro_Sub_menu
+Jump @Fim_Primeiro_Sub_menu
+
+:Switch_Primeiro_Sub_menu
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Primeiro_Sub_menu_Opcao_1][2=@Primeiro_Sub_menu_Opcao_2][3=@Primeiro_Sub_menu_Opcao_3][4=@Primeiro_Sub_menu_Opcao_4][5=@Primeiro_Sub_menu_Opcao_5][6=@Primeiro_Sub_menu_Opcao_6]
+
+:Primeiro_Sub_menu_Opcao_1
+//codigo
+Jump @Fim_Primeiro_Sub_menu
+
+:Primeiro_Sub_menu_Opcao_2
+//codigo
+Jump @Fim_Primeiro_Sub_menu
+
+:Primeiro_Sub_menu_Opcao_3
+//codigo
+Jump @Fim_Primeiro_Sub_menu
+
+:Primeiro_Sub_menu_Opcao_4
+//codigo
+Jump @Fim_Primeiro_Sub_menu
+
+:Primeiro_Sub_menu_Opcao_5
+//codigo
+Jump @Fim_Primeiro_Sub_menu
+
+:Primeiro_Sub_menu_Opcao_6
+//codigo
+Jump @Fim_Primeiro_Sub_menu
+
+:Fim_Primeiro_Sub_menu
+Return 0 0
+
+//==================================================
+
+:Segundo_Sub_menu
+Function 0 2 0
+
+fPush_6.0
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString ""
+Call @AddRodape
+PushString "Sub_Menu 2"
+Call @AddTitle
+fPush_1.0
+PushString "Opcao 1"
+Call @AddOption
+fPush_2.0
+PushString "Opcao 2"
+Call @AddOption
+fPush_3.0
+PushString "Opcao 3"
+Call @AddOption
+fPush_4.0
+PushString "Opcao 4"
+Call @AddOption
+fPush_5.0
+PushString "Opcao 5"
+Call @AddOption
+fPush_6.0
+PushString "Opcao 6"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Segundo_Sub_menu
+Jump @Fim_Segundo_Sub_menu
+
+:Switch_Segundo_Sub_menu
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Segundo_Sub_menu_Opcao_1][2=@Segundo_Sub_menu_Opcao_2][3=@Segundo_Sub_menu_Opcao_3][4=@Segundo_Sub_menu_Opcao_4][5=@Segundo_Sub_menu_Opcao_5][6=@Segundo_Sub_menu_Opcao_6]
+
+:Segundo_Sub_menu_Opcao_1
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_2
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_3
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_4
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_5
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Segundo_Sub_menu_Opcao_6
+//codigo
+Jump @Fim_Segundo_Sub_menu
+
+:Fim_Segundo_Sub_menu
+Return 0 0
+
+//========================
+
+:Terceiro_Sub_menu
+Function 0 2 0
+
+fPush_6.0
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString "Sub_Menu 3"
+Call @AddTitle
+fPush_1.0
+PushString "Opcao 1"
+Call @AddOption
+fPush_2.0
+PushString "Opcao 2"
+Call @AddOption
+fPush_3.0
+PushString "Opcao 3"
+Call @AddOption
+fPush_4.0
+PushString "Opcao 4"
+Call @AddOption
+fPush_5.0
+PushString "Opcao 5"
+Call @AddOption
+fPush_6.0
+PushString "Opcao 6"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Terceiro_Sub_menu
+Jump @Fim_Terceiro_Sub_menu
+
+:Switch_Terceiro_Sub_menu
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Terceiro_Sub_menu_Opcao_1][2=@Terceiro_Sub_menu_Opcao_2][3=@Terceiro_Sub_menu_Opcao_3][4=@Terceiro_Sub_menu_Opcao_4][5=@Terceiro_Sub_menu_Opcao_5][6=@Terceiro_Sub_menu_Opcao_6]
+
+:Terceiro_Sub_menu_Opcao_1
+//codigo
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_2
+//codigo
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_3
+//codigo
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_4
+//codigo
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_5
+//codigo
+Jump @Fim_Terceiro_Sub_menu
+
+:Terceiro_Sub_menu_Opcao_6
+//codigo
+Jump @Fim_Terceiro_Sub_menu
+
+:Fim_Terceiro_Sub_menu
+Return 0 0
+
+//-------------------------------------------------
+
+:Quarto_Sub_menu
+Function 0 2 0
+
+fPush_6.0
+StaticSet1 3
+push_1
+StaticSet1 8
+Call @Draw_rect_2
+Call @Draw_rect_1
+PushString "Sub_Menu 4"
+Call @AddTitle
+fPush_1.0
+PushString "Opcao 1"
+Call @AddOption
+fPush_2.0
+PushString "Opcao 2"
+Call @AddOption
+fPush_3.0
+PushString "Opcao 3"
+Call @AddOption
+fPush_4.0
+PushString "Opcao 4"
+Call @AddOption
+fPush_5.0
+PushString "Opcao 5"
+Call @AddOption
+fPush_6.0
+PushString "Opcao 6"
+Call @AddOption
+Call @Botao_X_apertado
+push_1
+JumpEQ @Switch_Quarto_Sub_menu
+Jump @Fim_Quarto_Sub_menu
+
+:Switch_Quarto_Sub_menu
+PushString "SELECT"
+Call @Tocar_som
+StaticGet1 2
+FtoI
+Switch [1=@Quarto_Sub_menu_Opcao_1][2=@Quarto_Sub_menu_Opcao_2][3=@Quarto_Sub_menu_Opcao_3][4=@Quarto_Sub_menu_Opcao_4][5=@Quarto_Sub_menu_Opcao_5][6=@Quarto_Sub_menu_Opcao_6]
+
+:Quarto_Sub_menu_Opcao_1
+//codigo
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_2
+//codigo
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_3
+//codigo
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_4
+//codigo
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_5
+//codigo
+Jump @Fim_Quarto_Sub_menu
+
+:Quarto_Sub_menu_Opcao_6
+//codigo
+Jump @Fim_Quarto_Sub_menu
+
+:Fim_Quarto_Sub_menu
+Return 0 0
+
+//----------------------------------------------------------------------
+
+:Menu_Creditos
+Function 0 2 0
+
+push_1
+StaticSet1 8
+PushString "Creditos"
+Call @AddTitle
+fPush_1.0
+PushString "Base - ~b~2much4u"
+Call @Draw_Text
+fPush_2.0
+PushString "Layout - ~b~EdUaRdO"
+Call @Draw_Text
+fPush_3.0
+PushString "Code/Mods - ~b~EdUaRdO"
+Call @Draw_Text
+fPush_4.0
+PushString "----------------------------------"
+Call @Draw_Text
+fPush_5.0
+PushString "Agradecimentos:"
+Call @Draw_Text
+fPush_6.0
+PushString "~g~Karrasco"
+Call @Draw_Text
+fPush_7.0
+PushString "Ajuda e Suporte"
+Call @Draw_Text
+fPush 8
+PushString ""
+Call @Draw_Text
+fPush 9
+PushString "~g~NotYourDope"
+Call @Draw_Text
+fPush 10
+PushString "Duvidas e ajudas adicionais"
+Call @Draw_Text
+fPush 11
+PushString ""
+Call @Draw_Text
+fPush 12
+PushString "~g~EROOTIIK"
+Call @Draw_Text
+fPush 13
+PushString "Script Assembler"
+Call @Draw_Text
+Return 0 0
+
+//----------------------------------------------------------------------
+
+:CarregarModelo
+Function 1 2 0
+
+getF1 0
+CallNative "REQUEST_MODEL" 1 0
+
+:CarregarModelo_Check
+getF1 0
+CallNative "HAS_MODEL_LOADED" 1 1
+Not
+JumpFalse @CarregarModelo_Fim
+push_0
+CallNative "WAIT" 1 0
+Jump @CarregarModelo_Check
+
+:CarregarModelo_Fim
+Return 1 0
+
+//----------------------------------------------------------------------
+
+:RequestControlOfEntiity
+Function 1 2 0
+
+push_0
+StaticSet2 300
+getF1 0
+CallNative "NETWORK_REQUEST_CONTROL_OF_ENTITY" 1 1
+Not
+JumpFalse @RequestControlOfEntiity_Fim
+
+:RequestControlOfEntiity_Check
+getF1 0
+CallNative "NETWORK_HAS_CONTROL_OF_ENTITY" 1 1
+Not
+JumpFalse @RequestControlOfEntiity_Fim
+push_0
+CallNative "WAIT" 1 0
+StaticGet2 300
+Add1 1
+StaticSet2 300
+StaticGet2 300
+Push 50
+Jump @RequestControlOfEntiity_Check
+
+:RequestControlOfEntiity_Fim
+Return 1 0
