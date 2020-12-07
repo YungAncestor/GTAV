@@ -1,0 +1,29 @@
+------------------------------------
+Ped Bone Index	 		|
+Name		Num	Hex	|
+------------------------------------
+BONE_ROOT	0	0x0000
+Head:		31086	0x796E
+Right Wrist:	28422	0x6F06
+Left Wrist:	60309	0xEB95
+Right Hand:	57005	0xDEAD  ( lol DEAD )
+Chest:		24818	0x60F2
+Month:		39317	0x9995
+Left Wrist:	18905	0x49D9
+Left Knee:	63931	0xF9BB
+Right Knee:	36864	0x9000
+Left Shoe:	14201	0x3779
+Right Shoe:	52301	0xCC4D
+Gentils:	51826	0xCA72
+Umbilical:	11816	0x2E28
+Right Shoulder:	40269	0x9D4D
+Right Arm:	28252	0x6E5C
+Left Shoulder:	45509	0xB1C5
+Left Arm:	61163	0xEEEB
+
+------------------------------------
+Vehicle Bone Index 		|
+Name		Num	Hex	|
+------------------------------------
+BONE_ROOT	0	0x0000
+This will be added later
