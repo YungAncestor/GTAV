@@ -1,0 +1,242 @@
+bool kickPlayer(int selectedPlayer, int type) {
+	if (type == -2) { 
+		DWORD64 args[3] = { FORCE_TO_NEW_SESSION, selectedPlayer, GlobForNeverWanted(selectedPlayer) };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 3, 1 << selectedPlayer);
+	}
+	if (type == -1) {	//auto trigger all kicks [>=1]
+		if (kickPlayer(selectedPlayer, 0)) notifyMap("host kicked");
+		else {
+ for (int x = 45; x <= 1; x--) {
+ 	kickPlayer(selectedPlayer, x);
+ }
+		}
+	}
+	else if (type == 0) {
+		NETWORK::NETWORK_SESSION_KICK_PLAYER(selectedPlayer);
+		return true;
+	}
+	else if (type == 1) {
+		DWORD64 args[4] = { KICK_1, selectedPlayer };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 2) {
+		DWORD64 args[3] = { KICK_2, selectedPlayer };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 3, 1 << selectedPlayer);
+	}
+	else if (type == 3) {
+		DWORD64 args[4] = { KICK_3, selectedPlayer };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 4) {
+		DWORD64 args[5] = { KICK_4, selectedPlayer, 0, 111 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 5, 1 << selectedPlayer);
+	}
+	else if (type == 5) {
+		DWORD64 args[3] = { KICK_5, selectedPlayer };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 3, 1 << selectedPlayer);
+	}
+	else if (type == 6) {
+		DWORD64 args[4] = { KICK_6, selectedPlayer, 50 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 7) {
+		DWORD64 args[4] = { KICK_7, selectedPlayer, 20, 1 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 8) {
+		DWORD64 args[4] = { KICK_8, selectedPlayer, 20 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 9) {
+		DWORD64 args[4] = { KICK_9, selectedPlayer, 20, 1 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 10) {
+		DWORD64 args[4] = { KICK_10, selectedPlayer, 20 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 11) {
+		DWORD64 args[4] = { KICK_11, selectedPlayer, 20 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 12) {
+		DWORD64 args[6] = { KICK_12, selectedPlayer, 0, 0, 0, 36 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 6, 1 << selectedPlayer);
+	}
+	else if (type == 13) {
+		DWORD64 args[3] = { KICK_13, selectedPlayer, 36 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 3, 1 << selectedPlayer);
+	}
+	else if (type == 14) {
+		DWORD64 args[3] = { KICK_14, selectedPlayer, -4294967260/*36*/ };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 3, 1 << selectedPlayer);
+	}
+	else if (type == 15) {
+		DWORD64 args[4] = { KICK_15, selectedPlayer, 32 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 16) {
+		DWORD64 args[5] = { KICK_16, selectedPlayer, 0, 0, 32 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 5, 1 << selectedPlayer);
+	}
+	else if (type == 17) {
+		DWORD64 args[5] = { KICK_17, selectedPlayer, 0, 0, 32 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 5, 1 << selectedPlayer);
+	}
+	else if (type == 18) {
+		DWORD64 args[5] = { KICK_18, selectedPlayer, 4 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 5, 1 << selectedPlayer);
+	}
+	else if (type == 19) {
+		DWORD64 args[5] = { KICK_19, selectedPlayer, 7 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 5, 1 << selectedPlayer);
+	}
+	else if (type == 20) {
+		DWORD64 args[6] = { KICK_20, selectedPlayer, 0, 59 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 6, 1 << selectedPlayer);
+	}
+	else if (type == 21) {
+		DWORD64 args[5] = { KICK_21, selectedPlayer, 0, 59 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 5, 1 << selectedPlayer);
+	}
+	else if (type == 22) {
+		DWORD64 args[4] = { KICK_22, selectedPlayer, 0, 59 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 23) {
+		DWORD64 args[4] = { KICK_23, selectedPlayer, 62 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 24) {
+		DWORD64 args[4] = { KICK_24, selectedPlayer, 0, 26 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 25) {
+		DWORD64 args[5] = { KICK_25, selectedPlayer, 0, 26 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 5, 1 << selectedPlayer);
+	}
+	else if (type == 26) {
+		DWORD64 args[4] = { KICK_26, selectedPlayer, 0, 26 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 27) {
+		DWORD64 args[3] = { KICK_27, selectedPlayer, 3 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 3, 1 << selectedPlayer);
+	}
+	else if (type == 28) {
+		DWORD64 args[24] = { KICK_28, selectedPlayer, 180 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 24, 1 << selectedPlayer);
+	}
+	else if (type == 29) {
+		DWORD64 args[5] = { KICK_29, selectedPlayer, 64 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 5, 1 << selectedPlayer);
+	}
+	else if (type == 30) {
+		DWORD64 args[3] = { KICK_30, selectedPlayer, 32 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 3, 1 << selectedPlayer);
+	}
+	else if (type == 31) {
+		DWORD64 args[4] = { KICK_31, selectedPlayer, 62 };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 32) {
+		DWORD64 args[18] = { KICK_32, selectedPlayer };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 18, 1 << selectedPlayer);
+	}
+	else if (type == 33) {
+		DWORD64 args[3] = { KICK_33, selectedPlayer };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 3, 1 << selectedPlayer);
+	}
+	else if (type == 34) {
+		DWORD64 args[13] = { KICK_34, selectedPlayer, 123 }; //fix
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 13, 1 << selectedPlayer);
+	}
+	else if (type == 35) {
+		DWORD64 args1[4] = { KICK_35, selectedPlayer };
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args1, 4, 1 << selectedPlayer);
+	}
+	else if (type == 36) {
+		DWORD64 args[21];
+		*args = KICK_36;
+		args[1] = selectedPlayer;
+		args[19] = 125;
+		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 21, 1 << selectedPlayer);
+	}
+	else if (type == 37) {
+	DWORD64 args[4] = { KICK_37, selectedPlayer, 1, 124 };//need check false alarm
+	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+	}
+	else if (type == 38) {
+	DWORD64 args[10] = { KICK_38, selectedPlayer, 1, 10000, 32/*n0*/, 0, 1, 46, 1, 40 };
+	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 10, 1 << selectedPlayer);
+	}
+	else if (type == 39) {
+	DWORD64 args[10] = { KICK_39, selectedPlayer, 1, 10000, 32, 0, 1, 36, 1, 40 };
+	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 10, 1 << selectedPlayer);
+	}
+	else if (type == 40) {	
+	DWORD64 args[25];
+	*args = KICK_40, args[1] = selectedPlayer, args[2] = 180;
+	args[24] = GlobForNeverWanted(selectedPlayer);
+	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 25, 1 << selectedPlayer);
+	}
+}
+
+
+
+
+
+
+
+
+
+if (Menu::Option("Force To Mission")) {
+ 	DWORD64 args[4] = { SEND_TO_JOB_2, selectedPlayer, 0, 0 };
+ 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+ }
+
+ if (Menu::Option("Transaction Error")) {
+ 	std::uint64_t args[8] = { TRANSACTION_FAIL, selectedPlayer, 10000, 0, 0, GlobForNeverWanted(selectedPlayer), IdkGlob_xxxxx_f_9(), IdkGlob_xxxxx_f_10() };
+ 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 8, 1 << selectedPlayer);
+ }
+
+ if (Menu::Option("GTA Banner Effect")) {
+ 	DWORD64 args[4] = { GTA_BANNER_EFFECT, selectedPlayer, 0, 0 };
+ 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+ }
+
+ if (Menu::IntChar("Send Invites", inviteSpamTypes, sendinvitesint, 0, inviteSpamTypes.size() - 1)) {
+ 	if (IsKeyPressed(VK_NUMPAD5)) {
+ 		DWORD64 args[3] = { SEND_INVITES, selectedPlayer, inviteSpamTypesInt[sendinvitesint] };
+ 		SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+ 	}
+ }
+
+ if (Menu::Option("Tp To Eclipse Tower")) {
+ 	DWORD64 arguments[9] = { TP_TO_APARTMENTS, selectedPlayer, 1, -1, 1, 1, 0, 0, 0 };
+ 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, arguments, 9, 1 << selectedPlayer);
+ }
+
+ if (Menu::Option("CEO Kick")) {
+ 	uint64_t args[4];
+ 	args[0] = CEO_KICK;
+ 	args[1] = selectedPlayer;
+ 	args[2] = 1;
+ 	args[3] = 5;
+ 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+ }
+
+ if (Menu::Option("CEO Ban")) {
+ 	uint64_t args[4];
+ 	args[0] = CEO_BAN;
+ 	args[1] = selectedPlayer;
+ 	args[2] = 1;
+ 	args[3] = 5;
+ 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 4, 1 << selectedPlayer);
+
+ }
+
+ if (Menu::Option("Infinite Loading")) {
+ 	DWORD64 args[9] = { TP_TO_APARTMENTS, selectedPlayer, 0, -1, 1, 115, 0, 0, 0 };
+ 	SCRIPT::TRIGGER_SCRIPT_EVENT(1, args, 9, 1 << selectedPlayer);
+ }
