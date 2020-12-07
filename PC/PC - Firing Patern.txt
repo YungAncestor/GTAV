@@ -1,0 +1,19 @@
+enum eFiringPattern  
+{
+	FiringPatternFullAuto = 0xC6EE6B4C,
+	FiringPatternBurstFire = 0xD6FF6D61,
+	FiringPatternBurstInCover = 0x026321F1,
+	FiringPatternBurstFireDriveby = 0xD31265F2,
+	FiringPatternFromGround = 0x2264E5D6,
+	FiringPatternDelayFireByOneSec = 0x7A845691,
+	FiringPatternSingleShot = 0x5D60E4E0,
+	FiringPatternBurstFirePistol = 0xA018DB8A,
+	FiringPatternBurstFireSMG = 0xD10DADEE,
+	FiringPatternBurstFireRifle = 0x9C74B406,
+	FiringPatternBurstFireMG = 0xB573C5B4,
+	FiringPatternBurstFirePumpShotGun = 0x00BAC39B,
+	FiringPatternBurstFireHeli = 0x914E786F,
+	FiringPatternBurstFireMicro = 0x42EF03FD,
+	FiringPatternBurstFireBursts = 0x42EF03FD,
+	FiringPatternBurstFireTank = 0xE2CA3A71
+};

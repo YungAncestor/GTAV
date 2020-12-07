@@ -1,0 +1,150 @@
+
+
+enum eVehicleDoor
+{
+	VehicleDoorFrontLeftDoor = 0,
+	VehicleDoorFrontRightDoor = 1,
+	VehicleDoorBackLeftDoor = 2,
+	VehicleDoorBackRightDoor = 3,
+	VehicleDoorHood = 4,
+	VehicleDoorTrunk = 5,
+	VehicleDoorTrunk2 = 6,
+};
+
+enum eVehicleLockStatus
+{
+	VehicleLockStatusNone = 0,
+	VehicleLockStatusUnlocked = 1,
+	VehicleLockStatusLocked = 2,
+	VehicleLockStatusLockedForPlayer = 3,
+	VehicleLockStatusStickPlayerInside = 4,
+	VehicleLockStatusCanBeBrokenInto = 7,
+	VehicleLockStatusCanBeBrokenIntoPersist = 8,
+	VehicleLockStatusCannotBeTriedToEnter = 10
+};
+
+enum eVehicleLandingGear
+{
+	VehicleLandingGearDeployed = 0,
+	VehicleLandingGearClosing = 1,
+	VehicleLandingGearOpening = 2,
+	VehicleLandingGearRetracted = 3,
+};
+
+enum eVehicleNeonLight
+{
+	VehicleNeonLightLeft = 0,
+	VehicleNeonLightRight = 1,
+	VehicleNeonLightFront = 2,
+	VehicleNeonLightBack = 3,
+};
+
+enum eVehicleRoofState
+{
+	VehicleRoofStateClosed,
+	VehicleRoofStateOpening,
+	VehicleRoofStateOpened,
+	VehicleRoofStateClosing,
+};
+
+enum eVehicleSeat
+{
+	VehicleSeatNone = -3,
+	VehicleSeatAny = -2,
+	VehicleSeatDriver = -1,
+	VehicleSeatPassenger = 0,
+	VehicleSeatLeftFront = -1,
+	VehicleSeatRightFront = 0,
+	VehicleSeatLeftRear = 1,
+	VehicleSeatRightRear = 2,
+};
+
+enum eVehicleToggleMod
+{
+	VehicleToggleModTurbo = 18,
+	VehicleToggleModTireSmoke = 20,
+	VehicleToggleModXenonHeadlights = 22
+};
+
+enum eVehicleWheelType
+{
+	VehicleWheelTypeSport = 0,
+	VehicleWheelTypeMuscle = 1,
+	VehicleWheelTypeLowrider = 2,
+	VehicleWheelTypeSUV = 3,
+	VehicleWheelTypeOffroad = 4,
+	VehicleWheelTypeTuner = 5,
+	VehicleWheelTypeBikeWheels = 6,
+	VehicleWheelTypeHighEnd = 7
+};
+
+enum eVehicleWindow
+{
+	VehicleWindowFrontRight = 1,
+	VehicleWindowFrontLeft = 0,
+	VehicleWindowBackRight = 3,
+	VehicleWindowBackLeft = 2
+};
+
+enum eVehicleWindowTint
+{
+	VehicleWindowTintNone = 0,
+	VehicleWindowTintPureBlack = 1,
+	VehicleWindowTintDarkSmoke = 2,
+	VehicleWindowTintLightSmoke = 3,
+	VehicleWindowTintStock = 4,
+	VehicleWindowTintLimo = 5,
+	VehicleWindowTintGreen = 6
+};
+
+enum eNumberPlateMounting
+{
+	NumberPlateMountingFrontAndRear = 0,
+	NumberPlateMountingFront = 1,
+	NumberPlateMountingRear = 2,
+	NumberPlateMountingNone = 3,
+};
+
+enum eNumberPlateType
+{
+	NumberPlateTypeBlueOnWhite1 = 0,
+	NumberPlateTypeYellowOnBlack = 1,
+	NumberPlateTypeYellowOnBlue = 2,
+	NumberPlateTypeBlueOnWhite2 = 3,
+	NumberPlateTypeBlueOnWhite3 = 4,
+	NumberPlateTypeNorthYankton = 5,
+};
+
+enum eVehicleClass
+{
+	VehicleClassCompacts = 0,
+	VehicleClassSedans = 1,
+	VehicleClassSUVs = 2,
+	VehicleClassCoupes = 3,
+	VehicleClassMuscle = 4,
+	VehicleClassSportsClassics = 5,
+	VehicleClassSports = 6,
+	VehicleClassSuper = 7,
+	VehicleClassMotorcycles = 8,
+	VehicleClassOffRoad = 9,
+	VehicleClassIndustrial = 10,
+	VehicleClassUtility = 11,
+	VehicleClassVans = 12,
+	VehicleClassCycles = 13,
+	VehicleClassBoats = 14,
+	VehicleClassHelicopters = 15,
+	VehicleClassPlanes = 16,
+	VehicleClassService = 17,
+	VehicleClassEmergency = 18,
+	VehicleClassMilitary = 19,
+	VehicleClassCommercial = 20,
+	VehicleClassTrains = 21,
+};
+
+enum eSeatIndex
+{
+	DriverSeat = -1,
+	Passenger = 0,
+	LeftRear = 1,
+	RightRear = 2,
+};
