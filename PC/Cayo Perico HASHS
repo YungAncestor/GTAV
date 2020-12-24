@@ -1,0 +1,1067 @@
+Vehicles
+
+// Name - Model Name - Hash - Class
+RO-86 Alkonost - alkonost - 0xEA313705 - Planes
+Annihilator Stealth - annihilator2 - 0x11962E49 - Helicopters
+Kraken Avisa - avisa - 0x9A474B5E - Boats
+Grotti Brioso 300 - brioso2 - 0x55365079 - Compacts
+Nagasaki Weaponized Dinghy - dinghy5 - 0xC58DA34A - Boats
+Grotti Itali RSX - italirsx - 0xBB78956A - Sports
+Kosatka - kosatka - 0x4FAF0D70 - Boats
+Shitzu Longfin - longfin - 0x6EF89CCC - Boats
+Maibatsu Manchez Scout - manchez2 - 0x40C332A3 - Motorcycles
+Kurtz 31 Patrol Boat - patrolboat - 0xEF813606 - Boats
+Sparrow - seasparrow2 - 0x494752F7 - Helicopters
+Sparrow - seasparrow3 - 0x5F017E6B - Helicopters
+Vapid Slamtruck - slamtruck - 0xC1A8A914 - Utility
+Mammoth Squaddie - squaddie - 0xF9E67C05 - SUVs
+Pegassi Toreador - toreador - 0x56C8A5EF - Sports Classics
+Dinka Verus - verus - 0x11CBC051 - Off-Road
+Vetir - vetir - 0x780FFBD2 - Military
+Dinka Veto Classic - veto - 0xCCE5C8FA - Sports
+Dinka Veto Modern - veto2 - 0xA703E4A9 - Sports
+BF Weevil - weevil - 0x61FE4D6A - Compacts
+Vapid Winky - winky - 0xF376F1E6 - Off-Road
+ 
+
+Weapons
+
+WEAPON_COMBATSHOTGUN | 0x5A96BA4
+Name (with GXT): Combat Shotgun (WT_CMBSHGN)
+Description (with GXT): There's only one semi-automatic shotgun with a fire rate that sets the LSFD alarm bells ringing, and you're looking at it. (WTD_CMBSHGN)
+
+Components:
+-> COMPONENT_AT_AR_FLSH | 0x7BC4CDDC
+-> Name (with GXT): Flashlight (WCT_FLASH)
+-> Description (with GXT): Aids low light target acquisition. (WCD_FLASH)
+
+-> COMPONENT_AT_AR_SUPP | 0x837445AA
+-> Name (with GXT): Suppressor (WCT_SUPP)
+-> Description (with GXT): Reduces noise and muzzle flash. (WCD_AR_SUPP)
+spacer.png
+
+ 
+
+WEAPON_GADGETPISTOL | 0x57A4368C
+Name (with GXT): Perico Pistol (WT_GDGTPST)
+Description (with GXT): A deadly shot. Don't be precious. You won't scuff the titanium nitride finish. (WTD_GDGTPST)
+spacer.png
+
+ 
+
+WEAPON_MILITARYRIFLE | 0x9D1F17E6
+Name (with GXT): Military Rifle (WT_MLTRYRFL)
+Description (with GXT): This immensely powerful assault rifle was designed for highly qualified, exceptionally skilled soldiers. Yes, you can buy it. (WTD_MLTRYRFL)
+
+Components:
+-> COMPONENT_MILITARYRIFLE_CLIP_01 | 0x2D46D83B
+-> Name (with GXT): Default Clip (WCT_CLIP1)
+-> Description GXT: WCD_CLIP1
+
+-> COMPONENT_MILITARYRIFLE_CLIP_02 | 0x684ACE42
+-> Name (with GXT): Extended Clip (WCT_CLIP2)
+-> Description GXT: WCD_CLIP2
+
+-> COMPONENT_MILITARYRIFLE_SIGHT_01 | 0x6B82F395
+-> Name (with GXT): Iron Sights (WCT_MRFL_SIGHT)
+-> Description (with GXT): Default rail-mounted iron sights. (WCD_MRFL_SIGHT)
+
+-> COMPONENT_AT_SCOPE_SMALL | 0xAA2C45B4
+-> Name (with GXT): Scope (WCT_SCOPE_SML)
+-> Description (with GXT): Medium-range zoom functionality. (WCD_SCOPE_SML)
+
+-> COMPONENT_AT_AR_FLSH | 0x7BC4CDDC
+-> Name (with GXT): Flashlight (WCT_FLASH)
+-> Description (with GXT): Aids low light target acquisition. (WCD_FLASH)
+
+-> COMPONENT_AT_AR_SUPP | 0x837445AA
+-> Name (with GXT): Suppressor (WCT_SUPP)
+-> Description (with GXT): Reduces noise and muzzle flash. (WCD_AR_SUPP)
+spacer.png
+
+ 
+
+Peds
+
+// Name | Hash
+A_C_Panther | 0xE71D5E68
+A_F_Y_Beach_02 | 0xB920CC2B
+A_F_Y_ClubCust_04 | 0x2EE1E9A0
+A_M_O_Beach_02 | 0xC1534DF2
+A_M_Y_Beach_04 | 0xB91A86BC
+A_M_Y_ClubCust_04 | 0xE2210515
+CS_Patricia_02 | 0x2EFAA8C3
+CSB_ARY | 0xB65C594E
+CSB_EnglishDave_02 | 0xDD59656F
+CSB_Gustavo | 0x8AF43D22
+CSB_HelmsmanPavel | 0x9F7E81F8
+CSB_IslDJ_00 | 0x7A5EE1A5
+CSB_IslDJ_01 | 0x34DFD6A4
+CSB_ISLDJ_02 | 0x66143910
+CSB_IslDJ_03 | 0x917B0FDD
+CSB_IslDJ_04 | 0xB2BC525F
+CSB_JIO | 0xA28B9E2D
+CSB_JuanStrickler | 0xD74B8139
+CSB_MiguelMadrazo | 0xDBB17082
+CSB_MJO | 0xA0FDA755
+CSB_SSS | 0xE0DBDC60
+G_M_M_CartelGuards_01 | 0x7ED5AD78
+G_M_M_CartelGuards_02 | 0x6C8C08E5
+IG_ARY | 0xCF0C7037
+IG_EnglishDave_02 | 0x35FFA54A
+IG_Gustavo | 0xB585B217
+IG_HelmsmanPavel | 0xD7C1E2B1
+IG_IslDJ_00 | 0xE2A32E68
+IG_IslDJ_01 | 0x6F4747CE
+IG_IslDJ_02 | 0x5D1DA37B
+IG_IslDJ_03 | 0x13360FA9
+IG_IslDJ_04 | 0x806E6A1C
+IG_ISLDJ_04_D_01 | 0xB193BD6A
+IG_ISLDJ_04_D_02 | 0xFDF6562E
+IG_ISLDJ_04_E_01 | 0x232D795D
+IG_Jackie | 0x799E61F6
+IG_JIO | 0x73775F3F
+IG_JuanStrickler | 0x1E3E327D
+IG_Kaylee | 0xA7810923
+IG_MiguelMadrazo | 0xA5CD7CD8
+IG_MJO | 0x2D5DB362
+IG_OldRichGuy | 0x3C04504A
+IG_Patricia_02 | 0xC3114CB1
+IG_Pilot | 0x864ED68E
+IG_SSS | 0x3B18E305
+S_F_Y_BeachBarStaff_01 | 0xC2E31A0A
+S_F_Y_ClubBar_02 | 0x55C5627B
+S_M_M_Bouncer_02 | 0x52060D92
+S_M_M_DrugProcess_01 | 0x5C366C83
+S_M_M_FieldWorker_01 | 0x9074CA50
+S_M_M_HighSec_04 | 0x55FE9B46
+ 
+
+Props
+
+int_mp_doors
+        h4_p_mp_yacht_bathroomdoor | 0x4E0C13D5
+        h4_p_mp_yacht_door | 0xD518C13A
+        h4_p_mp_yacht_door_01 | 0x9142B646
+        h4_p_mp_yacht_door_02 | 0x7F5A1275
+        h4_prop_yacht_glass_01 | 0xC6F55EBB
+        h4_prop_yacht_glass_02 | 0xA89F220F
+        h4_prop_yacht_glass_03 | 0xE0AE1230
+        h4_prop_yacht_glass_04 | 0xD2BD764B
+        h4_prop_yacht_glass_05 | 0xE86EDE1
+        h4_prop_yacht_glass_06 | 0xF046B161
+        h4_prop_yacht_glass_07 | 0x27DBA08A
+        h4_prop_yacht_glass_08 | 0x19B70441
+        h4_prop_yacht_glass_09 | 0x55827BD7
+        h4_prop_yacht_glass_10 | 0x9AD78364
+        h4_prop_yacht_showerdoor | 0x3B30F9DB
+
+int_mp_h_props
+        h4_mp_h_acc_artwalll_01 | 0xC7D672EA
+        h4_mp_h_acc_artwalll_02 | 0xDE289F8E
+        h4_mp_h_acc_artwallm_02 | 0x18469818
+        h4_mp_h_acc_artwallm_03 | 0xCE030392
+        h4_mp_h_acc_box_trinket_02 | 0x172A785D
+        h4_mp_h_acc_candles_02 | 0x2A4397EC
+        h4_mp_h_acc_candles_05 | 0xCB2BD9BE
+        h4_mp_h_acc_candles_06 | 0xF05C241E
+        h4_mp_h_acc_dec_sculpt_01 | 0xBB23984F
+        h4_mp_h_acc_dec_sculpt_02 | 0xCB4EB8A5
+        h4_mp_h_acc_dec_sculpt_03 | 0x284270F
+        h4_mp_h_acc_drink_tray_02 | 0x9D5E8FD1
+        h4_mp_h_acc_fruitbowl_01 | 0x7359849E
+        h4_mp_h_acc_jar_03 | 0x4D95C0CE
+        h4_mp_h_acc_vase_04 | 0xDFBC7BA7
+        h4_mp_h_acc_vase_05 | 0xB1919F52
+        h4_mp_h_acc_vase_flowers_01 | 0x595602C2
+        h4_mp_h_acc_vase_flowers_03 | 0x7AEF45F4
+        h4_mp_h_acc_vase_flowers_04 | 0xFDB14B8E
+        h4_mp_h_yacht_armchair_01 | 0xAFC4BD8F
+        h4_mp_h_yacht_armchair_03 | 0xC7276C4C
+        h4_mp_h_yacht_armchair_04 | 0x940E061A
+        h4_mp_h_yacht_barstool_01 | 0xB1877382
+        h4_mp_h_yacht_bed_01 | 0x9AAB090D
+        h4_mp_h_yacht_bed_02 | 0xB1FE37B3
+        h4_mp_h_yacht_coffee_table_01 | 0x57F2D3B8
+        h4_mp_h_yacht_coffee_table_02 | 0xA30169D4
+        h4_mp_h_yacht_floor_lamp_01 | 0x2EE7B88D
+        h4_mp_h_yacht_side_table_01 | 0x4DF6C655
+        h4_mp_h_yacht_side_table_02 | 0x20A56BAF
+        h4_mp_h_yacht_sofa_01 | 0x45A0B165
+        h4_mp_h_yacht_sofa_02 | 0x9BD85DD3
+        h4_mp_h_yacht_stool_01 | 0x17396C36
+        h4_mp_h_yacht_strip_chair_01 | 0x9380628C
+        h4_mp_h_yacht_table_lamp_01 | 0x42E50B9F
+        h4_mp_h_yacht_table_lamp_02 | 0x50262621
+        h4_mp_h_yacht_table_lamp_03 | 0x6668D2A6
+        h4_p_h_acc_artwalll_04 | 0xFF9A4E0
+        h4_p_h_acc_artwallm_04 | 0x7AD04BA1
+
+mp_apa_yacht_jacuzzi
+        h4_mp_apa_yacht_jacuzzi_cam | 0x5F0B60FF
+        h4_mp_apa_yacht_jacuzzi_ripple003 | 0xADF28EA5
+        h4_mp_apa_yacht_jacuzzi_ripple1 | 0x8938DBEC
+        h4_mp_apa_yacht_jacuzzi_ripple2 | 0x97637841
+
+mp_apa_yacht
+        h4_mp_apa_yacht | 0x408D3AA0
+        h4_mp_apa_yacht_win | 0xB36122B5
+
+prop_game_asset_test
+        prop_h4_ball_01a | 0xCE6A0DB
+        prop_h4_ceiling_01a | 0xE55F1673
+        prop_h4_corridor_2x1_01a | 0xD68A4347
+        prop_h4_corridor_2x3_01a | 0xFCBD0134
+        prop_h4_corridor_2x6_01a | 0xA5E73F67
+        prop_h4_corridor_6x10_01a | 0xFB05F835
+        prop_h4_corridorz_3x3_01a | 0xFA2B9C81
+        prop_h4_corridorzd_3x3_01a | 0xE6A255E8
+        prop_h4_cross_01a | 0x9C1B6B9B
+        prop_h4_enemies_01a | 0xD4F9095F
+        prop_h4_enemies_02a | 0x385BCDBF
+        prop_h4_floor_01a | 0xBBCB3764
+        prop_h4_l_shape_l_01a | 0x6C2E7551
+        prop_h4_l_shape_r_01a | 0xF8C692D3
+        prop_h4_l_shape_rd_01a | 0x27E2E49A
+        prop_h4_room_12x12_01a | 0xFD9B7AEA
+        prop_h4_room_3x3_01a | 0x63B41085
+        prop_h4_room_4x4_01a | 0x403D81A0
+        prop_h4_room_4x4_01b | 0x7757EFD4
+        prop_h4_room_4x4_01c | 0x651B4B5B
+        prop_h4_room_4x4_01d | 0x197BB41D
+        prop_h4_room_4x4_01e | 0xB5817D6
+        prop_h4_room_4x4_01f | 0x3E1E7D62
+        prop_h4_room_6x6_01a | 0x29C367AB
+        prop_h4_room_8x8_01a | 0x355AC9C8
+        prop_h4_roomd_14x14_01a | 0x82548BD1
+        prop_h4_roomd_4x6_01a | 0x9B539A0A
+        prop_h4_roomd_7x8_01a | 0x6EDA0F9D
+        prop_h4_t_shape_01a | 0x4F659414
+        prop_h4_wall_01a | 0x9BB05F17
+        prop_h4_wall_01b | 0x533A4E2C
+        prop_h4_wall_door_2x1_01a | 0x7550C070
+        prop_h4_wall_door_2x1_02a | 0xA3A4177A
+        prop_h4_wall_door_2x1_03a | 0xB6F2AFB7
+        prop_h4_wall_end_2x1_01a | 0x328CFB99
+        prop_h4_wall_end_2x1_02a | 0xE40BD3E9
+        prop_h4_wall_end_2x1_03a | 0x6436D569
+        prop_h4_wall_end_2x1_04a | 0x4E3D37FE
+        prop_h4_wall_end_2x1_05a | 0xC7B01A12
+
+prop_h4_accs_01
+        h4_p_h4_m_bag_var22_arm_s | 0xE7FAE3F1
+        h4_prop_h4_airmissile_01a | 0x4B3E056A
+        h4_prop_h4_ante_off_01a | 0xDAE18D44
+        h4_prop_h4_ante_on_01a | 0xBA4D0B18
+        h4_prop_h4_art_pant_01a | 0x34713C62
+        h4_prop_h4_bag_cutter_01a | 0xD02C410A
+        h4_prop_h4_bag_hook_01a | 0x955039BE
+        h4_prop_h4_board_01a | 0x7C71A2D0
+        h4_prop_h4_bolt_cutter_01a | 0xD5A86A96
+        h4_prop_h4_box_ammo_02a | 0x680FF7C7
+        h4_prop_h4_box_delivery_01a | 0xCC33ECFF
+        h4_prop_h4_box_delivery_01b | 0x9639810B
+        h4_prop_h4_bracelet_01a | 0xABE189D2
+        h4_prop_h4_card_hack_01a | 0x59C8B46E
+        h4_prop_h4_case_supp_01a | 0x3AC8D558
+        h4_prop_h4_casino_button_01a | 0x8F5E1462
+        h4_prop_h4_casino_button_01b | 0x9B1B2BDC
+        h4_prop_h4_chain_lock_01a | 0x1316F6B3
+        h4_prop_h4_chest_01a | 0xE758D427
+        h4_prop_h4_chest_01a_land | 0x2A7872A1
+        h4_prop_h4_chest_01a_uw | 0xE684293F
+        h4_prop_h4_codes_01a | 0xCE59F1DE
+        h4_prop_h4_crate_cloth_01a | 0xBBEF0BA1
+        h4_prop_h4_cutter_01a | 0xEFDD7467
+        h4_prop_h4_diamond_01a | 0x28655EA8
+        h4_prop_h4_diamond_disp_01a | 0x9FB0974
+        h4_prop_h4_engine_fusebox_01a | 0x1A62466E
+        h4_prop_h4_exp_device_01a | 0xFB8E57BF
+        h4_prop_h4_file_cylinder_01a | 0x6EF41FA
+        h4_prop_h4_files_paper_01a | 0xE04A7A15
+        h4_prop_h4_files_paper_01b | 0xBD4B341B
+        h4_prop_h4_fingerkeypad_01a | 0x310C7DD8
+        h4_prop_h4_fingerkeypad_01b | 0x16DAC975
+        h4_prop_h4_fuse_box_01a | 0x8B482AE
+        h4_prop_h4_gascutter_01a | 0x6F8BEF2D
+        h4_prop_h4_glass_cut_01a | 0xFAAC6A72
+        h4_prop_h4_glass_disp_01a | 0x99CE4C9F
+        h4_prop_h4_glass_disp_01b | 0x2DD074A1
+        h4_prop_h4_gold_coin_01a | 0x3D8CD78C
+        h4_prop_h4_gold_pile_01a | 0x89853ED0
+        h4_prop_h4_laptop_01a | 0x10C85700
+        h4_prop_h4_ld_bomb_01a | 0x7307B380
+        h4_prop_h4_ld_bomb_02a | 0x793B3A6B
+        h4_prop_h4_ld_keypad_01 | 0xE8C9C338
+        h4_prop_h4_ld_keypad_01b | 0x7E417FDC
+        h4_prop_h4_ld_keypad_01c | 0x477F1258
+        h4_prop_h4_ld_keypad_01d | 0x2284C864
+        h4_prop_h4_lever_box_01a | 0x9AA7757
+        h4_prop_h4_neck_disp_01a | 0xCEA2D48E
+        h4_prop_h4_necklace_01a | 0x935DE6A4
+        h4_prop_h4_photo_01a | 0x5AB1127A
+        h4_prop_h4_pile_letters_01a | 0x87B09A3B
+        h4_prop_h4_rope_hook_01a | 0x1B1DF26F
+        h4_prop_h4_securitycard_01a | 0xD524D63C
+        h4_prop_h4_sign_cctv_01a | 0x7F65E2C7
+        h4_prop_h4_t_bottle_01a | 0xB1101C98
+        h4_prop_h4_t_bottle_02a | 0xAA9E9321
+        h4_prop_h4_t_bottle_02b | 0xB555A88F
+        h4_prop_h4_tannoy_01a | 0xB1078EFD
+        h4_prop_h4_tool_box_01a | 0x78593C93
+        h4_prop_h4_tool_box_01b | 0xAEA22928
+
+prop_h4_accs_02
+        h4_p_cs_rope05x | 0x8957946B
+        h4_p_cs_rope05x_01a | 0x1B78F8A0
+        h4_prop_h4_big_bag_01a | 0x648AEE50
+        h4_prop_h4_big_bag_02a | 0x3FE9A30E
+        h4_prop_h4_box_ammo03a | 0x187DE83D
+        h4_prop_h4_camera_01 | 0x93B21420
+        h4_prop_h4_isl_speaker_01a | 0xF911A0C3
+        h4_prop_h4_jammer_01a | 0xBE0EEF9A
+        h4_prop_h4_key_desk_01 | 0xBF5D5C78
+        h4_prop_h4_luggage_01a | 0xEDF18F2D
+        h4_prop_h4_luggage_02a | 0x5C60E886
+        h4_prop_h4_mb_crate_01a | 0x71FFF623
+        h4_prop_h4_med_bag_01b | 0x4731C3BE
+        h4_prop_h4_michael_backpack | 0x505ED20C
+        h4_prop_h4_mil_crate_02 | 0x174C061C
+        h4_prop_h4_npc_phone | 0x608EDBD8
+        h4_prop_h4_photo_fire_01a | 0x29EFF41D
+        h4_prop_h4_photo_fire_01b | 0x345C08BD
+        h4_prop_h4_pouch_01a | 0xC18EF1EC
+        h4_prop_h4_pumpshotgunh4 | 0xE07C3BFC
+        h4_prop_h4_tool_box_02 | 0xFBDBF973
+
+prop_h4_arcade_manhunt
+        prop_h4_manhunt_01a | 0xCC81EB2B
+        prop_h4_manhunt_01a_screen_p1 | 0x459CBB1
+        prop_h4_manhunt_01a_screen_p2 | 0x161E6F3A
+        prop_h4_wpnmanhunt_01a | 0x9E9B689
+
+prop_h4_arcade_trophies
+        prop_h4_trophy_manhunt_01a | 0x5B82EF05
+
+prop_h4_casino
+        h4_p_cs_shot_glass_2_s | 0xBC64E662
+        h4_p_h4_champ_flute_s | 0x154D2044
+        h4_prop_h4_champ_tray_01a | 0xE7F02D13
+        h4_prop_h4_champ_tray_01b | 0xD6068940
+        h4_prop_h4_champ_tray_01c | 0x3C0E4B4
+        h4_prop_h4_lime_01a | 0x2A3A2CB2
+        h4_prop_h4_saltshaker_01a | 0xC3017955
+        h4_prop_h4_tray_01a | 0xC3FDB7C3
+        h4_prop_tumbler_01 | 0x5BB01723
+
+prop_h4_coke_01
+        h4_prop_h4_caviar_spoon_01a | 0xD300096A
+        h4_prop_h4_caviar_tin_01a | 0x32A7A0F1
+        h4_prop_h4_coke_bottle_01a | 0xDC62A0F5
+        h4_prop_h4_coke_bottle_02a | 0xE8ADBA6B
+        h4_prop_h4_coke_metalbowl_01 | 0x2E699AAD
+        h4_prop_h4_coke_metalbowl_03 | 0x2ADE1382
+        h4_prop_h4_coke_mixtube_02 | 0x21243BDD
+        h4_prop_h4_coke_mixtube_03 | 0x2C83D29C
+        h4_prop_h4_coke_mortalpestle | 0xB746E5D6
+        h4_prop_h4_coke_plasticbowl_01 | 0xB6B12CFC
+        h4_prop_h4_coke_powderbottle_01 | 0xA154FCA4
+        h4_prop_h4_coke_scale_01 | 0x6BE1E5CA
+        h4_prop_h4_coke_scale_02 | 0x4293132D
+        h4_prop_h4_coke_scale_03 | 0x4FCB2D9D
+        h4_prop_h4_coke_spatula_01 | 0x98E9AF72
+        h4_prop_h4_coke_spatula_02 | 0x5EF6BB89
+        h4_prop_h4_coke_spatula_03 | 0x30CADF32
+        h4_prop_h4_coke_spatula_04 | 0x634E4438
+        h4_prop_h4_coke_spoon_01 | 0xE2F6ECCE
+        h4_prop_h4_coke_stack_01a | 0x803696B8
+        h4_prop_h4_coke_tablepowder | 0x51DA3049
+        h4_prop_h4_coke_testtubes | 0x5C9EB7DE
+        h4_prop_h4_coke_tube_01 | 0x16865DC7
+        h4_prop_h4_coke_tube_02 | 0x200070BB
+        h4_prop_h4_coke_tube_03 | 0x3357176C
+        h4_prop_h4_powdercleaner_01a | 0x206AF3C3
+
+prop_h4_des_gate_end
+        h4_des_hs4_gate_exp_end | 0x9A69CDAD
+
+prop_h4_des_gate
+        h4_des_hs4_gate_exp_01 | 0xE5CAE98E
+        h4_des_hs4_gate_exp_02 | 0xB4EF87D8
+        h4_des_hs4_gate_exp_03 | 0xC25E22B5
+        h4_des_hs4_gate_exp_04 | 0x42E9A3D2
+        h4_des_hs4_gate_exp_05 | 0x2D5878B0
+
+prop_h4_dj
+        h4_dfloor_strobe_lightproxy | 0x57F38709
+        h4_dj_set_wbeach | 0x48E55E4E
+        h4_prop_battle_analoguemixer_01a | 0xF91E76BE
+        h4_prop_battle_bar_beerfridge_01 | 0x36400ACA
+        h4_prop_battle_bar_fridge_01 | 0x7995406
+        h4_prop_battle_bar_fridge_02 | 0xBB5EBB92
+        h4_prop_battle_chakrastones_01a | 0xFF43076
+        h4_prop_battle_champ_closed | 0xD34D358F
+        h4_prop_battle_champ_closed_02 | 0x70AB73E8
+        h4_prop_battle_champ_closed_03 | 0xAA616753
+        h4_prop_battle_champ_open | 0x91175C4B
+        h4_prop_battle_champ_open_02 | 0x5E3ADCC8
+        h4_prop_battle_champ_open_03 | 0x6CD97A05
+        h4_prop_battle_club_chair_01 | 0xE4DEEC5F
+        h4_prop_battle_club_chair_02 | 0xA88A73B7
+        h4_prop_battle_club_chair_03 | 0x9A5BD75A
+        h4_prop_battle_club_computer_01 | 0xEA016F27
+        h4_prop_battle_club_computer_02 | 0x8BE2B2EB
+        h4_prop_battle_club_screen | 0xCEDA6F88
+        h4_prop_battle_club_screen_02 | 0x47FDB2EB
+        h4_prop_battle_club_screen_03 | 0xB4AD8C45
+        h4_prop_battle_club_speaker_array | 0x6AB23CC9
+        h4_prop_battle_club_speaker_dj | 0x2DA841EA
+        h4_prop_battle_club_speaker_large | 0x375C7FF
+        h4_prop_battle_club_speaker_med | 0x1F487531
+        h4_prop_battle_club_speaker_small | 0xE0704497
+        h4_prop_battle_coconutdrink_01a | 0x12D4AB5C
+        h4_prop_battle_cuffs | 0xA54F6FE8
+        h4_prop_battle_decanter_01_s | 0xFA62816E
+        h4_prop_battle_decanter_02_s | 0x46E466F9
+        h4_prop_battle_decanter_03_s | 0xDA2E7565
+        h4_prop_battle_dj_box_01a | 0x2F64881D
+        h4_prop_battle_dj_box_02a | 0xACA2FEDD
+        h4_prop_battle_dj_box_03a | 0xF0D488B6
+        h4_prop_battle_dj_deck_01a | 0xD8C03E15
+        h4_prop_battle_dj_deck_01a_a | 0x1A22A42
+        h4_prop_battle_dj_deck_01b | 0xC7129ABA
+        h4_prop_battle_dj_kit_mixer | 0xD85A0152
+        h4_prop_battle_dj_kit_speaker | 0x393DE1B2
+        h4_prop_battle_dj_mixer_01a | 0x89B366A6
+        h4_prop_battle_dj_mixer_01b | 0x57688211
+        h4_prop_battle_dj_mixer_01c | 0x728FB85F
+        h4_prop_battle_dj_mixer_01d | 0x416055FD
+        h4_prop_battle_dj_mixer_01e | 0xBFEAD314
+        h4_prop_battle_dj_mixer_01f | 0x9CD28CE4
+        h4_prop_battle_dj_stand | 0x1F79E7EA
+        h4_prop_battle_dj_t_box_01a | 0x88C563C8
+        h4_prop_battle_dj_t_box_02a | 0x10556B22
+        h4_prop_battle_dj_t_box_03a | 0x4232CB64
+        h4_prop_battle_dj_wires_dixon | 0x22FE6926
+        h4_prop_battle_dj_wires_madonna | 0xDB36D04E
+        h4_prop_battle_dj_wires_solomon | 0x1505FB85
+        h4_prop_battle_dj_wires_tale | 0x5D7E31B6
+        h4_prop_battle_fan | 0xD534718
+        h4_prop_battle_glowstick_01 | 0xD11F7A34
+        h4_prop_battle_headphones_dj | 0x468FE3BF
+        h4_prop_battle_hobby_horse | 0x95C5468E
+        h4_prop_battle_ice_bucket | 0x61D1987A
+        h4_prop_battle_mic | 0x9D534B6B
+        h4_prop_battle_poster_promo_01 | 0x582642E5
+        h4_prop_battle_poster_promo_02 | 0x4C612B5F
+        h4_prop_battle_poster_promo_03 | 0x329FF7DD
+        h4_prop_battle_poster_promo_04 | 0xDE145A
+        h4_prop_battle_poster_skin_01 | 0x6971DD69
+        h4_prop_battle_poster_skin_02 | 0x77887996
+        h4_prop_battle_poster_skin_03 | 0x47E69A53
+        h4_prop_battle_poster_skin_04 | 0x4DD6A633
+        h4_prop_battle_rotarymixer_01a | 0x41C55FC2
+        h4_prop_battle_security_pad | 0xDC79877F
+        h4_prop_battle_shot_glass_01 | 0xCC4F0F6F
+        h4_prop_battle_sniffing_pipe | 0x557833B
+        h4_prop_battle_sports_helmet | 0x53EE617B
+        h4_prop_battle_trophy_battler | 0x5A949A37
+        h4_prop_battle_trophy_dancer | 0xFECDE42E
+        h4_prop_battle_trophy_no1 | 0x66C3484A
+        h4_prop_battle_vape_01 | 0x3B0502C8
+        h4_prop_battle_waterbottle_01a | 0x9E92A139
+        h4_prop_battle_whiskey_bottle_2_s | 0x17F8CA1D
+        h4_prop_battle_whiskey_bottle_s | 0xCE74AA0B
+        h4_prop_battle_whiskey_opaque_s | 0xE4FB591A
+        h4_prop_club_champset | 0xA118BEBC
+        h4_prop_club_dimmer | 0xFA757C09
+        h4_prop_club_glass_opaque | 0xD8AF7759
+        h4_prop_club_glass_trans | 0x346BEB12
+        h4_prop_club_laptop_dj | 0x308AA9F
+        h4_prop_club_laptop_dj_02 | 0x23CCA511
+        h4_prop_club_screens_01 | 0xEA7F9C75
+        h4_prop_club_screens_02 | 0x5860F836
+        h4_prop_club_smoke_machine | 0x7510C144
+        h4_prop_club_tonic_bottle | 0x1C1C5A6E
+        h4_prop_club_tonic_can | 0x58C3BA18
+        h4_prop_club_water_bottle | 0x865B9A7A
+        h4_prop_door_club_edgy_generic | 0x44519ACE
+        h4_prop_door_club_edgy_wc | 0x470B8202
+        h4_prop_door_club_entrance | 0x60B29E21
+        h4_prop_door_club_generic_vip | 0xF90AB3E4
+        h4_prop_door_club_glam_generic | 0x9F6D0E91
+        h4_prop_door_club_glam_wc | 0x48179175
+        h4_prop_door_club_glass | 0x386A9377
+        h4_prop_door_club_glass_opaque | 0x2E7221DE
+        h4_prop_door_club_trad_generic | 0xDEDCE543
+        h4_prop_door_club_trad_wc | 0x5D296BA9
+        h4_prop_door_elevator_1l | 0xCB711772
+        h4_prop_door_elevator_1r | 0x3960F350
+        h4_prop_door_gun_safe | 0x8DFA3596
+        h4_prop_door_safe | 0x66F4619
+        h4_prop_door_safe_02 | 0x37086B64
+        h4_prop_glass_front_office | 0xEA120F07
+        h4_prop_glass_front_office_opaque | 0x99021104
+        h4_prop_glass_garage | 0xE834370A
+        h4_prop_glass_garage_opaque | 0x42949E28
+        h4_prop_glass_rear_office | 0xBF272EE5
+        h4_prop_glass_rear_opaque | 0xF8E7FDC
+        h4_prop_h4_bag_djlp_01a | 0x1431D451
+        h4_prop_h4_can_beer_01a | 0xE17EAEE9
+        h4_prop_h4_dj_t_wires_01a | 0x98705263
+        h4_prop_h4_dj_wires_01a | 0xA0483534
+        h4_prop_h4_dj_wires_tale_01a | 0xD2E08248
+        h4_prop_h4_lp_01a | 0x2C57A91C
+        h4_prop_h4_lp_01b | 0x42C3D5F4
+        h4_prop_h4_lp_02a | 0x1E7A97DE
+        h4_prop_h4_mic_dj_01a | 0x70711C64
+        h4_prop_h4_table_07 | 0x4468BF01
+        h4_prop_h4_turntable_01a | 0xD3014D0F
+        h4_prop_int_edgy_stool | 0x337302D1
+        h4_prop_int_edgy_table_01 | 0x4D7A24F8
+        h4_prop_int_edgy_table_02 | 0xBA8CFF1C
+        h4_prop_int_glam_stool | 0x40432F7D
+        h4_prop_int_glam_table | 0xA78504D
+        h4_prop_int_stool_low | 0x3C26072C
+        h4_prop_int_trad_table | 0x5F0A8A7D
+        h4_prop_sign_galaxy | 0xA3743234
+        h4_prop_sign_gefangnis | 0x774C4028
+        h4_prop_sign_maison | 0x4EC54832
+        h4_prop_sign_omega | 0x78BB6E1A
+        h4_prop_sign_omega_02 | 0x715B146
+        h4_prop_sign_palace | 0xA6C1B3E6
+        h4_prop_sign_paradise | 0x40DC60AE
+        h4_prop_sign_studio | 0x7130ECAF
+        h4_prop_sign_technologie | 0x707646F4
+        h4_prop_sign_tonys | 0x3DC846EA
+
+prop_h4_ground_cover
+        h4_prop_bush_bgnvla_lrg_01 | 0xB7D3C8EA
+        h4_prop_bush_bgnvla_med_01 | 0x96517C47
+        h4_prop_bush_bgnvla_sml_01 | 0x141F6B57
+        h4_prop_bush_buddleia_low_01 | 0xD75E01A6
+        h4_prop_bush_ear_aa | 0x675D244E
+        h4_prop_bush_ear_ab | 0x799B48CA
+        h4_prop_bush_fern_low_01 | 0x68E49D4D
+        h4_prop_bush_fern_tall_cc | 0x66F34017
+        h4_prop_bush_mang_ad | 0x1705D85C
+        h4_prop_bush_mang_low_aa | 0xDE1807BB
+        h4_prop_bush_mang_low_ab | 0xC4C9551E
+        h4_prop_bush_seagrape_low_01 | 0x1AD51F27
+        h4_prop_grass_med_01 | 0x5D750529
+        h4_prop_grass_tropical_lush_01 | 0xC4EEC556
+        h4_prop_grass_wiregrass_01 | 0xCF37BA1F
+        h4_prop_weed_01_plant | 0xB015923B
+        h4_prop_weed_01_row | 0x3B25A26F
+        h4_prop_weed_groundcover_01 | 0xB69AD9F8
+
+prop_h4_hatches_01
+        h4_int_sub_lift_doors_frm | 0x24DD2C9A
+        h4_int_sub_lift_doors_l | 0x53D0D1DA
+        h4_int_sub_lift_doors_r | 0xA1CDEDDB
+        h4_prop_sub_lift_platfom | 0xFF1F0D75
+        h4_prop_sub_pool_hatch_l_01a | 0x105F9D8F
+        h4_prop_sub_pool_hatch_l_02a | 0x94A40476
+        h4_prop_sub_pool_hatch_r_01a | 0x8019D984
+        h4_prop_sub_pool_hatch_r_02a | 0x4F1FEF95
+
+prop_h4_island_01
+        h4_prop_h4_air_bigradar | 0x932BB8F2
+        h4_prop_h4_crates_full_01a | 0xD7A401A4
+        h4_prop_h4_door_01a | 0xDBD1B66B
+        h4_prop_h4_door_03a | 0xAA2D5573
+        h4_prop_h4_elecbox_01a | 0x76201CBC
+        h4_prop_h4_fence_arches_x2_01a | 0x72E2F577
+        h4_prop_h4_fence_arches_x3_01a | 0x7F02DF82
+        h4_prop_h4_fence_seg_x1_01a | 0x2761E158
+        h4_prop_h4_fence_seg_x3_01a | 0x38BF0080
+        h4_prop_h4_fence_seg_x5_01a | 0xB0332DF
+        h4_prop_h4_garage_door_01a | 0x86C0659
+        h4_prop_h4_gate_02a | 0xAEE1B82C
+        h4_prop_h4_gate_03a | 0x85496A68
+        h4_prop_h4_gate_04a | 0x9ACB8DC0
+        h4_prop_h4_gate_05a | 0xDA669255
+        h4_prop_h4_gate_l_01a | 0xC1409E2C
+        h4_prop_h4_gate_l_03a | 0x4872B7E6
+        h4_prop_h4_gate_r_01a | 0x6F47F6EA
+        h4_prop_h4_gate_r_03a | 0xA22C5A6A
+        h4_prop_h4_hatch_01a | 0x933B7666
+        h4_prop_h4_ilev_roc_door2 | 0x91BA257B
+        h4_prop_h4_keys_jail_01a | 0xAB290F0E
+        h4_prop_h4_lrggate_01_l | 0x97DEA4B5
+        h4_prop_h4_lrggate_01_pst | 0x5A49AE14
+        h4_prop_h4_lrggate_01_r | 0xFE9B7225
+        h4_prop_h4_sluce_gate_l_01a | 0x92D61170
+        h4_prop_h4_sluce_gate_r_01a | 0x1C73D681
+        h4_prop_h4_win_blind_01a | 0xAF1A76E5
+        h4_prop_h4_win_blind_02a | 0x67F2E9CF
+        h4_prop_h4_win_blind_03a | 0x3D499105
+
+prop_h4_island_02
+        h4_prop_h4_barstool_01a | 0x2A347D3A
+        h4_prop_h4_chair_01a | 0x290AEB43
+        h4_prop_h4_chair_02a | 0xF0297CE1
+        h4_prop_h4_chair_03a | 0x71CC1A60
+        h4_prop_h4_couch_01a | 0xA8F16E1C
+        h4_prop_h4_map_door_01 | 0xEA79169
+        h4_prop_h4_painting_01a | 0xEC7C29AE
+        h4_prop_h4_painting_01b | 0xDCCF8A55
+        h4_prop_h4_painting_01c | 0xC24E5527
+        h4_prop_h4_painting_01d | 0xD1C0F438
+        h4_prop_h4_painting_01e | 0xBFFF50B5
+        h4_prop_h4_painting_01f | 0xB6CFBE56
+        h4_prop_h4_painting_01g | 0x9A9885E8
+        h4_prop_h4_painting_01h | 0x8AA3E5FF
+        h4_prop_h4_pillow_01a | 0xD1312F12
+        h4_prop_h4_pillow_02a | 0x6EF76964
+        h4_prop_h4_pillow_03a | 0xC2C40FA8
+        h4_prop_h4_plate_wall_01a | 0x9A0CD351
+        h4_prop_h4_plate_wall_02a | 0xA0BD6666
+        h4_prop_h4_plate_wall_03a | 0x66D3F3BC
+        h4_prop_h4_pot_01a | 0xF16DC284
+        h4_prop_h4_pot_01b | 0x72FEE08
+        h4_prop_h4_pot_01c | 0x1AFE15AC
+        h4_prop_h4_pot_01d | 0x28B8B121
+        h4_prop_h4_sign_vip_01a | 0xB093041C
+        h4_prop_h4_stool_01a | 0x2DCAF9DC
+        h4_prop_h4_table_01a | 0xE130949D
+        h4_prop_h4_table_01b | 0xEE63AF03
+        h4_prop_h4_valet_01a | 0x2B56284D
+        h4_prop_h4_wheel_nimbus | 0x8B5D7A81
+        h4_prop_h4_wheel_nimbus_f | 0x50D7EC49
+        h4_prop_h4_wheel_velum2 | 0x14BBB3CC
+
+prop_h4_island_03
+        h4_prop_h4_barrel_01a | 0xECBDC30C
+        h4_prop_h4_barrel_pile_01a | 0x8B43EFEF
+        h4_prop_h4_barrel_pile_02a | 0xA7D827FF
+        h4_prop_h4_boxpile_01a | 0x5981477A
+        h4_prop_h4_boxpile_01b | 0x2499908
+        h4_prop_h4_cctv_pole_04 | 0x813C7637
+        h4_prop_h4_firepit_rocks_01a | 0x43142C9B
+        h4_prop_h4_loch_monster | 0x427BADC1
+        h4_prop_h4_p_boat_01a | 0x668705E9
+        h4_prop_h4_rowboat_01a | 0x579C789F
+        h4_prop_h4_sec_barrier_ld_01a | 0x74CCFA11
+        h4_prop_h4_sec_cabinet_dum | 0x3DC4C741
+
+prop_h4_lights_02
+        h4_prop_club_emis_rig_01 | 0x904069E
+        h4_prop_club_emis_rig_02 | 0x36F2E27B
+        h4_prop_club_emis_rig_02b | 0xA028837F
+        h4_prop_club_emis_rig_02c | 0xBC84BC37
+        h4_prop_club_emis_rig_02d | 0x3E413FAE
+        h4_prop_club_emis_rig_03 | 0xD498F2D
+        h4_prop_club_emis_rig_04 | 0x3B776B88
+        h4_prop_club_emis_rig_04b | 0x53FD7F0E
+        h4_prop_club_emis_rig_04c | 0xE2541BB9
+        h4_prop_club_emis_rig_05 | 0xDDBAB00C
+        h4_prop_club_emis_rig_06 | 0xD4849DA0
+        h4_prop_club_emis_rig_07 | 0x2507937
+        h4_prop_club_emis_rig_08 | 0xE92146D9
+        h4_prop_club_emis_rig_09 | 0x972D22F2
+        h4_prop_club_emis_rig_10 | 0xCBB106F1
+        h4_prop_club_emis_rig_10_shad | 0xF0639ED6
+        h4_rig_dj_01_lights_01_a | 0xB9123853
+        h4_rig_dj_01_lights_01_b | 0xCA8CDB48
+        h4_rig_dj_01_lights_01_c | 0xFD2A4082
+        h4_rig_dj_02_lights_01_a | 0x9611DDCB
+        h4_rig_dj_02_lights_01_b | 0x83D83958
+        h4_rig_dj_02_lights_01_c | 0x74669A75
+        h4_rig_dj_03_lights_01_a | 0x1616CCDD
+        h4_rig_dj_03_lights_01_b | 0x4C7DB9AA
+        h4_rig_dj_03_lights_01_c | 0x329385D6
+        h4_rig_dj_04_lights_01_a | 0x4CFD7128
+        h4_rig_dj_04_lights_01_b | 0x70F6541
+        h4_rig_dj_04_lights_01_c | 0xF8E548ED
+        h4_rig_dj_all_lights_01_off | 0x36EDA70C
+
+prop_h4_lights_03
+        h4_rig_dj_01_lights_02_a | 0xB1723A3C
+        h4_rig_dj_01_lights_02_b | 0x60059760
+        h4_rig_dj_01_lights_02_c | 0xCDD9F30B
+        h4_rig_dj_02_lights_02_a | 0xDE9E88BE
+        h4_rig_dj_02_lights_02_b | 0xF440B402
+        h4_rig_dj_02_lights_02_c | 0x91FEEF80
+        h4_rig_dj_03_lights_02_a | 0x4DAD6341
+        h4_rig_dj_03_lights_02_b | 0xDEDE05A4
+        h4_rig_dj_03_lights_02_c | 0xF10729F6
+        h4_rig_dj_04_lights_02_a | 0x38D030BE
+        h4_rig_dj_04_lights_02_b | 0x2E021B22
+        h4_rig_dj_04_lights_02_c | 0x5BC376A4
+        h4_rig_dj_all_lights_02_off | 0x388CFCD
+
+prop_h4_lights_04
+        h4_rig_dj_01_lights_03_a | 0x505E4514
+        h4_rig_dj_01_lights_03_b | 0xFA4798E0
+        h4_rig_dj_01_lights_03_c | 0x2641F0D4
+        h4_rig_dj_02_lights_03_a | 0xD725365F
+        h4_rig_dj_02_lights_03_b | 0xC5869322
+        h4_rig_dj_02_lights_03_c | 0xA1CE4BB6
+        h4_rig_dj_03_lights_03_a | 0x2CFB661D
+        h4_rig_dj_03_lights_03_b | 0x1BBCC3A0
+        h4_rig_dj_03_lights_03_c | 0xD8763D14
+        h4_rig_dj_04_lights_03_a | 0xC9D9890A
+        h4_rig_dj_04_lights_03_b | 0xDB1D2B95
+        h4_rig_dj_04_lights_03_c | 0xC55F0019
+        h4_rig_dj_all_lights_03_off | 0x12B71EDB
+
+prop_h4_lights_05
+        h4_rig_dj_01_lights_04_a | 0xF4CCA0C7
+        h4_rig_dj_01_lights_04_a_scr | 0x84F9595E
+        h4_rig_dj_01_lights_04_b | 0x1341DDB1
+        h4_rig_dj_01_lights_04_b_scr | 0x8FB8E0D0
+        h4_rig_dj_01_lights_04_c | 0x20AA7882
+        h4_rig_dj_01_lights_04_c_scr | 0xC78F72A1
+        h4_rig_dj_02_lights_04_a | 0xF12544D5
+        h4_rig_dj_02_lights_04_a_scr | 0x5597EE61
+        h4_rig_dj_02_lights_04_b | 0xE5FC2E83
+        h4_rig_dj_02_lights_04_b_scr | 0xD5172AF
+        h4_rig_dj_02_lights_04_c | 0xD5B18DEE
+        h4_rig_dj_02_lights_04_c_scr | 0x1BDA4A8A
+        h4_rig_dj_03_lights_04_a | 0x1EDFCB77
+        h4_rig_dj_03_lights_04_a_scr | 0x75E8BAA0
+        h4_rig_dj_03_lights_04_b | 0x9D8B48CC
+        h4_rig_dj_03_lights_04_b_scr | 0x314914D8
+        h4_rig_dj_03_lights_04_c | 0xD402B5BA
+        h4_rig_dj_03_lights_04_c_scr | 0x66EDF66F
+        h4_rig_dj_04_lights_04_a | 0x5003ACEB
+        h4_rig_dj_04_lights_04_a_scr | 0xFDEB454B
+        h4_rig_dj_04_lights_04_b | 0x96E6BAB0
+        h4_rig_dj_04_lights_04_b_scr | 0xE98004F7
+        h4_rig_dj_04_lights_04_c | 0x657957D6
+        h4_rig_dj_04_lights_04_c_scr | 0xBCA81D5D
+        h4_rig_dj_all_lights_04_off | 0x3E568C2E
+
+prop_h4_lights_content
+        h4_prop_battle_emis_rig_01 | 0xC71061BC
+        h4_prop_battle_emis_rig_02 | 0x9D570E4A
+        h4_prop_battle_emis_rig_03 | 0xE55B1E51
+        h4_prop_battle_emis_rig_04 | 0xF38BBAB2
+
+prop_h4_lights
+        h4_prop_battle_lights_01_bright | 0x441770E4
+        h4_prop_battle_lights_01_dim | 0xB8DB1E62
+        h4_prop_battle_lights_02_bright | 0x584EB54B
+        h4_prop_battle_lights_02_dim | 0xCBDBC360
+        h4_prop_battle_lights_03_bright | 0xFAEFA9CD
+        h4_prop_battle_lights_03_dim | 0xB4E82014
+        h4_prop_battle_lights_ceiling_l_a | 0x2467EB9F
+        h4_prop_battle_lights_ceiling_l_b | 0xF1EB869B
+        h4_prop_battle_lights_ceiling_l_c | 0x1FB4622C
+        h4_prop_battle_lights_ceiling_l_d | 0xE6E57097
+        h4_prop_battle_lights_ceiling_l_e | 0x43BAB3B
+        h4_prop_battle_lights_ceiling_l_f | 0xCAD1B870
+        h4_prop_battle_lights_ceiling_l_g | 0xB91894FE
+        h4_prop_battle_lights_ceiling_l_h | 0x9FF5E2B9
+        h4_prop_battle_lights_club_df | 0xC3E76A2A
+        h4_prop_battle_lights_floor | 0xE9CCF334
+        h4_prop_battle_lights_floor_l_a | 0xF3F84620
+        h4_prop_battle_lights_floor_l_b | 0x3F5DDCEA
+        h4_prop_battle_lights_floorblue | 0xB23ABCD2
+        h4_prop_battle_lights_floorred | 0x70BCA95
+        h4_prop_battle_lights_fx_lamp | 0x61FD0FAD
+        h4_prop_battle_lights_fx_riga | 0xAF5AA7AD
+        h4_prop_battle_lights_fx_rigb | 0x9EFD06F2
+        h4_prop_battle_lights_fx_rigc | 0xE386567
+        h4_prop_battle_lights_fx_rigd | 0xFFAF4855
+        h4_prop_battle_lights_fx_rige | 0xF1F4ACE0
+        h4_prop_battle_lights_fx_rigf | 0x570376F0
+        h4_prop_battle_lights_fx_rigg | 0x48C15A6C
+        h4_prop_battle_lights_fx_righ | 0x3A92BE0F
+        h4_prop_battle_lights_fx_rotator | 0x943141BE
+        h4_prop_battle_lights_fx_support | 0xA5C19E8C
+        h4_prop_battle_lights_int_03_lr1 | 0xC610E65F
+        h4_prop_battle_lights_int_03_lr2 | 0x934500C8
+        h4_prop_battle_lights_int_03_lr3 | 0x18EDD5A
+        h4_prop_battle_lights_int_03_lr4 | 0x12B67FA9
+        h4_prop_battle_lights_int_03_lr5 | 0xE07F9B3C
+        h4_prop_battle_lights_int_03_lr6 | 0xEE3AB6B2
+        h4_prop_battle_lights_int_03_lr7 | 0x3C41D2B7
+        h4_prop_battle_lights_int_03_lr8 | 0x466566FE
+        h4_prop_battle_lights_int_03_lr9 | 0x139B816B
+        h4_prop_battle_lights_stairs | 0x38B6B4B6
+        h4_prop_battle_lights_support | 0xD559B02C
+        h4_prop_battle_lights_tube_l_a | 0xDC3FC21D
+        h4_prop_battle_lights_tube_l_b | 0x5DDB4556
+        h4_prop_battle_lights_wall_l_a | 0x7CA9EBFA
+        h4_prop_battle_lights_wall_l_b | 0x6CD54C51
+        h4_prop_battle_lights_wall_l_c | 0x516C1583
+        h4_prop_battle_lights_wall_l_d | 0x6B5C4963
+        h4_prop_battle_lights_wall_l_e | 0x300ED2C9
+        h4_prop_battle_lights_wall_l_f | 0x5FC8323B
+        h4_prop_battle_lights_workbench | 0x4D10886C
+        h4_prop_casinoclub_lights_domed | 0x8EDCC817
+
+prop_h4_money_01
+        h4_prop_h4_box_ammo_01a | 0x714D6DAA
+        h4_prop_h4_box_ammo_01b | 0x82DE90DC
+        h4_prop_h4_cash_bag_01a | 0xCDF57594
+        h4_prop_h4_cash_bon_01a | 0xB0190F5F
+        h4_prop_h4_cash_stack_01a | 0x49340C40
+        h4_prop_h4_cash_stack_02a | 0x80417B96
+        h4_prop_h4_gold_stack_01a | 0xF544490A
+        h4_prop_h4_safe_01a | 0x41740612
+        h4_prop_h4_safe_01b | 0x4FB7A299
+
+prop_h4_office_01
+        h4_prop_door_safe_01 | 0x1CEA3728
+        h4_prop_office_desk_01 | 0x499AA60
+        h4_prop_office_elevator_door_01 | 0xDDAA96E9
+        h4_prop_office_elevator_door_02 | 0xEB6F3272
+        h4_prop_office_painting_01a | 0xBB16CFA2
+        h4_prop_office_painting_01b | 0x1280FE0D
+
+prop_h4_potted
+        h4_prop_int_plants_01a | 0x262E492F
+        h4_prop_int_plants_01b | 0x1EE2BA98
+        h4_prop_int_plants_01c | 0x27E81D0
+        h4_prop_int_plants_02 | 0xAD4B5EAC
+        h4_prop_int_plants_03 | 0x5B023A1B
+        h4_prop_int_plants_04 | 0xDE85D5
+
+prop_h4_rock
+        h4_prop_rock_lrg_01 | 0x9BAB7A9F
+        h4_prop_rock_lrg_02 | 0x6D609E0A
+        h4_prop_rock_lrg_03 | 0x61020559
+        h4_prop_rock_lrg_04 | 0x7BC93AE7
+        h4_prop_rock_lrg_05 | 0x4D5D5E10
+        h4_prop_rock_lrg_06 | 0x581B738C
+        h4_prop_rock_lrg_07 | 0x29EC972F
+        h4_prop_rock_lrg_08 | 0x48B4C6D
+        h4_prop_rock_lrg_09 | 0xF3661C3
+        h4_prop_rock_lrg_10 | 0xF65DD6C6
+        h4_prop_rock_lrg_11 | 0xAB48C09D
+        h4_prop_rock_lrg_12 | 0x996A9CE1
+        h4_prop_rock_med_01 | 0x3F62313C
+        h4_prop_rock_med_02 | 0x118A5589
+        h4_prop_rock_med_03 | 0x1BEE6A51
+        h4_prop_rock_scree_med_01 | 0x1BC51FD0
+        h4_prop_rock_scree_med_02 | 0x83FFF044
+        h4_prop_rock_scree_med_03 | 0x763D54BF
+        h4_prop_rock_scree_small_01 | 0x6EE01649
+        h4_prop_rock_scree_small_02 | 0xE2CBFE4F
+        h4_prop_rock_scree_small_03 | 0xD0355922
+
+prop_h4_sam
+        h4_prop_h4_sam_turret_01a | 0x1580CD5B
+
+prop_h4_sub
+        h4_prop_h4_sub_kos | 0x5AE7BFF9
+        h4_prop_h4_sub_kos_extra | 0xB5A354EE
+        h4_prop_x17_sub | 0xB7DB269
+        h4_prop_x17_sub_extra | 0xAAD391C8
+
+prop_h4_tables
+        h4_prop_casino_3cardpoker_01a | 0x5620A5CC
+        h4_prop_casino_3cardpoker_01b | 0x44B202EF
+        h4_prop_casino_3cardpoker_01c | 0xB388609A
+        h4_prop_casino_3cardpoker_01d | 0xA92D4BE4
+        h4_prop_casino_3cardpoker_01e | 0x980BA9A1
+        h4_prop_casino_blckjack_01a | 0xA98DBB4
+        h4_prop_casino_blckjack_01b | 0xED3E42A
+        h4_prop_casino_blckjack_01c | 0xDF1584AE
+        h4_prop_casino_blckjack_01d | 0xECC02003
+        h4_prop_casino_blckjack_01e | 0x4C92DFA7
+
+prop_h4_trees
+        h4_prop_bush_boxwood_med_01 | 0xB9380D17
+        h4_prop_bush_buddleia_sml_01 | 0x81CF1585
+        h4_prop_bush_cocaplant_01 | 0x595FAA29
+        h4_prop_bush_cocaplant_01_row | 0x396A0726
+        h4_prop_bush_mang_aa | 0xD2C1CFD5
+        h4_prop_bush_mang_ac | 0xAD4E04EE
+        h4_prop_bush_mang_lg_aa | 0x880A6EBF
+        h4_prop_bush_mang_lrg_01 | 0xA8BA6E48
+        h4_prop_bush_mang_lrg_02 | 0x5FB1DC30
+        h4_prop_bush_monstera_med_01 | 0x8DBBAD1B
+        h4_prop_bush_olndr_white_lrg | 0x6ACC61FC
+        h4_prop_bush_olndr_white_sml | 0x4C52A649
+        h4_prop_bush_rosemary_lrg_01 | 0x4774C75A
+        h4_prop_bush_wandering_aa | 0x8E6CD5CA
+        h4_prop_palmeto_sap_aa | 0xCB228307
+        h4_prop_palmeto_sap_ab | 0x20CA2E55
+        h4_prop_palmeto_sap_ac | 0xEC37C531
+        h4_prop_tree_banana_med_01 | 0xDE65E28
+        h4_prop_tree_beech_lrg_if_01 | 0x6591C645
+        h4_prop_tree_blk_mgrv_lrg_01 | 0x3B7A24A8
+        h4_prop_tree_blk_mgrv_lrg_02 | 0x292F8013
+        h4_prop_tree_blk_mgrv_med_01 | 0xBF462FE9
+        h4_prop_tree_dracaena_lrg_01 | 0xA7A58EF7
+        h4_prop_tree_dracaena_sml_01 | 0x7DD91F24
+        h4_prop_tree_frangipani_lrg_01 | 0xCD336A6D
+        h4_prop_tree_frangipani_med_01 | 0x6868B3B0
+        h4_prop_tree_palm_areca_sap_02 | 0x70B02669
+        h4_prop_tree_palm_areca_sap_03 | 0x335EABC7
+        h4_prop_tree_palm_fan_bea_03b | 0x242EFC63
+        h4_prop_tree_palm_thatch_01 | 0xD1BF68DA
+        h4_prop_tree_palm_trvlr_03 | 0xAFC2B246
+        h4_prop_tree_umbrella_med_01 | 0xD14DF71C
+        h4_prop_tree_umbrella_sml_01 | 0xFBB00074
+
+prop_h4_weed_01
+        h4_prop_h4_table_isl_01a | 0x43B662B9
+        h4_prop_h4_weed_bud_02b | 0xFD6D2F09
+        h4_prop_h4_weed_chair_01a | 0x70ED52B7
+        h4_prop_h4_weed_dry_01a | 0x2E419009
+        h4_prop_h4_weed_stack_01a | 0x310C8742
+
+props_h4_mines
+        h4_prop_h4_mine_01a | 0x958DD5E8
+        h4_prop_h4_mine_02a | 0xD07C4CD0
+        h4_prop_h4_mine_03a | 0xCDF5447E
+
+props_sub_int_h4
+        h4_int_lev_scuba_gear | 0xB1CFF3FB
+        h4_int_lev_sub_chair_01 | 0x7B24AFF5
+        h4_int_lev_sub_chair_02 | 0xCC2151ED
+        h4_int_lev_sub_doorl | 0xA364FDCE
+        h4_int_lev_sub_doorr | 0xB3C01E88
+        h4_int_lev_sub_hatch | 0x8272B272
+        h4_int_lev_sub_periscope | 0xF9997F51
+        h4_int_lev_sub_periscope_h_up | 0x57F2AA94
+        h4_prop_h4_console_01a | 0xFE8BAEC
+        h4_prop_h4_hatch_tower_01a | 0xC0C6BFF8
+        h4_prop_screen_bottom_sonar | 0xB7304AB3
+        h4_prop_screen_btm_missile_active | 0xCD86DBBA
+        h4_prop_screen_btm_missile_ready | 0x121BBFE4
+        h4_prop_screen_btm_missile_reload | 0x6B616909
+        h4_prop_screen_btm_offline | 0xD54C0F63
+        h4_prop_screen_top_missile_active | 0xE09B5DA4
+        h4_prop_screen_top_missile_ready | 0x57929B39
+        h4_prop_screen_top_sonar | 0xA8E97D62
+        h4_prop_sub_screen_top_offline | 0xFA01E392
+        h4_prop_x17_sub_al_lamp_off | 0x384F80A8
+        h4_prop_x17_sub_al_lamp_on | 0x7EB2DC9A
+        h4_prop_x17_sub_alarm_lamp | 0xE2A6399A
+        h4_prop_x17_sub_lampa_large_blue | 0xE63958A2
+        h4_prop_x17_sub_lampa_large_white | 0x690FC48E
+        h4_prop_x17_sub_lampa_large_yel | 0x430990B5
+        h4_prop_x17_sub_lampa_small_blue | 0x9F8B6899
+        h4_prop_x17_sub_lampa_small_white | 0x6955AA6
+        h4_prop_x17_sub_lampa_small_yel | 0xE2EDFC79
+
+weapons
+        rifle_vector | 0xE85A2F2D
+        w_ar_bullpuprifleh4 | 0x25E0D719
+        w_ar_bullpuprifleh4_hi | 0xD08B17C6
+        w_ar_bullpuprifleh4_mag1 | 0xAFDBBE32
+        w_ar_bullpuprifleh4_mag2 | 0x9D01187D
+        w_ar_bullpuprifleh4_sight | 0xAA523316
+        w_ar_bullpuprifleh4_sight_hi | 0xA7B6FF7
+        w_pi_singleshoth4 | 0xBD73D886
+        w_pi_singleshoth4_hi | 0x46F51818
+        w_pi_singleshoth4_shell | 0xED4E0DEA
+        w_sg_pumpshotgunh4 | 0xA1E9339B
+        w_sg_pumpshotgunh4_hi | 0xCC43E580
+        w_sg_pumpshotgunh4_mag1 | 0xF97EA057
+ 
+ 
+ 
+
+Cayo Perico Island
+
+Unlike other places Rockstar added, this location is loaded via its own native. (0x9A9D1BA639675CF1)
+
+Said native hides the original map so only use it when players are going to the island.
+
+You can check this example script:
+
+let g_bIslandLoaded = false;
+
+mp.keys.bind(0x72 /* F3 */, false, () => {
+    g_bIslandLoaded = !g_bIslandLoaded;
+    mp.game.invoke("0x9A9D1BA639675CF1", "HeistIsland", g_bIslandLoaded);
+    mp.game.invoke("0x5E1460624D194A38", g_bIslandLoaded); // for island map in pause menu and minimap
+
+    mp.gui.chat.push(`Island ${g_bIslandLoaded ? "loaded" : "unloaded"}`);
+});
+(you might want to use 1 and 0 instead of true and false in clientside C#)
+
+Position: new mp.Vector3(4840.571, -5174.425, 2.0);
+
+IPLs (optional): 
+
+Most of the time, you won't need to use these as they seem to be for making different heist scenarios. (some aren't even for heists but for the island itself)
+
+You can totally skip this section.
+
+https://gist.github.com/root-cause/068b4060d3a75151da2f33db0d06695e
+
+spacer.png
+
+ 
+
+Submarine
+
+Position: new mp.Vector3(1561.562, 410.45, -48.0);
+
+Entity Sets/Interior Props:
+
+entity_set_acetylene
+entity_set_brig
+entity_set_demolition
+entity_set_fingerprint
+entity_set_guide
+entity_set_hatch_lights_off
+entity_set_hatch_lights_on
+entity_set_jammer
+entity_set_plasma
+entity_set_suppressors
+entity_set_weapons
+ 
+
+Casino Nightclub
+
+Position: new mp.Vector3(1550.0, 250.0, -48.0);
+
+Entity Sets/Interior Props:
+
+EntitySet_DJ_Lighting
+dj_01_lights_01
+dj_01_lights_02
+dj_01_lights_03
+dj_01_lights_04
+dj_02_lights_01
+dj_02_lights_02
+dj_02_lights_03
+dj_02_lights_04
+dj_03_lights_01
+dj_03_lights_02
+dj_03_lights_03
+dj_03_lights_04
+dj_04_lights_01
+dj_04_lights_02
+dj_04_lights_03
+dj_04_lights_04
+int01_ba_bar_content
+int01_ba_booze_01
+int01_ba_booze_02
+int01_ba_booze_03
+int01_ba_dj01
+int01_ba_dj02
+int01_ba_dj03
+int01_ba_dj04
+int01_ba_dj_keinemusik
+int01_ba_dj_moodyman
+int01_ba_dj_palms_trax
+int01_ba_dry_ice
+int01_ba_equipment_setup
+int01_ba_equipment_upgrade
+int01_ba_lightgrid_01
+int01_ba_lights_screen
+int01_ba_screen
+int01_ba_security_upgrade
+int01_ba_style02_podium
+light_rigs_off
+ 
+
+ 
+Entity Sets/Interior Props:
+
+bonds_set
+files_set
+panther_set
+pearl_necklace_set
+pink_diamond_set
+tequila_set
